@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+div#wrapper{
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+div.title{
+    font-size: 36px;
+    height: 200px;
+    width: 80%;
+    line-height: 200px;
+    margin: auto;
+    /*background: url(/static/total_index/button_background.jpg) ;*/
+    /*background-size: contain;*/
+}
+div.twitter,div.linkedin,div.search{
+    font-size: 30px;
+    height: 150px;
+    width: 60%;
+    line-height: 150px;
+    margin: auto;
+    background-color: aqua;
+}
+
+/*h1.title.chara{*/
+    /*!*background: url(http://127.0.0.1:8000/static/total_index/button_background.jpg);*!*/
+    /*!*background-image: url(http://127.0.0.1:8000/static/total_index/button_background.jpg) ;*!*/
+    /*!*background-repeat: no-repeat;*!*/
+    /*!*background-position: 100%,100%;*!*/
+    /*!*background-color: aqua;*!*/
+    /*margin:auto;*/
+    /*width:50%; !* 必须制定宽度 *!*/
+    /*height:50%;*/
+    /*max-width: 100%;*/
+    /*color:red;*/
+/*}*/

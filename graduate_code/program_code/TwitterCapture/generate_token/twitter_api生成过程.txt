@@ -1,0 +1,10 @@
+101上Twitter/Twitter_Crawler/get_access_token
+
+1、用手机使一个账号得到twitter的授权，得到consumer_key和consumer_secret,变成APP。
+（注：一个APP可以对应大量（上百万）的账户，让账户允许他使用账户）
+2、APP向twitter账户发送请求，希望得到授权。
+3、twitter账户向twitter发送账户和密码  (好像这一步是模拟网页)
+4、twitter确认后，向APP发送access_token和access_token_secret
+
+（注：现在一个APP对应600个账户，有3个APP，现在查找的关键字是email，但是以后一个email，可以对应3个APP，需要改变关键字
+，而且以后需要生成更多的APP，不可能大量用户对应一个APP）

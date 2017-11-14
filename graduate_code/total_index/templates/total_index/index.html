@@ -1,0 +1,28 @@
+{% extends 'total_index/common.html' %}
+{% load static %}
+    {% block title %}首页{% endblock %}
+    {% block link %}
+        <link rel="stylesheet" type="text/css" href="{% static 'total_index/index.css' %}">
+    {% endblock %}
+    {% block body %}
+        <div id="Layer1" style="position:absolute; left:0; top:0; width:100%; height:100%">
+        <img src="/static/total_index/background.jpg" width="100%" height="100%"/>
+        </div>
+    <div id="wrapper">
+        <div class="title">
+            <h1 class="title chara">社交网络数据采集系统</h1>
+        </div>
+        <div class="twitter">
+            <a href="/twitter/"><h2>twitter采集</h2></a>
+        </div>
+        <div class="linkedin">
+            <a href="/linkedin/"><h2>linkedin人物信息采集</h2></a>
+        </div>
+        <div class="search">
+            <a href="/search/"><h2>ES文本查询</h2></a>
+        </div>
+        {#    <div class="event">#}
+        {#        <a href="/event/"><h2>事件查询</h2></a>#}
+        {#    </div>#}
+        </div>
+    {% endblock %}

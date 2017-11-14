@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'global.ico' %}" type="image/x-icon"/>
+    <title>{% block title %}默认标题{% endblock %} - 社交网络数据采集系统</title>
+    {% block link %}{% endblock %}
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
