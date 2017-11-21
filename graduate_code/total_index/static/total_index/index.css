@@ -4,12 +4,12 @@ body {
     width: 100%;
     margin: 0;
 }
+
 div#wrapper{
     height: 100%;
-    width: 80%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
 }
 div.title{
     font-size: 36px;
@@ -17,8 +17,6 @@ div.title{
     width: 80%;
     line-height: 200px;
     margin: auto;
-    /*background: url(/static/total_index/button_background.jpg) ;*/
-    /*background-size: contain;*/
 }
 div.twitter,div.linkedin,div.search{
     font-size: 30px;

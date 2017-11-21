@@ -1,0 +1,56 @@
+Thu 16 Nov 2017 19:28:44 API.py [line:660] INFO start
+Thu 16 Nov 2017 19:28:44 API.py [line:692] INFO thread 0 start.
+Thu 16 Nov 2017 19:28:44 API.py [line:692] INFO thread 1 start.
+Thu 16 Nov 2017 19:28:44 API.py [line:692] INFO thread 2 start.
+Thu 16 Nov 2017 19:28:44 API.py [line:692] INFO thread 3 start.
+Thu 16 Nov 2017 19:28:44 API.py [line:692] INFO thread 4 start.
+Thu 16 Nov 2017 19:28:44 API.py [line:695] INFO thread 0's token_index 456
+Thu 16 Nov 2017 19:28:44 API.py [line:692] INFO thread 5 start.
+Thu 16 Nov 2017 19:28:44 API.py [line:695] INFO thread 1's token_index 438
+Thu 16 Nov 2017 19:28:44 API.py [line:692] INFO thread 6 start.
+Thu 16 Nov 2017 19:28:44 API.py [line:692] INFO thread 7 start.
+Thu 16 Nov 2017 19:28:44 API.py [line:695] INFO thread 2's token_index 456
+Thu 16 Nov 2017 19:28:44 API.py [line:692] INFO thread 8 start.
+Thu 16 Nov 2017 19:28:44 API.py [line:695] INFO thread 3's token_index 227
+Thu 16 Nov 2017 19:28:44 API.py [line:695] INFO thread 4's token_index 183
+Thu 16 Nov 2017 19:28:44 API.py [line:696] INFO {u'access_token': u'725855121041547264-8VBEEGtjiaPqMWffukMXDy7HdnnE7CN', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'ALtFIFt61ctQnQF0oPMtTWLXKWKXytazQkFEkzU1eTO28'}
+Thu 16 Nov 2017 19:28:44 API.py [line:695] INFO thread 5's token_index 285
+Thu 16 Nov 2017 19:28:44 API.py [line:696] INFO {u'access_token': u'724865057327337472-d0V0oY5Lxpsf2aCIGBaE9hqmLAbhuhr', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'wtUofM8kR7LVGYrZwK6BzRKsJ4P2lBKLTPlAVrFNf1CnG'}
+Thu 16 Nov 2017 19:28:44 API.py [line:695] INFO thread 6's token_index 167
+Thu 16 Nov 2017 19:28:44 API.py [line:695] INFO thread 7's token_index 46
+Thu 16 Nov 2017 19:28:44 API.py [line:696] INFO {u'access_token': u'725855121041547264-8VBEEGtjiaPqMWffukMXDy7HdnnE7CN', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'ALtFIFt61ctQnQF0oPMtTWLXKWKXytazQkFEkzU1eTO28'}
+Thu 16 Nov 2017 19:28:44 API.py [line:695] INFO thread 8's token_index 182
+Thu 16 Nov 2017 19:28:44 API.py [line:696] INFO {u'access_token': u'720949925194825728-TMxZBp8eOEKHLuG4gvotdA7vph7hfm3', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'uN7GC8vyP4cCaPT9KMPnqUE3N7yYAEOFQA2EuTdtK17e1'}
+Thu 16 Nov 2017 19:28:44 API.py [line:696] INFO {u'access_token': u'720207052673572864-EEeim3FliluDgDGEReOL3oz0lknm26w', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'9RUlOXpK4lJxDicOhrVB9jOVXGnDE95BB8Mww5UofELBj'}
+Thu 16 Nov 2017 19:28:44 API.py [line:697] INFO sh
+Thu 16 Nov 2017 19:28:44 API.py [line:696] INFO {u'access_token': u'722385980888588288-ALz13BbBXBUCO8sPBoQkbYT0yIqeruG', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'0p0gDvHtRVQuK5UUtgGxI21q43Vuk5KYlLl1y4ti87whY'}
+Thu 16 Nov 2017 19:28:44 API.py [line:697] INFO oo
+Thu 16 Nov 2017 19:28:44 API.py [line:696] INFO {u'access_token': u'714624487241568256-9U83CZ0GER6TVzgjka59VE5aNRuQtvC', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'Iuizh90jT3dZENLtNHEak6EUGrxm2AnanXRo8L08d5faP'}
+Thu 16 Nov 2017 19:28:44 API.py [line:696] INFO {u'access_token': u'708465524649275392-8AM0Pcp0fH2uTSTY7k9xVWrMfZrgSnK', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'Nj53X1yQE2jzz4PAbhpPB5HhnaixMdluJ87S74gCmB7Lr'}
+Thu 16 Nov 2017 19:28:44 API.py [line:697] INFO ti
+Thu 16 Nov 2017 19:28:44 API.py [line:696] INFO {u'access_token': u'720204260558958593-8M6gnsBpqHWAtsgrGjQkYMPW15FdjHG', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'wNb4lf4o5M25RuM4LtSroUphYYZJKldmbbCpEzm2DcVh2'}
+Thu 16 Nov 2017 19:28:44 API.py [line:697] INFO ng
+Thu 16 Nov 2017 19:28:44 API.py [line:697] INFO ,k
+Thu 16 Nov 2017 19:28:44 API.py [line:698] INFO [u'192.168.1.148:8118']
+Thu 16 Nov 2017 19:28:44 API.py [line:697] INFO il
+Thu 16 Nov 2017 19:28:44 API.py [line:698] INFO [u'192.168.1.148:8118']
+Thu 16 Nov 2017 19:28:44 API.py [line:697] INFO l,
+Thu 16 Nov 2017 19:28:44 API.py [line:697] INFO de
+Thu 16 Nov 2017 19:28:44 API.py [line:698] INFO [u'192.168.1.148:8118']
+Thu 16 Nov 2017 19:28:44 API.py [line:697] INFO ad
+Thu 16 Nov 2017 19:28:44 API.py [line:698] INFO [u'192.168.1.148:8118']
+Thu 16 Nov 2017 19:28:44 API.py [line:698] INFO [u'192.168.1.148:8118']
+Thu 16 Nov 2017 19:28:44 API.py [line:698] INFO [u'192.168.1.148:8118']
+Thu 16 Nov 2017 19:28:44 API.py [line:210] ERROR value error : None
+Thu 16 Nov 2017 19:28:44 API.py [line:210] ERROR value error : None
+Thu 16 Nov 2017 19:28:44 API.py [line:698] INFO [u'192.168.1.148:8118']
+Thu 16 Nov 2017 19:28:44 API.py [line:698] INFO [u'192.168.1.148:8118']
+Thu 16 Nov 2017 19:28:44 API.py [line:210] ERROR value error : None
+Thu 16 Nov 2017 19:28:44 API.py [line:698] INFO [u'192.168.1.148:8118']
+Thu 16 Nov 2017 19:28:44 API.py [line:210] ERROR value error : None
+Thu 16 Nov 2017 19:28:44 API.py [line:210] ERROR value error : None
+Thu 16 Nov 2017 19:28:44 API.py [line:210] ERROR value error : None
+Thu 16 Nov 2017 19:28:44 API.py [line:210] ERROR value error : None
+Thu 16 Nov 2017 19:28:44 API.py [line:210] ERROR value error : None
+Thu 16 Nov 2017 19:28:44 API.py [line:210] ERROR value error : None
+Thu 16 Nov 2017 19:28:45 API.py [line:680] INFO finish

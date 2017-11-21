@@ -4,9 +4,9 @@
 # 数据库和kafka相关操作封装模块
 from pymongo import MongoClient
 import pymongo.errors
-from TwitterUserCapture.common.constants import *
-from TwitterUserCapture.interaction.kafka_interface import Producer
-from TwitterUserCapture.interaction.HbaseInterface import HbaseInterface
+from ..common.constants import *
+from ..interaction.kafka_interface import Producer
+from ..interaction.HbaseInterface import HbaseInterface
 
 
 # 封装了连接数据库，朝数据库和kafka发送消息的功能

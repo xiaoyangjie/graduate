@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+#运行Django之前，自定义需要处理的事情
+# from BeforeDjangoOperation import operation
+# operation()
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,7 +30,7 @@ SECRET_KEY = '_kgdxw8uf@1j)km9t)p_8i!8sjh8mgslasct#e_urfp3c_&*=v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.148','127.0.0.1']
+ALLOWED_HOSTS = ['192.168.1.148','127.0.0.1','localhost']
 
 
 # Application definition
@@ -44,6 +48,7 @@ INSTALLED_APPS = [
     'event',
     'linkedin',
     'search',
+    # 'query',
 ]
 
 MIDDLEWARE = [

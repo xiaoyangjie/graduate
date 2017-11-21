@@ -14,8 +14,8 @@ from multiprocessing.dummy import Pool
 import logging
 import os
 from .crawler_error import CrawlerRequestError, CrawlerConnectionError, CrawlerEmptyException, CrawlerError
-from ..data_storage import DataStorage
-from ..constants import *
+from ..common.data_storage import DataStorage
+from ..common.constants import *
 
 
 class Crawler(object):
@@ -32,7 +32,7 @@ class Crawler(object):
         """
         # 创建/连接数据库
         self.__data_storage = data_storage or DataStorage()
-        self.__data_storage.update_collections([COOKIES_COLLECTION, RECORD_COLLECTION, ID_COLLECTION])
+        # self.__data_storage.update_collections([COOKIES_COLLECTION, RECORD_COLLECTION, ID_COLLECTION])
 
         self.__opener = None
         self.__timeout = timeout

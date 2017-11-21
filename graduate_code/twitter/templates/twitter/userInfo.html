@@ -2,8 +2,8 @@
 {% load static %}
     {% block title %}Twitter用户详细信息采集{% endblock %}
     {% block link %}
-        <link rel="stylesheet" type="text/css" href="{% static 'twitter/index.css' %}">
     {% endblock %}
+
     {% block body %}
 
 {#        <div id="Layer1" style="position:absolute; left:0; top:0; width:100%; height:100%">#}
@@ -11,6 +11,73 @@
 {#        </div>#}
 
         <div id="wrapper">
+            <form action="/twitter/twitterCapture/" method="get">
+                <div class="aa">
+                    <p><span style="display:inline-block;width:130px;text-align:right;color: red;">type:</span><input type="text" id="type" size="60" maxlength="120"><span>如type:userInfo</span></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;color: red;">creator:</span><input type="text" id="creator"></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;color: red;">description:</span><input type="text" id="description" ></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;">userDatabase:</span><input type="text" id="userDatabase"></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;">userCollection:</span><input type="text" id="userCollection" ></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;">screenNameList:</span><input type="text" id="screenNameList"></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;">accountIdList:</span><input type="text" id="accountIdList" ></p>
+                    <p><span style="display:inline-block;width:130px;text-align:right;color: green">processName:</span><input type="text" id="processName" ></p>
+                    <p>提示：<span style="color: red">红色</span>部分为必填内容</p>
+                </div>
+                <button type="button" id='dataCapture'>开始采集</button>
+                <button type="button" id='checkSchedule'>查看采集进度</button>
+                <button type="button" id='terminate'>结束采集</button>
+                <br>
+                <br>
+                <textarea id='result' rows="9" cols="150"></textarea>
+{#                <p><span id='result' style="display:inline-block;width:400px;height: 400px"></span></p>#}
+            </form>
+            <br>
+            <br>
+            <br>
+        <script src="/static/jquery_1.11.1.js"></script>
+        <script>
 
+            $(document).ready(function() {
+
+                $("#dataCapture").click(function () {
+                    var userDatabase = $("#userDatabase").val();
+                    var userCollection = $("#userCollection").val();
+                    var screenNameList = $("#screenNameList").val();
+                    var description = $("#description").val();
+                    var creator = $("#creator").val();
+                    var accountIdList = $("#accountIdList").val();
+                    var type = $("#type").val();
+                    $.get("/twitter/twitterCapture/", {
+                        'userDatabase': userDatabase,
+                        'userCollection': userCollection,
+                        'type': type,
+                        'screenNameList': screenNameList,
+                        'accountIdList': accountIdList,
+                        'creator': creator,
+                        'description': description
+                    }, function (ret) {
+                        $('#result').html(ret)
+                    });
+                });
+                $("#checkSchedule").click(function () {
+                    var processName = $("#processName").val();
+                    $.get("/twitter/twitterCheck/", {
+                        'processName': processName,
+                    }, function (ret) {
+                        $('#result').html(ret)
+                    });
+                });
+
+                $("#terminate").click(function () {
+                    var processName = $("#processName").val();
+                    $.get("/twitter/twitterTerminate/", {
+                        'processName':processName
+                    }, function (ret) {
+                        $('#result').html(ret)
+                    });
+                });
+
+            });
+        </script>
         </div>
     {% endblock %}

@@ -7,10 +7,10 @@ from TwitterAPI.TwitterError import TwitterConnectionError
 from TwitterAPI.TwitterError import TwitterRequestError
 import time
 from multiprocessing.dummy import Pool
-from TwitterUserCapture.common.data_storage import DataStorage
-from TwitterUserCapture.interaction.HbaseInterface import HbaseInterface
-from TwitterUserCapture.common.constants import *
-from TwitterUserCapture.common.tools import *
+from ..common.data_storage import DataStorage
+from ..interaction.HbaseInterface import HbaseInterface
+from ..common.constants import *
+from ..common.tools import *
 import logging
 import os
 import requests

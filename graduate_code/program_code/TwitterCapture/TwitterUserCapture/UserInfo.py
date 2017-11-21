@@ -34,6 +34,7 @@ def userInfo(userHost=MONGOHOST, userDatabase="twitter", userCollection='user',
     twitter = MultiProcessAPI(proxyList=proxyList, data_storage=data_storage, debug=False)
     result = True
     while result:
+
         result = twitter.get_users_lookup(cl_name=userCollection,
                                           account_id_list=accountIdList,
                                           screen_name_list=screenNameList)
@@ -59,6 +60,8 @@ def getScreenName():
 
 
 if __name__ == "__main__":
+
+
     userHost = 'localhost:27020'  # 'mongodb://mongo:123456@222.197.180.150'
     userDatabase = 'twitter'   # 'zwyTemp'
     userCollection = 'user'  # 'User'

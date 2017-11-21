@@ -88,7 +88,7 @@ def init_logging(log_name):
                                   '[line:%(lineno)d] %(levelname)s %(message)s',
                                   datefmt='%a %d %b %Y %H:%M:%S')
     file_logging = RotatingFileHandler(
-        'D:/YjProject/yj_project/log/'+log_name+'.log', maxBytes=10*1024*1024, backupCount=5)
+        './program_code/TwitterCapture/TwitterUserCapture/logs/'+log_name+'.log', maxBytes=10*1024*1024, backupCount=5)
     file_logging.setLevel(logging.INFO)
     console = logging.StreamHandler(sys.stdout)
     console.setLevel(logging.INFO)
@@ -146,4 +146,4 @@ class StatusMongo:
     def find_all(self):
         return self.collection.find()
 
-print time.gmtime(0)
+# print time.gmtime(0)

@@ -1,0 +1,40 @@
+Mon 20 Nov 2017 18:46:50 API.py [line:660] INFO start
+Mon 20 Nov 2017 18:46:50 API.py [line:692] INFO thread 0 start.
+Mon 20 Nov 2017 18:46:50 API.py [line:692] INFO thread 1 start.
+Mon 20 Nov 2017 18:46:50 API.py [line:692] INFO thread 2 start.
+Mon 20 Nov 2017 18:46:50 API.py [line:692] INFO thread 3 start.
+Mon 20 Nov 2017 18:46:50 API.py [line:692] INFO thread 4 start.
+Mon 20 Nov 2017 18:46:50 API.py [line:692] INFO thread 5 start.
+Mon 20 Nov 2017 18:46:50 API.py [line:695] INFO thread 0's token_index 518
+Mon 20 Nov 2017 18:46:50 API.py [line:692] INFO thread 6 start.
+Mon 20 Nov 2017 18:46:50 API.py [line:695] INFO thread 1's token_index 33
+Mon 20 Nov 2017 18:46:50 API.py [line:695] INFO thread 2's token_index 424
+Mon 20 Nov 2017 18:46:50 API.py [line:695] INFO thread 3's token_index 109
+Mon 20 Nov 2017 18:46:50 API.py [line:695] INFO thread 4's token_index 478
+Mon 20 Nov 2017 18:46:50 API.py [line:695] INFO thread 5's token_index 102
+Mon 20 Nov 2017 18:46:50 API.py [line:695] INFO thread 6's token_index 47
+Mon 20 Nov 2017 18:46:50 API.py [line:696] INFO {u'access_token': u'707590572077256706-cU98uuQrpDnf78zxcQVpGGcP92OgZMm', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'ENDhhP0mvjVhnQT8cD5i4869C8mlLxUeh0fY5wDylYbFw'}
+Mon 20 Nov 2017 18:46:50 API.py [line:696] INFO {u'access_token': u'724776444606341120-FU4TUvN4T9djod5s0wlce2Nfz2OweMS', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'NJIe4fmTQ60LkYTcW13DTGmMNe5w0G26nAQABAUMare6u'}
+Mon 20 Nov 2017 18:46:50 API.py [line:696] INFO {u'access_token': u'714749985263337472-vpalEHWUiZMolxL6TXKBk9icsafkwui', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'3C256Q8DqpbvWu2ZMc21mvoQEUuZvF9oOXAOYPpPrE4uh'}
+Mon 20 Nov 2017 18:46:50 API.py [line:696] INFO {u'access_token': u'728512384663363584-eKi7TZcq6cWZUujkUCDveLUGmq3jJKy', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'VNz2Ihc2DqIAggCRUkxXGgUE9batEv5htHAGcalBNcMd7'}
+Mon 20 Nov 2017 18:46:50 API.py [line:696] INFO {u'access_token': u'714439765056073735-j3sQI34aCwGBFDlU7V3J9Yj3I6X6kiI', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'70Jh1q4L9aLLlxQI0wjuLP5sd8k5ZyX1aj5xO7OnpWEG8'}
+Mon 20 Nov 2017 18:46:50 API.py [line:696] INFO {u'access_token': u'4844743881-SYMnTtS1C8ffIAo80ziBlOZ37cj43BSKoPcz6sI', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'1QRWjxpjG8t1aQGatmAqNRCcQAAditvF35GlRPPbmazPA'}
+Mon 20 Nov 2017 18:46:50 API.py [line:697] INFO oo
+Mon 20 Nov 2017 18:46:50 API.py [line:697] INFO ti
+Mon 20 Nov 2017 18:46:50 API.py [line:697] INFO ng
+Mon 20 Nov 2017 18:46:50 API.py [line:697] INFO ,c
+Mon 20 Nov 2017 18:46:50 API.py [line:697] INFO hi
+Mon 20 Nov 2017 18:46:50 API.py [line:697] INFO na
+Mon 20 Nov 2017 18:46:50 API.py [line:698] INFO ['192.168.1.148:8118']
+Mon 20 Nov 2017 18:46:50 API.py [line:698] INFO ['192.168.1.148:8118']
+Mon 20 Nov 2017 18:46:50 API.py [line:698] INFO ['192.168.1.148:8118']
+Mon 20 Nov 2017 18:46:50 API.py [line:698] INFO ['192.168.1.148:8118']
+Mon 20 Nov 2017 18:46:50 API.py [line:698] INFO ['192.168.1.148:8118']
+Mon 20 Nov 2017 18:46:50 API.py [line:698] INFO ['192.168.1.148:8118']
+Mon 20 Nov 2017 18:46:50 API.py [line:210] ERROR value error : None
+Mon 20 Nov 2017 18:46:50 API.py [line:210] ERROR value error : None
+Mon 20 Nov 2017 18:46:50 API.py [line:210] ERROR value error : None
+Mon 20 Nov 2017 18:46:50 API.py [line:210] ERROR value error : None
+Mon 20 Nov 2017 18:46:50 API.py [line:210] ERROR value error : None
+Mon 20 Nov 2017 18:46:50 API.py [line:210] ERROR value error : None
+Mon 20 Nov 2017 18:46:50 API.py [line:680] INFO finish

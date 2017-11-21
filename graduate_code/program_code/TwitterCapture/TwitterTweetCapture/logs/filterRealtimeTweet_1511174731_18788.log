@@ -1,0 +1,128 @@
+Mon 20 Nov 2017 18:45:32 API.py [line:660] INFO start
+Mon 20 Nov 2017 18:45:32 API.py [line:692] INFO thread 0 start.
+Mon 20 Nov 2017 18:45:32 API.py [line:695] INFO thread 0's token_index 116
+Mon 20 Nov 2017 18:45:32 API.py [line:696] INFO {u'access_token': u'713315378798039040-UDUClUhaSyzcwBafjq19xbtaGGGEboK', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'PsK7mrElSmQ1nuCzjnYRiN0Lo3dqQwbObAZNYjM6MxIPw'}
+Mon 20 Nov 2017 18:45:32 API.py [line:697] INFO [u'shooting,china']
+Mon 20 Nov 2017 18:45:32 API.py [line:698] INFO ['192.168.1.148:8118']
+Mon 20 Nov 2017 18:45:32 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:32 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:37 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:37 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:42 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:42 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:47 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:47 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:52 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:52 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:57 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:45:57 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:46:02 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:46:02 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:46:07 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:46:07 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Mon 20 Nov 2017 18:46:16 API.py [line:712] INFO 932560716254646274
+Mon 20 Nov 2017 18:46:17 API.py [line:712] INFO 932560716833476610
+Mon 20 Nov 2017 18:46:17 API.py [line:712] INFO 932560717437456384
+Mon 20 Nov 2017 18:46:17 API.py [line:712] INFO 932560719194628096
+Mon 20 Nov 2017 18:46:17 API.py [line:712] INFO 932560719865720832
+Mon 20 Nov 2017 18:46:17 API.py [line:712] INFO 932560720176275457
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560720826392576
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560722147414018
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560721862451200
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560722592239616
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560723041030145
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560723686801408
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560724114620417
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560724227952640
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560724194463744
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560723934437376
+Mon 20 Nov 2017 18:46:18 API.py [line:712] INFO 932560725515558912
+Mon 20 Nov 2017 18:46:19 API.py [line:712] INFO 932560725616332800
+Mon 20 Nov 2017 18:46:19 API.py [line:712] INFO 932560726513856512
+Mon 20 Nov 2017 18:46:19 API.py [line:712] INFO 932560729718259713
+Mon 20 Nov 2017 18:46:20 API.py [line:712] INFO 932560729991012354
+Mon 20 Nov 2017 18:46:20 API.py [line:712] INFO 932560733300195328
+Mon 20 Nov 2017 18:46:21 API.py [line:712] INFO 932560735661465600
+Mon 20 Nov 2017 18:46:21 API.py [line:712] INFO 932560736806633472
+Mon 20 Nov 2017 18:46:21 API.py [line:712] INFO 932560737016385539
+Mon 20 Nov 2017 18:46:22 API.py [line:712] INFO 932560738081796096
+Mon 20 Nov 2017 18:46:22 API.py [line:712] INFO 932560740036231168
+Mon 20 Nov 2017 18:46:22 API.py [line:712] INFO 932560740451467264
+Mon 20 Nov 2017 18:46:22 API.py [line:712] INFO 932560741265297408
+Mon 20 Nov 2017 18:46:23 API.py [line:712] INFO 932560742728925185
+Mon 20 Nov 2017 18:46:23 API.py [line:712] INFO 932560742817005568
+Mon 20 Nov 2017 18:46:23 API.py [line:712] INFO 932560744649859072
+Mon 20 Nov 2017 18:46:23 API.py [line:712] INFO 932560745837064192
+Mon 20 Nov 2017 18:46:24 API.py [line:712] INFO 932560746478817280
+Mon 20 Nov 2017 18:46:24 API.py [line:712] INFO 932560748034777088
+Mon 20 Nov 2017 18:46:24 API.py [line:712] INFO 932560748294918144
+Mon 20 Nov 2017 18:46:24 API.py [line:712] INFO 932560750651908096
+Mon 20 Nov 2017 18:46:25 API.py [line:712] INFO 932560751549698048
+Mon 20 Nov 2017 18:46:25 API.py [line:712] INFO 932560753084678144
+Mon 20 Nov 2017 18:46:25 API.py [line:712] INFO 932560753030324224
+Mon 20 Nov 2017 18:46:25 API.py [line:712] INFO 932560753994985472
+Mon 20 Nov 2017 18:46:25 API.py [line:712] INFO 932560754456264704
+Mon 20 Nov 2017 18:46:25 API.py [line:712] INFO 932560754934501376
+Mon 20 Nov 2017 18:46:26 API.py [line:712] INFO 932560752983945216
+Mon 20 Nov 2017 18:46:26 API.py [line:712] INFO 932560755857285120
+Mon 20 Nov 2017 18:46:26 API.py [line:712] INFO 932560756092100609
+Mon 20 Nov 2017 18:46:26 API.py [line:712] INFO 932560757509693441
+Mon 20 Nov 2017 18:46:27 API.py [line:712] INFO 932560759753773057
+Mon 20 Nov 2017 18:46:27 API.py [line:712] INFO 932560760445730816
+Mon 20 Nov 2017 18:46:27 API.py [line:712] INFO 932560760949166080
+Mon 20 Nov 2017 18:46:27 API.py [line:712] INFO 932560761464983552
+Mon 20 Nov 2017 18:46:27 API.py [line:712] INFO 932560761213333505
+Mon 20 Nov 2017 18:46:27 API.py [line:712] INFO 932560762056400896
+Mon 20 Nov 2017 18:46:27 API.py [line:712] INFO 932560762505252864
+Mon 20 Nov 2017 18:46:27 API.py [line:712] INFO 932560762421178368
+Mon 20 Nov 2017 18:46:27 API.py [line:712] INFO 932560763419586560
+Mon 20 Nov 2017 18:46:28 API.py [line:712] INFO 932560763440521216
+Mon 20 Nov 2017 18:46:28 API.py [line:712] INFO 932560764426125312
+Mon 20 Nov 2017 18:46:28 API.py [line:712] INFO 932560763872563200
+Mon 20 Nov 2017 18:46:28 API.py [line:712] INFO 932560766690979841
+Mon 20 Nov 2017 18:46:28 API.py [line:712] INFO 932560766569295873
+Mon 20 Nov 2017 18:46:29 API.py [line:712] INFO 932560769035784193
+Mon 20 Nov 2017 18:46:30 API.py [line:712] INFO 932560773020254209
+Mon 20 Nov 2017 18:46:30 API.py [line:712] INFO 932560774668709888
+Mon 20 Nov 2017 18:46:31 API.py [line:712] INFO 932560778250608640
+Mon 20 Nov 2017 18:46:31 API.py [line:712] INFO 932560780058247168
+Mon 20 Nov 2017 18:46:31 API.py [line:712] INFO 932560780519706624
+Mon 20 Nov 2017 18:46:32 API.py [line:712] INFO 932560781274628096
+Mon 20 Nov 2017 18:46:32 API.py [line:712] INFO 932560782482706433
+Mon 20 Nov 2017 18:46:32 API.py [line:712] INFO 932560783296335873
+Mon 20 Nov 2017 18:46:33 API.py [line:712] INFO 932560784634368000
+Mon 20 Nov 2017 18:46:33 API.py [line:712] INFO 932560786534232065
+Mon 20 Nov 2017 18:46:33 API.py [line:712] INFO 932560787222261760
+Mon 20 Nov 2017 18:46:33 API.py [line:712] INFO 932560788610457600
+Mon 20 Nov 2017 18:46:34 API.py [line:712] INFO 932560791361875968
+Mon 20 Nov 2017 18:46:35 API.py [line:712] INFO 932560792364437505
+Mon 20 Nov 2017 18:46:35 API.py [line:712] INFO 932560793996005377
+Mon 20 Nov 2017 18:46:35 API.py [line:712] INFO 932560796818788352
+Mon 20 Nov 2017 18:46:35 API.py [line:712] INFO 932560797066321920
+Mon 20 Nov 2017 18:46:36 API.py [line:712] INFO 932560797150208003
+Mon 20 Nov 2017 18:46:36 API.py [line:712] INFO 932560797993226240
+Mon 20 Nov 2017 18:46:36 API.py [line:712] INFO 932560798446178304
+Mon 20 Nov 2017 18:46:36 API.py [line:712] INFO 932560800312541185
+Mon 20 Nov 2017 18:46:36 API.py [line:712] INFO 932560800375558144
+Mon 20 Nov 2017 18:46:38 API.py [line:712] INFO 932560805983326208
+Mon 20 Nov 2017 18:46:38 API.py [line:712] INFO 932560806482395136
+Mon 20 Nov 2017 18:46:38 API.py [line:712] INFO 932560807270985728
+Mon 20 Nov 2017 18:46:38 API.py [line:712] INFO 932560808395051008
+Mon 20 Nov 2017 18:46:39 API.py [line:712] INFO 932560811557638145
+Mon 20 Nov 2017 18:46:39 API.py [line:712] INFO 932560811951669248
+Mon 20 Nov 2017 18:46:39 API.py [line:712] INFO 932560812929093632
+Mon 20 Nov 2017 18:46:40 API.py [line:712] INFO 932560814220947456
+Mon 20 Nov 2017 18:46:40 API.py [line:712] INFO 932560816141950976
+Mon 20 Nov 2017 18:46:40 API.py [line:712] INFO 932560816938897409
+Mon 20 Nov 2017 18:46:41 API.py [line:712] INFO 932560818075590656
+Mon 20 Nov 2017 18:46:41 API.py [line:712] INFO 932560818574589952
+Mon 20 Nov 2017 18:46:41 API.py [line:712] INFO 932560819153498112
+Mon 20 Nov 2017 18:46:42 API.py [line:712] INFO 932560821603000320
+Mon 20 Nov 2017 18:46:42 API.py [line:712] INFO 932560822789922817
+Mon 20 Nov 2017 18:46:42 API.py [line:712] INFO 932560823448301568
+Mon 20 Nov 2017 18:46:42 API.py [line:712] INFO 932560824094294016
+Mon 20 Nov 2017 18:46:42 API.py [line:712] INFO 932560825671229440
+Mon 20 Nov 2017 18:46:42 API.py [line:712] INFO 932560825730109440
+Mon 20 Nov 2017 18:46:42 API.py [line:712] INFO 932560824979349504
+Mon 20 Nov 2017 18:46:43 API.py [line:712] INFO 932560827030343680
+Mon 20 Nov 2017 18:46:43 API.py [line:712] INFO 932560828003508225

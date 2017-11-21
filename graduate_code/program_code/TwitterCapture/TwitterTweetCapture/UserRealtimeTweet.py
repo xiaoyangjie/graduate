@@ -4,11 +4,11 @@ sys.path.insert(0, '/home/server-cj/twitter/Django')
 from TwitterTweetCapture.api.API import *
 from TwitterTweetCapture.common.decorator import *
 from TwitterTweetCapture.common.tools import createCollection
-
+from TwitterTweetCapture.common.constants import *
 # @status_collection(with_log=True)
 @setLogging()
-def realtimeTweet(userHost=None, userDatabase=None, userCollection=None,
-                   tweetHost=None, tweetDatabase=None, tweetCollection=None,proxyList=PROXYLIST):
+def realtimeTweet(userHost=DEFAULTHOST, userDatabase=None, userCollection=None,
+                   tweetHost=DEFAULTHOST, tweetDatabase=None, tweetCollection=None,proxyList=PROXYLIST):
     """
     功能：重点用户实时关注
     :param userHost:

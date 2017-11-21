@@ -5,7 +5,7 @@
 
 
 INFINITE = -1  # 无采集上限
-PROXY = '127.0.0.1:8118'  # 代理
+PROXY = '192.168.1.148:8118'  # 代理
 # HOST = 'mongodb://mongo:123456@222.197.180.150'  # mongo host
 HOST = 'localhost:27020'
 BASE_PATH = "/home/server-cj/twitter/"  # Linux图片存储路径
@@ -20,6 +20,11 @@ RECORD_COLLECTION = {'host': HOST, 'db': 'account', 'cl': 'temp_record', 'name':
 TOKEN_COLLECTION = {'host': HOST, 'db': 'account', 'cl': 'twitter_apis', 'name': 'token'}  # 'db': 'token'
 
 MONGOHOST = 'localhost:27020'
+
+PROCESS_DATABASE = 'Process'
+
+PROCESS_COLLECTION = 'Process'
+
 # 爬虫程序的HTTP头部
 HTTP_HEADER = {'Connection': 'Keep-Alive',
                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',

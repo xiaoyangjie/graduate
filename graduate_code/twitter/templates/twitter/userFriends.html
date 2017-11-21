@@ -1,0 +1,58 @@
+{% extends 'total_index/common.html' %}
+{% load static %}
+    {% block title %}Twitter用户详细信息采集{% endblock %}
+    {% block link %}
+    {% endblock %}
+
+    {% block body %}
+
+{#        <div id="Layer1" style="position:absolute; left:0; top:0; width:100%; height:100%">#}
+{#        <img src="/static/twitter/twitter_background.jpg" width="100%" height="100%"/>#}
+{#        </div>#}
+
+        <div id="wrapper">
+            <form action="/twitter/twitterCapture/" method="get">
+                <p><span style="display:inline-block;width:130px;text-align:right;">type:</span><input type="text" id="type" size="60" maxlength="120"></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;">userDatabase:</span><input type="text" id="userDatabase"></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;">userCollection:</span><input type="text" id="userCollection" ></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;">screenNameList:</span><input type="text" id="screenNameList"></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;">accountIdList:</span><input type="text" id="accountIdList" ></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;">creator:</span><input type="text" id="creator"></p>
+                <p><span style="display:inline-block;width:130px;text-align:right;">description:</span><input type="text" id="description" ></p>
+                <button type="button" id='dataCapture'>开始采集</button>
+                <br>
+                <br>
+                <br>
+                <p>result: <span id='result'></span></p>
+            </form>
+            <br>
+            <br>
+            <br>
+        <script src="/static/jquery_1.11.1.js"></script>
+        <script>
+
+            $(document).ready(function() {
+                $("#dataCapture").click(function () {
+                    var userDatabase = $("#userDatabase").val();
+                    var userCollection = $("#userCollection").val();
+                    var screenNameList = $("#screenNameList").val();
+                    var description = $("#description").val();
+                    var creator = $("#creator").val();
+                    var accountIdList = $("#accountIdList").val();
+                    var type = $("#type").val();
+                    $.get("/twitter/twitterCapture/", {
+                        'userDatabase': userDatabase,
+                        'userCollection': userCollection,
+                        'type': type,
+                        'screenNameList': screenNameList,
+                        'accountIdList': accountIdList,
+                        'creator': creator,
+                        'description': description
+                    }, function (ret) {
+                        $('#result').html(ret)
+                    });
+                });
+            });
+        </script>
+        </div>
+    {% endblock %}
