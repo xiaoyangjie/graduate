@@ -25,6 +25,8 @@ PROCESS_DATABASE = 'Process'
 
 PROCESS_COLLECTION = 'Process'
 
+PROCESS_DB_COL_NAME = 'DbAndColName'
+
 # 爬虫程序的HTTP头部
 HTTP_HEADER = {'Connection': 'Keep-Alive',
                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',

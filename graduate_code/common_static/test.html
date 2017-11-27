@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>line</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 800px;height:300px;"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+var myChart = echarts.init(document.getElementById('main'));
+
+function randomData() {
+    var date = new Date();
+    return {
+        value: [date,Math.random() * 100]
+    }
+}
+
+var data = [];
+var now = +0;
+var oneDay = 1;
+var value = Math.random() * 1000;
+for (var i = 0; i < 700; i++) {
+    data.push(randomData());
+}
+
+option = {
+    title: {
+        text: '动态数据 + 时间坐标轴'
+    },
+    tooltip: {
+        trigger: 'axis',
+        formatter: function (params) {
+            params = params[0];
+            var date = new Date();
+            return date.getHours() + '/' + date.getMinutes() + '/' + date.getSeconds() + ' : ' + params.value[1];
+        },
+        axisPointer: {
+            animation: false
+        }
+    },
+    xAxis: {
+        type: 'time',
+    },
+    yAxis: {
+        type: 'value',
+        splitLine: {
+            show: false
+        }
+    },
+    series: [{
+        name: '模拟数据',
+        type: 'line',
+        showSymbol: false,
+        hoverAnimation: false,
+        //stack: '总量',
+        data: data
+    }]
+};
+
+setInterval(function () {
+
+
+    data.shift();
+    data.push(randomData());
+
+
+    myChart.setOption({
+    series: [{
+        name: '模拟数据',
+        type: 'line',
+        showSymbol: false,
+        hoverAnimation: false,
+        //stack: '总量',
+        data: data
+    }]
+    });
+
+}, 1000);
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+</script>
+</body>
+</html>

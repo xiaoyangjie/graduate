@@ -12,7 +12,7 @@ def index(request):
     return render(request, 'total_index/index.html')
 
 def test(request):
-    return render(request, 'total_index/test.html')
+    return render(request, 'total_index/../doc/test.html')
 
 def add(request):
     a = request.GET['a']

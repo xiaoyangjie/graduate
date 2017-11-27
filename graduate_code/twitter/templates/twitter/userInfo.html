@@ -11,73 +11,358 @@
 {#        </div>#}
 
         <div id="wrapper">
-            <form action="/twitter/twitterCapture/" method="get">
-                <div class="aa">
-                    <p><span style="display:inline-block;width:130px;text-align:right;color: red;">type:</span><input type="text" id="type" size="60" maxlength="120"><span>如type:userInfo</span></p>
-                <p><span style="display:inline-block;width:130px;text-align:right;color: red;">creator:</span><input type="text" id="creator"></p>
-                <p><span style="display:inline-block;width:130px;text-align:right;color: red;">description:</span><input type="text" id="description" ></p>
-                <p><span style="display:inline-block;width:130px;text-align:right;">userDatabase:</span><input type="text" id="userDatabase"></p>
-                <p><span style="display:inline-block;width:130px;text-align:right;">userCollection:</span><input type="text" id="userCollection" ></p>
-                <p><span style="display:inline-block;width:130px;text-align:right;">screenNameList:</span><input type="text" id="screenNameList"></p>
-                <p><span style="display:inline-block;width:130px;text-align:right;">accountIdList:</span><input type="text" id="accountIdList" ></p>
-                    <p><span style="display:inline-block;width:130px;text-align:right;color: green">processName:</span><input type="text" id="processName" ></p>
-                    <p>提示：<span style="color: red">红色</span>部分为必填内容</p>
-                </div>
-                <button type="button" id='dataCapture'>开始采集</button>
-                <button type="button" id='checkSchedule'>查看采集进度</button>
-                <button type="button" id='terminate'>结束采集</button>
-                <br>
-                <br>
-                <textarea id='result' rows="9" cols="150"></textarea>
-{#                <p><span id='result' style="display:inline-block;width:400px;height: 400px"></span></p>#}
-            </form>
+            <label><input name="type" type="checkbox" value="userInfo" id="userInfo"/>用户详细信息采集 </label>
+            <label><input name="type" type="checkbox" value="userFriends" id="userFriends"/>用户朋友ID列表采集 </label>
+            <label><input name="type" type="checkbox" value="userFollowers" id="userFollowers"/>用户粉丝ID列表采集 </label>
+            <p><span style="display:inline-block;width:130px;text-align:right;">用户数据库:</span>
+                <select id="selectUserDatabase" style="width: 248px;background-color: rgba(10, 17, 45, 0.11);">
+                    <option selected>选择数据库</option>
+                    {% for i in user %}
+                    <option value={{ i }}>{{ i }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">用户名字列表:</span><input type="text" id="screenNameList" value="">用逗号隔开，如ra,yang</p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">用户ID列表:</span><input type="text" id="accountIdList" >用逗号隔开，如12345,6789</p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">上传采集列表:</span><input type="file" name="myfile" id="myfile"/></p>
+            <button type="button" id="dataCapture">开始采集</button>
+            <button type="button" id='terminateUserInfo'>结束用户信息采集</button>
+            <button type="button" id='terminateUserFriends'>结束用户朋友采集</button>
+            <button type="button" id='terminateUserFollowers'>结束用户粉丝采集</button>
             <br>
             <br>
-            <br>
+            <textarea id='result' rows="3" cols="150"></textarea>
+            <div id="chartUserInfo" style="height:400px;margin: 0 auto;float:left;width: 30%;"></div>
+            <div id="chartUserFriends" style="height:400px;margin: 0 auto;float:left;width: 30%;"></div>
+            <div id="chartUserFollowers" style="height:400px;margin: 0 auto;float:left;width: 30%;"></div>
+
         <script src="/static/jquery_1.11.1.js"></script>
         <script>
+{#            定义一个全局进程标识，可以用于结束进程使用#}
+            var processNameUserInfo = null;
+            var processNameUserFriends = null;
+            var processNameUserFollowers = null;
+            var resultBeforeUserInfo = 0;
+            var resultBeforeUserFriends = 0;
+            var resultBeforeUserFollowers = 0;
+            var totalViewNum = 5;
+            var dataListUserInfo = [];
+            var dataListUserFriends = [];
+            var dataListUserFollowers = [];
+            var len = 300;
+            var now = +new Date();
+            var internal = 3 * 1000;
+            for (var i = 0 ; i < len ; i++)
+            {
+                dataListUserInfo.unshift({value:[now,0]});
+                dataListUserFriends.unshift({value:[now,0]});
+                dataListUserFollowers.unshift({value:[now,0]});
+                now = new Date(+now - internal);
+            }
+            var timeOutUserInfo = false;
+            var timeOutUserFriends = false;
+            var timeOutUserFollowers = false;
+            var chartUserInfo = echarts.init(document.getElementById('chartUserInfo'));
+            var chartUserFriends = echarts.init(document.getElementById('chartUserFriends'));
+            var chartUserFollowers = echarts.init(document.getElementById('chartUserFollowers'));
 
             $(document).ready(function() {
-
                 $("#dataCapture").click(function () {
-                    var userDatabase = $("#userDatabase").val();
-                    var userCollection = $("#userCollection").val();
                     var screenNameList = $("#screenNameList").val();
-                    var description = $("#description").val();
-                    var creator = $("#creator").val();
                     var accountIdList = $("#accountIdList").val();
-                    var type = $("#type").val();
-                    $.get("/twitter/twitterCapture/", {
-                        'userDatabase': userDatabase,
-                        'userCollection': userCollection,
-                        'type': type,
-                        'screenNameList': screenNameList,
-                        'accountIdList': accountIdList,
-                        'creator': creator,
-                        'description': description
-                    }, function (ret) {
-                        $('#result').html(ret)
-                    });
+                    var selectUserDatabase = $("#selectUserDatabase").val();
+                    if (selectUserDatabase == '选择数据库')
+                    {
+                        alert("请先选择用户数据库");
+                    }
+                    var fileObj = document.getElementById("myfile").files[0]; // 获取文件对象
+                // FormData 对象
+                    var form = new FormData();
+                    form.append("screenNameList", screenNameList);
+                    form.append("accountIdList", accountIdList);
+                    form.append("selectUserDatabase", selectUserDatabase);
+                    var str=document.getElementsByName("type");
+                    var objarray=str.length;
+                    var chestr=0;
+                    var typeList = [];
+                    for (i=0;i<objarray;i++)
+                    {
+                          if(str[i].checked == true)
+                          {
+                              typeList.push(str[i].value);
+                              chestr = chestr + 1;
+                          }
+                    }
+                    if(chestr == 0)
+                    {
+                        alert("请先选择采集类型，可以多选");
+                    }
+                    else{
+                        form.append("type", typeList);
+                    }
+                    form.append("myfile", fileObj);
+                    if (selectUserDatabase != '选择数据库' && chestr != 0){
+                        $.ajax({
+                        url: '/twitter/twitterCapture/',
+                        type: 'POST',
+                        cache: false,
+                        data: form,
+                        processData: false,
+                        contentType: false
+                        }).done(function(ret) {
+                            if (ret['level'] == 'normal'){
+                                processNameUserInfo = ret['processName']['userInfo'];
+                                processNameUserFriends = ret['processName']['userFriends'];
+                                processNameUserFollowers = ret['processName']['userFollowers'];
+                                $('#result').html(ret['content']);
+                                timeOutUserInfo = false;
+                                timeOutUserFriends = false;
+                                timeOutUserFollowers = false;
+                                var option = {
+                                tooltip: {
+                                    trigger: 'axis',
+                                    formatter: function (params) {
+                                        params = params[0];
+                                        return params.value[1];
+                                    },
+                                    axisPointer: {
+                                        animation: false
+                                    }
+                                },
+                                xAxis: {
+                                    type: 'time',
+                                    splitLine: {
+                                        show: false
+                                    },
+                                    name:'时间轴'
+                                },
+                                yAxis: {
+                                    type: 'value',
+                                    splitLine: {
+                                        show: false
+                                    },
+                                    name:'采集进程IO速率：bytes/3每秒'
+                                }
+                                };
+
+
+                            option['title'] = {
+                                text: '用户信息采集',
+                                x:'center',
+                                textStyle: {
+                                fontSize: 18,
+                                fontWeight: 'bolder',
+                                color: '#333'}
+                            };
+                            option['series'] = [{
+                                name: '模拟数据',
+                                type: 'line',
+                                showSymbol: false,
+                                hoverAnimation: false,
+                                data: dataListUserInfo
+                            }];
+                            chartUserInfo.setOption(option);
+
+                            option['title'] = {
+                                    text: '用户朋友ID采集',
+                                    x:'center',
+                                    textStyle: {
+                                    fontSize: 18,
+                                    fontWeight: 'bolder',
+                                    color: '#333'}
+                                };
+                                option['series'] = [{
+                                    name: '模拟数据',
+                                    type: 'line',
+                                    showSymbol: false,
+                                    hoverAnimation: false,
+                                    data: dataListUserFriends
+                                }];
+                            chartUserFriends.setOption(option);
+
+                            option['title'] = {
+                                    text: '用户粉丝ID采集',
+                                    x:'center',
+                                    textStyle: {
+                                    fontSize: 18,
+                                    fontWeight: 'bolder',
+                                    color: '#333'}
+                                };
+                                option['series'] = [{
+                                    name: '模拟数据',
+                                    type: 'line',
+                                    showSymbol: false,
+                                    hoverAnimation: false,
+                                    data: dataListUserFollowers
+                                }];
+                            chartUserFollowers.setOption(option);
+                            if(typeList.indexOf('userInfo') != -1){
+                                time('userInfo');
+                            }
+                            if(typeList.indexOf('userFriends') != -1){
+                                time('userFriends');
+                            }
+                            if(typeList.indexOf('userFollowers') != -1){
+                                time('userFollowers');
+                            }
+                            }
+                        });
+                    }
                 });
                 $("#checkSchedule").click(function () {
-                    var processName = $("#processName").val();
                     $.get("/twitter/twitterCheck/", {
-                        'processName': processName,
+                        'processName': processName
                     }, function (ret) {
                         $('#result').html(ret)
                     });
                 });
 
-                $("#terminate").click(function () {
-                    var processName = $("#processName").val();
+                $("#terminateUserInfo").click(function () {
                     $.get("/twitter/twitterTerminate/", {
-                        'processName':processName
+                        'processName':processNameUserInfo
                     }, function (ret) {
+                        resultBeforeUserInfo = 0;
+                        now = +new Date();
+                        dataListUserInfo = [];
+                        for (var i = 0 ; i < len ; i++)
+                        {
+                            dataListUserInfo.unshift({value:[now,0]});
+                            now = new Date(+now - internal);
+                        }
+                        $('#result').html(ret)
+                    });
+                });
+
+                $("#terminateUserFriends").click(function () {
+                    $.get("/twitter/twitterTerminate/", {
+                        'processName':processNameUserFriends
+                    }, function (ret) {
+                        resultBeforeUserFriends = 0;
+                        now = +new Date();
+                        dataListUserFriends = [];
+                        for (var i = 0 ; i < len ; i++)
+                        {
+                            dataListUserFriends.unshift({value:[now,0]});
+                            now = new Date(+now - internal);
+                        }
+                        $('#result').html(ret)
+                    });
+                });
+
+                $("#terminateUserFollowers").click(function () {
+                    $.get("/twitter/twitterTerminate/", {
+                        'processName':processNameUserFollowers
+                    }, function (ret) {
+                        now = +new Date();
+                        dataListUserFollowers = [];
+                        for (var i = 0 ; i < len ; i++)
+                        {
+                            dataListUserFollowers.unshift({value:[now,0]});
+                            now = new Date(+now - internal);
+                        }
+                        resultBeforeUserFollowers = 0;
                         $('#result').html(ret)
                     });
                 });
 
             });
+
+            function time(type) {
+                if(type=='userInfo' && timeOutUserInfo) return;
+                if(type=='userFriends' && timeOutUserFriends) return;
+                if(type=='userFollowers' && timeOutUserFollowers) return;
+                clock(type);
+                setTimeout(time,3000,type); //time是指本身,延时递归调用自己,100为间隔调用时间,单位毫秒
+            }
+            function clock(type){
+                if (type == 'userInfo'){
+                    $.get("/twitter/getProcessIO/", {
+                        'processName':processNameUserInfo
+                    }, function (ret) {
+                        if (ret['level'] == 'normal'){
+                            dataListUserInfo.shift();
+                            dataListUserInfo.push({value:[new Date(),ret['data'] - resultBeforeUserInfo]});
+                            chartUserInfo.setOption({
+                            series: [{
+                                data: dataListUserInfo
+                            }]
+                            });
+                            resultBeforeUserInfo = ret['data'];
+                        }else{
+                            timeOutUserInfo = true;
+                        }
+                    });
+                }
+                if (type == 'userFriends'){
+                    $.get("/twitter/getProcessIO/", {
+                        'processName':processNameUserFriends
+                    }, function (ret) {
+                        if (ret['level'] == 'normal'){
+                            dataListUserFriends.shift();
+                            dataListUserFriends.push({value:[new Date(),ret['data'] - resultBeforeUserFriends]});
+                            chartUserFriends.setOption({
+                            series: [{
+                                data: dataListUserFriends
+                            }]
+                            });
+                            resultBeforeUserFriends = ret['data'];
+                        }else{
+                            timeOutUserFriends = true;
+                        }
+                    });
+                }
+                if (type == 'userFollowers'){
+                    $.get("/twitter/getProcessIO/", {
+                        'processName':processNameUserFollowers
+                    }, function (ret) {
+                        if (ret['level'] == 'normal'){
+                            dataListUserFollowers.shift();
+                            dataListUserFollowers.push({value:[new Date(),ret['data'] - resultBeforeUserFollowers]});
+                            chartUserFollowers.setOption({
+                            series: [{
+                                data: dataListUserFollowers
+                            }]
+                            });
+                            resultBeforeUserFollowers = ret['data'];
+                        }else{
+                            timeOutUserFollowers = true;
+                        }
+                    });
+                }
+{#                var tweetDatabase = $("#tweetDatabase").val();#}
+{#                var tweetCollection = $("#tweetCollection").val();#}
+{#                var type = $("#type").val();#}
+{#                var dataContent = "";#}
+{#                $.get("/twitter/realtimeInfoGet/",{'tweetDatabase':tweetDatabase,'tweetCollection':tweetCollection#}
+{#                ,'type':type}, function(data) {#}
+{#                var str = "";#}
+{#                if (data['level'] == 'error'){#}
+{#                    timeOut = true;#}
+{#                    str = str + data['content'];#}
+{#                    dataContent = str;#}
+{#                }#}
+{#                else{#}
+{#                    $.each(data, function (key, value) {#}
+{#                        dataContent = "";#}
+{#                        dataContent = dataContent + '用户屏显名：' + data['user']['screen_name'] + '<br>';#}
+{#                        dataContent = dataContent + '用户自我描述：' + data['user']['description'] + '<br>';#}
+{#                        dataContent = dataContent + '推文创建时间：' + data['created_at'] + '<br>';#}
+{#                        dataContent = dataContent + '推文的内容：' + data['text'] + '<br>';#}
+{#                        dataContent = dataContent + '<br><br><br>';#}
+{#                    });#}
+{#                    dataList.push(dataContent);#}
+                  {#    超出了设定的可视化条数范围，就删除dataList前面的数据#}
+{#                if (dataList.length > totalViewNum){#}
+{#                    dataList.shift();#}
+{#                }#}
+{#                dataContent = "";#}
+{#                for (var i = 0 ; i < dataList.length ;i++){#}
+{#                    dataContent += dataList[i];#}
+{#                }#}
+{#                }#}
+{#                $('#twitterQuery').html(dataContent);#}
+{#            });#}
+        }
         </script>
         </div>
     {% endblock %}

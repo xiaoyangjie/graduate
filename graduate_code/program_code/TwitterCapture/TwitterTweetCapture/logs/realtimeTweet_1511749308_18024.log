@@ -1,0 +1,7 @@
+Mon 27 Nov 2017 10:21:49 API.py [line:604] INFO 200 statuses/filter text thread 0's token_index 129
+Mon 27 Nov 2017 10:22:38 TwitterError.py [line:22] WARNING 400 statuses/filter text ('Connection broken: IncompleteRead(0 bytes read, 1 more expected)', IncompleteRead(0 bytes read, 1 more expected))
+Mon 27 Nov 2017 10:22:38 API.py [line:250] ERROR 400 statuses/filter text ('Connection broken: IncompleteRead(0 bytes read, 1 more expected)', IncompleteRead(0 bytes read, 1 more expected))
+Mon 27 Nov 2017 10:23:20 TwitterError.py [line:22] WARNING 400 statuses/filter text ('Connection broken: IncompleteRead(0 bytes read, 1 more expected)', IncompleteRead(0 bytes read, 1 more expected))
+Mon 27 Nov 2017 10:23:20 API.py [line:250] ERROR 400 statuses/filter text ('Connection broken: IncompleteRead(0 bytes read, 1 more expected)', IncompleteRead(0 bytes read, 1 more expected))
+Mon 27 Nov 2017 10:24:20 TwitterError.py [line:22] WARNING 400 statuses/filter text ('Connection broken: IncompleteRead(0 bytes read, 1 more expected)', IncompleteRead(0 bytes read, 1 more expected))
+Mon 27 Nov 2017 10:24:20 API.py [line:250] ERROR 400 statuses/filter text ('Connection broken: IncompleteRead(0 bytes read, 1 more expected)', IncompleteRead(0 bytes read, 1 more expected))

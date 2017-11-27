@@ -1,0 +1,49 @@
+Mon 27 Nov 2017 10:54:57 API.py [line:405] INFO start.
+Mon 27 Nov 2017 10:54:57 API.py [line:460] INFO thread 0 start.
+Mon 27 Nov 2017 10:54:57 API.py [line:460] INFO thread 1 start.
+Mon 27 Nov 2017 10:54:57 API.py [line:460] INFO thread 2 start.
+Mon 27 Nov 2017 10:54:57 API.py [line:460] INFO thread 3 start.
+Mon 27 Nov 2017 10:54:57 API.py [line:463] INFO thread 0's token_index 124
+Mon 27 Nov 2017 10:54:57 API.py [line:460] INFO thread 4 start.
+Mon 27 Nov 2017 10:54:57 API.py [line:460] INFO thread 5 start.
+Mon 27 Nov 2017 10:54:57 API.py [line:463] INFO thread 1's token_index 19
+Mon 27 Nov 2017 10:54:57 API.py [line:460] INFO thread 6 start.
+Mon 27 Nov 2017 10:54:57 API.py [line:463] INFO thread 2's token_index 465
+Mon 27 Nov 2017 10:54:57 API.py [line:460] INFO thread 7 start.
+Mon 27 Nov 2017 10:54:57 API.py [line:463] INFO thread 3's token_index 367
+Mon 27 Nov 2017 10:54:57 API.py [line:463] INFO thread 4's token_index 453
+Mon 27 Nov 2017 10:54:57 API.py [line:470] INFO user_queue size 199
+Mon 27 Nov 2017 10:54:57 API.py [line:463] INFO thread 5's token_index 326
+Mon 27 Nov 2017 10:54:57 API.py [line:463] INFO thread 6's token_index 312
+Mon 27 Nov 2017 10:54:57 API.py [line:470] INFO user_queue size 198
+Mon 27 Nov 2017 10:54:57 API.py [line:463] INFO thread 7's token_index 287
+Mon 27 Nov 2017 10:54:57 API.py [line:470] INFO user_queue size 197
+Mon 27 Nov 2017 10:54:57 API.py [line:471] INFO start process 284197383 blxcknicotine
+Mon 27 Nov 2017 10:54:57 API.py [line:470] INFO user_queue size 196
+Mon 27 Nov 2017 10:54:57 API.py [line:470] INFO user_queue size 195
+Mon 27 Nov 2017 10:54:57 API.py [line:471] INFO start process 15846407 TheEllenShow
+Mon 27 Nov 2017 10:54:57 API.py [line:470] INFO user_queue size 193
+Mon 27 Nov 2017 10:54:57 API.py [line:470] INFO user_queue size 194
+Mon 27 Nov 2017 10:54:57 API.py [line:471] INFO start process 1251828655 TheDeeKosh
+Mon 27 Nov 2017 10:54:57 API.py [line:470] INFO user_queue size 192
+Mon 27 Nov 2017 10:54:57 API.py [line:88] INFO value: 284197383, blxcknicotine
+Mon 27 Nov 2017 10:54:57 API.py [line:471] INFO start process 444413055 smrtsg
+Mon 27 Nov 2017 10:54:57 API.py [line:471] INFO start process 38140836 SingaporePolice
+Mon 27 Nov 2017 10:54:57 API.py [line:88] INFO value: 15846407, TheEllenShow
+Mon 27 Nov 2017 10:54:57 API.py [line:471] INFO start process 21366823 allkpop
+Mon 27 Nov 2017 10:54:57 API.py [line:471] INFO start process 14372143 jasonfried
+Mon 27 Nov 2017 10:54:57 API.py [line:88] INFO value: 1251828655, TheDeeKosh
+Mon 27 Nov 2017 10:54:57 API.py [line:471] INFO start process 76577609 MOEsg
+Mon 27 Nov 2017 10:54:57 API.py [line:88] INFO value: 444413055, smrtsg
+Mon 27 Nov 2017 10:54:57 API.py [line:88] INFO value: 38140836, SingaporePolice
+Mon 27 Nov 2017 10:54:57 API.py [line:88] INFO value: 21366823, allkpop
+Mon 27 Nov 2017 10:54:57 API.py [line:88] INFO value: 14372143, jasonfried
+Mon 27 Nov 2017 10:54:57 API.py [line:88] INFO value: 76577609, MOEsg
+Mon 27 Nov 2017 10:55:10 TwitterError.py [line:34] INFO Status code 403: Twitter request failed
+Mon 27 Nov 2017 10:55:10 API.py [line:122] ERROR Twitter request failed
+Mon 27 Nov 2017 10:55:10 TwitterError.py [line:34] INFO Status code 403: Twitter request failed
+Mon 27 Nov 2017 10:55:10 API.py [line:528] ERROR 403	Twitter request failed
+Mon 27 Nov 2017 10:55:10 TwitterError.py [line:34] INFO Status code 403: Twitter request failed
+Mon 27 Nov 2017 10:55:10 API.py [line:470] INFO user_queue size 191
+Mon 27 Nov 2017 10:55:10 API.py [line:471] INFO start process 115624161 YahooSG
+Mon 27 Nov 2017 10:55:10 API.py [line:88] INFO value: 115624161, YahooSG

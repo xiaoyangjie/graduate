@@ -11,9 +11,8 @@ from multiprocessing import Process, freeze_support
 import psutil
 # for pid in psutil.pids():
     # print pid, psutil.Process(pid).name
-psutil.Process(13488).terminate()
-# 13488
-import multiprocessing
+# print psutil.net_io_counters()
+print int('66666')
 # print psutil.pid_exists(16112)
 # print time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
 

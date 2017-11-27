@@ -1,0 +1,27 @@
+Mon 27 Nov 2017 14:45:07 rest_api get_users_ids 15892 Thread-1 [line:212] INFO id: 747785298940067840, type: followers, get: 3
+Mon 27 Nov 2017 14:45:07 rest_api __get_users_follow 15892 Thread-1 [line:572] INFO 747785298940067840 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:45:07 rest_api __get_users_follow 15892 Thread-1 [line:576] INFO id: 747785298940067840, type: followers, total: 3
+Mon 27 Nov 2017 14:45:07 rest_api get_users_ids 10872 Thread-2 [line:212] INFO id: 38686803, type: followers, get: 796
+Mon 27 Nov 2017 14:45:07 rest_api __get_users_follow 10872 Thread-2 [line:572] INFO 38686803 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:45:07 rest_api __get_users_follow 10872 Thread-2 [line:576] INFO id: 38686803, type: followers, total: 796
+Mon 27 Nov 2017 14:45:08 rest_api get_users_ids 11380 Thread-4 [line:212] INFO id: 216558300, type: followers, get: 5000
+Mon 27 Nov 2017 14:45:08 rest_api __get_users_follow 11380 Thread-4 [line:572] INFO 216558300 finish, next_cursor=1581627581586930953, rest_num=0
+Mon 27 Nov 2017 14:45:08 rest_api __get_users_follow 11380 Thread-4 [line:576] INFO id: 216558300, type: followers, total: 5000
+Mon 27 Nov 2017 14:45:10 rest_api get_users_ids 19524 Thread-3 [line:212] INFO id: 637313893, type: followers, get: 5000
+Mon 27 Nov 2017 14:45:10 rest_api __get_users_follow 19524 Thread-3 [line:572] INFO 637313893 finish, next_cursor=1585149914164353799, rest_num=0
+Mon 27 Nov 2017 14:45:10 rest_api __get_users_follow 19524 Thread-3 [line:576] INFO id: 637313893, type: followers, total: 5000
+Mon 27 Nov 2017 14:45:21 rest_api get_users_ids 19524 Thread-3 [line:212] INFO id: 226624742, type: followers, get: 622
+Mon 27 Nov 2017 14:45:21 rest_api __get_users_follow 19524 Thread-3 [line:572] INFO 226624742 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:45:21 rest_api __get_users_follow 19524 Thread-3 [line:576] INFO id: 226624742, type: followers, total: 622
+Mon 27 Nov 2017 14:45:32 rest_api get_users_ids 19524 Thread-3 [line:212] INFO id: 283835151, type: followers, get: 417
+Mon 27 Nov 2017 14:45:32 rest_api __get_users_follow 19524 Thread-3 [line:572] INFO 283835151 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:45:32 rest_api __get_users_follow 19524 Thread-3 [line:576] INFO id: 283835151, type: followers, total: 417
+Mon 27 Nov 2017 14:45:33 rest_api get_users_ids 11380 Thread-4 [line:212] INFO id: 3077784184, type: followers, get: 5000
+Mon 27 Nov 2017 14:45:33 rest_api __get_users_follow 11380 Thread-4 [line:572] INFO 3077784184 finish, next_cursor=1540452792599386095, rest_num=0
+Mon 27 Nov 2017 14:45:33 rest_api __get_users_follow 11380 Thread-4 [line:576] INFO id: 3077784184, type: followers, total: 5000
+Mon 27 Nov 2017 14:45:33 rest_api get_users_ids 10872 Thread-2 [line:212] INFO id: 487118986, type: followers, get: 5000
+Mon 27 Nov 2017 14:45:33 rest_api __get_users_follow 10872 Thread-2 [line:572] INFO 487118986 finish, next_cursor=1585163359797633232, rest_num=0
+Mon 27 Nov 2017 14:45:33 rest_api __get_users_follow 10872 Thread-2 [line:576] INFO id: 487118986, type: followers, total: 5000
+Mon 27 Nov 2017 14:45:33 rest_api get_users_ids 15892 Thread-1 [line:212] INFO id: 456178697, type: followers, get: 5000
+Mon 27 Nov 2017 14:45:33 rest_api __get_users_follow 15892 Thread-1 [line:572] INFO 456178697 finish, next_cursor=1580247252682035851, rest_num=0
+Mon 27 Nov 2017 14:45:33 rest_api __get_users_follow 15892 Thread-1 [line:576] INFO id: 456178697, type: followers, total: 5000

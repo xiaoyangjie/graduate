@@ -30,16 +30,16 @@ def infoGet(userDatabase=None,userCollection=None,screenNameList=None,accountIdL
     :return:
     """
     result = []
-    num = 10  #每次返回的条数
-    if _type == 'user':
+    num = 5  #每次返回的条数
+    if _type in ('userInfo','userFriends','userFollowers'):
         _assert() #判断数据库是否存在
         userClient = MongoClient(MONGOHOST)[userDatabase][userCollection]
-        if screenNameList != ['']:
+        if screenNameList is not None:
             for screenName in screenNameList:
                 user = userClient.find_one({'screen_name': screenName})
                 user.pop('_id')
                 result.append(user)
-        elif accountIdList != ['']:
+        elif accountIdList is not None:
             for accountId in accountIdList:
                 user = userClient.find_one({'id':accountId})
                 user.pop('_id')
@@ -49,10 +49,9 @@ def infoGet(userDatabase=None,userCollection=None,screenNameList=None,accountIdL
                 user.pop('_id')
                 result.append(user)
 
-    if _type == 'tweet':
+    if _type in ('filterTweet','historyTweet','userRealtimeTweet'):
         _assert()  # 判断数据库是否存在
         tweetClient = MongoClient(MONGOHOST)[tweetDatabase][tweetCollection]
-        #每次返回10条
         for tweet in tweetClient.find().skip(page).limit(num):
             tweet.pop('_id')
             result.append(tweet)

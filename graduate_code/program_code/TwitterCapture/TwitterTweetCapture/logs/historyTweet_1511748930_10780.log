@@ -1,0 +1,125 @@
+Mon 27 Nov 2017 10:15:30 API.py [line:405] INFO start.
+Mon 27 Nov 2017 10:15:30 API.py [line:460] INFO thread 0 start.
+Mon 27 Nov 2017 10:15:30 API.py [line:460] INFO thread 1 start.
+Mon 27 Nov 2017 10:15:30 API.py [line:460] INFO thread 2 start.
+Mon 27 Nov 2017 10:15:30 API.py [line:463] INFO thread 0's token_index 425
+Mon 27 Nov 2017 10:15:30 API.py [line:460] INFO thread 3 start.
+Mon 27 Nov 2017 10:15:30 API.py [line:460] INFO thread 4 start.
+Mon 27 Nov 2017 10:15:30 API.py [line:463] INFO thread 1's token_index 227
+Mon 27 Nov 2017 10:15:30 API.py [line:460] INFO thread 5 start.
+Mon 27 Nov 2017 10:15:30 API.py [line:463] INFO thread 2's token_index 425
+Mon 27 Nov 2017 10:15:30 API.py [line:460] INFO thread 6 start.
+Mon 27 Nov 2017 10:15:30 API.py [line:460] INFO thread 7 start.
+Mon 27 Nov 2017 10:15:30 API.py [line:463] INFO thread 3's token_index 248
+Mon 27 Nov 2017 10:15:30 API.py [line:470] INFO user_queue size 199
+Mon 27 Nov 2017 10:15:30 API.py [line:463] INFO thread 4's token_index 269
+Mon 27 Nov 2017 10:15:30 API.py [line:463] INFO thread 5's token_index 456
+Mon 27 Nov 2017 10:15:30 API.py [line:470] INFO user_queue size 198
+Mon 27 Nov 2017 10:15:30 API.py [line:463] INFO thread 6's token_index 286
+Mon 27 Nov 2017 10:15:30 API.py [line:463] INFO thread 7's token_index 55
+Mon 27 Nov 2017 10:15:30 API.py [line:470] INFO user_queue size 197
+Mon 27 Nov 2017 10:15:30 API.py [line:470] INFO user_queue size 196
+Mon 27 Nov 2017 10:15:30 API.py [line:471] INFO start process 747785298940067840 xiaoyangjie3
+Mon 27 Nov 2017 10:15:30 API.py [line:470] INFO user_queue size 195
+Mon 27 Nov 2017 10:15:30 API.py [line:471] INFO start process 38686803 heychuck
+Mon 27 Nov 2017 10:15:30 API.py [line:470] INFO user_queue size 194
+Mon 27 Nov 2017 10:15:30 API.py [line:470] INFO user_queue size 193
+Mon 27 Nov 2017 10:15:30 API.py [line:471] INFO start process 637313893 IBGDRGN
+Mon 27 Nov 2017 10:15:30 API.py [line:470] INFO user_queue size 192
+Mon 27 Nov 2017 10:15:30 API.py [line:471] INFO start process 253073155 jaureguh
+Mon 27 Nov 2017 10:15:30 API.py [line:88] INFO value: 747785298940067840, xiaoyangjie3
+Mon 27 Nov 2017 10:15:30 API.py [line:471] INFO start process 216558300 iamscottpage
+Mon 27 Nov 2017 10:15:30 API.py [line:88] INFO value: 38686803, heychuck
+Mon 27 Nov 2017 10:15:30 API.py [line:471] INFO start process 456178697 lynxhollow
+Mon 27 Nov 2017 10:15:30 API.py [line:471] INFO start process 487118986 XHNews
+Mon 27 Nov 2017 10:15:30 API.py [line:88] INFO value: 637313893, IBGDRGN
+Mon 27 Nov 2017 10:15:30 API.py [line:471] INFO start process 3077784184 songpills
+Mon 27 Nov 2017 10:15:30 API.py [line:88] INFO value: 253073155, jaureguh
+Mon 27 Nov 2017 10:15:30 API.py [line:88] INFO value: 216558300, iamscottpage
+Mon 27 Nov 2017 10:15:30 API.py [line:88] INFO value: 456178697, lynxhollow
+Mon 27 Nov 2017 10:15:30 API.py [line:88] INFO value: 487118986, XHNews
+Mon 27 Nov 2017 10:15:30 API.py [line:88] INFO value: 3077784184, songpills
+Mon 27 Nov 2017 10:15:43 TwitterError.py [line:34] INFO Status code 401: Twitter request failed
+Mon 27 Nov 2017 10:15:43 API.py [line:122] ERROR Twitter request failed
+Mon 27 Nov 2017 10:15:43 TwitterError.py [line:34] INFO Status code 401: Twitter request failed
+Mon 27 Nov 2017 10:15:43 API.py [line:500] WARNING 253073155 jaureguhis protected.
+Mon 27 Nov 2017 10:15:43 API.py [line:470] INFO user_queue size 191
+Mon 27 Nov 2017 10:15:43 API.py [line:471] INFO start process 226624742 danielaidu
+Mon 27 Nov 2017 10:15:43 API.py [line:88] INFO value: 226624742, danielaidu
+Mon 27 Nov 2017 10:15:55 API.py [line:554] INFO 747785298940067840 xiaoyangjie3 total insert 22 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:15:55 API.py [line:470] INFO user_queue size 190
+Mon 27 Nov 2017 10:15:55 API.py [line:471] INFO start process 283835151 veroschuerta
+Mon 27 Nov 2017 10:15:55 API.py [line:88] INFO value: 283835151, veroschuerta
+Mon 27 Nov 2017 10:15:58 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/user_timeline.json?count=100&user_id=226624742 (Caused by ProxyError('Cannot connect to proxy.', timeout('timed out',)))
+Mon 27 Nov 2017 10:16:07 API.py [line:554] INFO 3077784184 songpills total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:07 API.py [line:470] INFO user_queue size 189
+Mon 27 Nov 2017 10:16:07 API.py [line:471] INFO start process 176954922 FernandoLeyva_
+Mon 27 Nov 2017 10:16:07 API.py [line:88] INFO value: 176954922, FernandoLeyva_
+Mon 27 Nov 2017 10:16:09 API.py [line:554] INFO 456178697 lynxhollow total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:09 API.py [line:470] INFO user_queue size 188
+Mon 27 Nov 2017 10:16:09 API.py [line:471] INFO start process 75849006 lorenasuxx
+Mon 27 Nov 2017 10:16:09 API.py [line:88] INFO value: 75849006, lorenasuxx
+Mon 27 Nov 2017 10:16:10 API.py [line:554] INFO 487118986 XHNews total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:10 API.py [line:470] INFO user_queue size 187
+Mon 27 Nov 2017 10:16:10 API.py [line:471] INFO start process 14372486 engadget
+Mon 27 Nov 2017 10:16:10 API.py [line:88] INFO value: 14372486, engadget
+Mon 27 Nov 2017 10:16:10 API.py [line:554] INFO 216558300 iamscottpage total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:10 API.py [line:470] INFO user_queue size 186
+Mon 27 Nov 2017 10:16:10 API.py [line:471] INFO start process 558797310 ManUtd
+Mon 27 Nov 2017 10:16:10 API.py [line:88] INFO value: 558797310, ManUtd
+Mon 27 Nov 2017 10:16:13 API.py [line:554] INFO 637313893 IBGDRGN total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:13 API.py [line:470] INFO user_queue size 185
+Mon 27 Nov 2017 10:16:13 API.py [line:471] INFO start process 45067861 AnaEngelll
+Mon 27 Nov 2017 10:16:13 API.py [line:88] INFO value: 45067861, AnaEngelll
+Mon 27 Nov 2017 10:16:29 API.py [line:554] INFO 38686803 heychuck total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:29 API.py [line:470] INFO user_queue size 184
+Mon 27 Nov 2017 10:16:29 API.py [line:471] INFO start process 239394793 mingkki21
+Mon 27 Nov 2017 10:16:29 API.py [line:88] INFO value: 239394793, mingkki21
+Mon 27 Nov 2017 10:16:33 API.py [line:554] INFO 226624742 danielaidu total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:33 API.py [line:470] INFO user_queue size 183
+Mon 27 Nov 2017 10:16:33 API.py [line:471] INFO start process 401478793 haroobomkum
+Mon 27 Nov 2017 10:16:33 API.py [line:88] INFO value: 401478793, haroobomkum
+Mon 27 Nov 2017 10:16:33 API.py [line:554] INFO 283835151 veroschuerta total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:33 API.py [line:470] INFO user_queue size 182
+Mon 27 Nov 2017 10:16:33 API.py [line:471] INFO start process 43815496 TheRealRyanHiga
+Mon 27 Nov 2017 10:16:33 API.py [line:88] INFO value: 43815496, TheRealRyanHiga
+Mon 27 Nov 2017 10:16:39 API.py [line:554] INFO 14372486 engadget total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:39 API.py [line:470] INFO user_queue size 181
+Mon 27 Nov 2017 10:16:39 API.py [line:471] INFO start process 828742454 krungy21
+Mon 27 Nov 2017 10:16:39 API.py [line:88] INFO value: 828742454, krungy21
+Mon 27 Nov 2017 10:16:39 API.py [line:554] INFO 176954922 FernandoLeyva_ total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:39 API.py [line:470] INFO user_queue size 180
+Mon 27 Nov 2017 10:16:39 API.py [line:471] INFO start process 284197383 blxcknicotine
+Mon 27 Nov 2017 10:16:39 API.py [line:88] INFO value: 284197383, blxcknicotine
+Mon 27 Nov 2017 10:16:45 API.py [line:554] INFO 558797310 ManUtd total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:16:45 API.py [line:470] INFO user_queue size 179
+Mon 27 Nov 2017 10:16:45 API.py [line:471] INFO start process 174266952 Realtaeyang
+Mon 27 Nov 2017 10:16:45 API.py [line:88] INFO value: 174266952, Realtaeyang
+Mon 27 Nov 2017 10:17:01 API.py [line:554] INFO 401478793 haroobomkum total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:17:01 API.py [line:470] INFO user_queue size 178
+Mon 27 Nov 2017 10:17:01 API.py [line:471] INFO start process 15846407 TheEllenShow
+Mon 27 Nov 2017 10:17:01 API.py [line:88] INFO value: 15846407, TheEllenShow
+Mon 27 Nov 2017 10:17:04 API.py [line:554] INFO 239394793 mingkki21 total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:17:04 API.py [line:470] INFO user_queue size 177
+Mon 27 Nov 2017 10:17:04 API.py [line:471] INFO start process 1251828655 TheDeeKosh
+Mon 27 Nov 2017 10:17:04 API.py [line:88] INFO value: 1251828655, TheDeeKosh
+Mon 27 Nov 2017 10:17:06 API.py [line:554] INFO 75849006 lorenasuxx total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:17:06 API.py [line:470] INFO user_queue size 176
+Mon 27 Nov 2017 10:17:06 API.py [line:471] INFO start process 444413055 smrtsg
+Mon 27 Nov 2017 10:17:06 API.py [line:88] INFO value: 444413055, smrtsg
+Mon 27 Nov 2017 10:17:07 API.py [line:554] INFO 828742454 krungy21 total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:17:07 API.py [line:470] INFO user_queue size 175
+Mon 27 Nov 2017 10:17:07 API.py [line:471] INFO start process 38140836 SingaporePolice
+Mon 27 Nov 2017 10:17:07 API.py [line:88] INFO value: 38140836, SingaporePolice
+Mon 27 Nov 2017 10:17:08 API.py [line:554] INFO 43815496 TheRealRyanHiga total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:17:08 API.py [line:470] INFO user_queue size 174
+Mon 27 Nov 2017 10:17:08 API.py [line:471] INFO start process 14372143 jasonfried
+Mon 27 Nov 2017 10:17:08 API.py [line:88] INFO value: 14372143, jasonfried
+Mon 27 Nov 2017 10:17:11 API.py [line:554] INFO 45067861 AnaEngelll total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:17:11 API.py [line:470] INFO user_queue size 173
+Mon 27 Nov 2017 10:17:11 API.py [line:471] INFO start process 21366823 allkpop
+Mon 27 Nov 2017 10:17:11 API.py [line:88] INFO value: 21366823, allkpop
+Mon 27 Nov 2017 10:17:15 API.py [line:554] INFO 174266952 Realtaeyang total insert 200 tweets. duplicate 0 tweets.
+Mon 27 Nov 2017 10:17:15 API.py [line:470] INFO user_queue size 172
+Mon 27 Nov 2017 10:17:15 API.py [line:471] INFO start process 76577609 MOEsg
+Mon 27 Nov 2017 10:17:15 API.py [line:88] INFO value: 76577609, MOEsg

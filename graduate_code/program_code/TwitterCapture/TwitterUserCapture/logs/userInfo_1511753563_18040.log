@@ -1,0 +1,4 @@
+Mon 27 Nov 2017 11:33:00 TwitterError __init__ 17328 MainThread [line:34] INFO Status code 404: Twitter request failed
+Mon 27 Nov 2017 11:33:00 rest_api get_users_lookup 17328 MainThread [line:105] ERROR Twitter request failed
+Mon 27 Nov 2017 11:33:00 rest_api get_users_lookup 17328 MainThread [line:111] INFO users: 1, success: 0
+Mon 27 Nov 2017 11:33:00 rest_api get_users_lookup 17328 MainThread [line:115] INFO failed name: [u'xiaoayngjie3']

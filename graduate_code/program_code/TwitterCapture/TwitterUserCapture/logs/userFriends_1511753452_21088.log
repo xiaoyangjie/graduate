@@ -1,0 +1,5 @@
+Mon 27 Nov 2017 11:30:53 rest_api get_users_follow 8008 MainThread [line:506] INFO list: [u'xiaoayngjie3']
+Mon 27 Nov 2017 11:31:06 TwitterError __init__ 19536 Thread-1 [line:34] INFO Status code 404: Twitter request failed
+Mon 27 Nov 2017 11:31:06 rest_api get_users_ids 19536 Thread-1 [line:188] INFO screen_name: xiaoayngjie3, not found
+Mon 27 Nov 2017 11:31:06 rest_api __get_users_follow 19536 Thread-1 [line:572] INFO xiaoayngjie3 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 11:31:06 rest_api __get_users_follow 19536 Thread-1 [line:576] INFO screen_name: xiaoayngjie3, type: friends, total: 0

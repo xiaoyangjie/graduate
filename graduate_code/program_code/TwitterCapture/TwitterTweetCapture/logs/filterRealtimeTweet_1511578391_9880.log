@@ -1,0 +1,8 @@
+Sat 25 Nov 2017 10:53:12 API.py [line:660] INFO start
+Sat 25 Nov 2017 10:53:12 API.py [line:692] INFO thread 0 start.
+Sat 25 Nov 2017 10:53:12 API.py [line:695] INFO thread 0's token_index 344
+Sat 25 Nov 2017 10:53:12 API.py [line:696] INFO {u'access_token': u'721926456482390016-Cg7aYWAryj5qWxXRhfo1aGtcUhRgrpq', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'qAFu92WRXk6F1KMAOZ1zV0WZ301yF6PxUMx64MGNOCj5x'}
+Sat 25 Nov 2017 10:53:12 API.py [line:697] INFO [u'china']
+Sat 25 Nov 2017 10:53:12 API.py [line:698] INFO ['192.168.1.148:8118']
+Sat 25 Nov 2017 10:53:37 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error(10061, '')))
+Sat 25 Nov 2017 10:53:37 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error(10061, '')))

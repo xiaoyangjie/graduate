@@ -45,7 +45,6 @@ INSTALLED_APPS = [
 
     'twitter',
     'total_index',
-    'event',
     'linkedin',
     'search',
     # 'query',

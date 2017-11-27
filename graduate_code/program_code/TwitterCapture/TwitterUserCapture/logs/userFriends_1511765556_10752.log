@@ -1,0 +1,75 @@
+Mon 27 Nov 2017 14:52:49 rest_api get_users_ids 16136 Thread-1 [line:212] INFO id: 23075496, type: friends, get: 1187
+Mon 27 Nov 2017 14:52:49 rest_api __get_users_follow 16136 Thread-1 [line:572] INFO 23075496 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:52:49 rest_api __get_users_follow 16136 Thread-1 [line:576] INFO id: 23075496, type: friends, total: 1187
+Mon 27 Nov 2017 14:52:49 rest_api get_users_ids 9944 Thread-4 [line:212] INFO id: 391500167, type: friends, get: 1225
+Mon 27 Nov 2017 14:52:49 rest_api __get_users_follow 9944 Thread-4 [line:572] INFO 391500167 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:52:49 rest_api __get_users_follow 9944 Thread-4 [line:576] INFO id: 391500167, type: friends, total: 1225
+Mon 27 Nov 2017 14:52:57 rest_api get_users_ids 13544 Thread-2 [line:212] INFO id: 1335456703, type: friends, get: 1132
+Mon 27 Nov 2017 14:52:57 rest_api __get_users_follow 13544 Thread-2 [line:572] INFO 1335456703 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:52:57 rest_api __get_users_follow 13544 Thread-2 [line:576] INFO id: 1335456703, type: friends, total: 1132
+Mon 27 Nov 2017 14:53:01 rest_api get_users_ids 5864 Thread-3 [line:212] INFO id: 2164601923, type: friends, get: 915
+Mon 27 Nov 2017 14:53:01 rest_api __get_users_follow 5864 Thread-3 [line:572] INFO 2164601923 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:01 rest_api __get_users_follow 5864 Thread-3 [line:576] INFO id: 2164601923, type: friends, total: 915
+Mon 27 Nov 2017 14:53:01 rest_api get_users_ids 16136 Thread-1 [line:212] INFO id: 824666877960028161, type: friends, get: 3002
+Mon 27 Nov 2017 14:53:01 rest_api __get_users_follow 16136 Thread-1 [line:572] INFO 824666877960028161 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:01 rest_api __get_users_follow 16136 Thread-1 [line:576] INFO id: 824666877960028161, type: friends, total: 3002
+Mon 27 Nov 2017 14:53:04 rest_api get_users_ids 9944 Thread-4 [line:212] INFO id: 775937971, type: friends, get: 4999
+Mon 27 Nov 2017 14:53:04 rest_api __get_users_follow 9944 Thread-4 [line:572] INFO 775937971 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:04 rest_api __get_users_follow 9944 Thread-4 [line:576] INFO id: 775937971, type: friends, total: 4999
+Mon 27 Nov 2017 14:53:13 TwitterError __init__ 5864 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Mon 27 Nov 2017 14:53:13 rest_api get_users_ids 5864 Thread-3 [line:191] ERROR Twitter request failed
+Mon 27 Nov 2017 14:53:13 TwitterError __init__ 5864 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Mon 27 Nov 2017 14:53:13 rest_api get_users_ids 13544 Thread-2 [line:212] INFO id: 19023939, type: friends, get: 5000
+Mon 27 Nov 2017 14:53:13 rest_api __get_users_follow 13544 Thread-2 [line:572] INFO 19023939 finish, next_cursor=1478759970885816703, rest_num=0
+Mon 27 Nov 2017 14:53:13 rest_api __get_users_follow 13544 Thread-2 [line:576] INFO id: 19023939, type: friends, total: 5000
+Mon 27 Nov 2017 14:53:16 TwitterError __init__ 16136 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Mon 27 Nov 2017 14:53:16 rest_api get_users_ids 16136 Thread-1 [line:191] ERROR Twitter request failed
+Mon 27 Nov 2017 14:53:16 TwitterError __init__ 16136 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Mon 27 Nov 2017 14:53:21 rest_api get_users_ids 9944 Thread-4 [line:212] INFO id: 1112999718, type: friends, get: 1329
+Mon 27 Nov 2017 14:53:21 rest_api __get_users_follow 9944 Thread-4 [line:572] INFO 1112999718 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:21 rest_api __get_users_follow 9944 Thread-4 [line:576] INFO id: 1112999718, type: friends, total: 1329
+Mon 27 Nov 2017 14:53:25 rest_api get_users_ids 13544 Thread-2 [line:212] INFO id: 771725713, type: friends, get: 4970
+Mon 27 Nov 2017 14:53:25 rest_api __get_users_follow 13544 Thread-2 [line:572] INFO 771725713 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:25 rest_api __get_users_follow 13544 Thread-2 [line:576] INFO id: 771725713, type: friends, total: 4970
+Mon 27 Nov 2017 14:53:26 rest_api get_users_ids 5864 Thread-3 [line:212] INFO id: 2545900439, type: friends, get: 4988
+Mon 27 Nov 2017 14:53:26 rest_api __get_users_follow 5864 Thread-3 [line:572] INFO 2545900439 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:26 rest_api __get_users_follow 5864 Thread-3 [line:576] INFO id: 2545900439, type: friends, total: 4988
+Mon 27 Nov 2017 14:53:29 rest_api get_users_ids 16136 Thread-1 [line:212] INFO id: 2737997509, type: friends, get: 760
+Mon 27 Nov 2017 14:53:29 rest_api __get_users_follow 16136 Thread-1 [line:572] INFO 2737997509 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:29 rest_api __get_users_follow 16136 Thread-1 [line:576] INFO id: 2737997509, type: friends, total: 760
+Mon 27 Nov 2017 14:53:41 rest_api get_users_ids 5864 Thread-3 [line:212] INFO id: 846024202062848000, type: friends, get: 444
+Mon 27 Nov 2017 14:53:41 rest_api __get_users_follow 5864 Thread-3 [line:572] INFO 846024202062848000 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:41 rest_api __get_users_follow 5864 Thread-3 [line:576] INFO id: 846024202062848000, type: friends, total: 444
+Mon 27 Nov 2017 14:53:41 rest_api get_users_ids 13544 Thread-2 [line:212] INFO id: 21337678, type: friends, get: 997
+Mon 27 Nov 2017 14:53:41 rest_api __get_users_follow 13544 Thread-2 [line:572] INFO 21337678 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:41 rest_api __get_users_follow 13544 Thread-2 [line:576] INFO id: 21337678, type: friends, total: 997
+Mon 27 Nov 2017 14:53:43 rest_api get_users_ids 9944 Thread-4 [line:212] INFO id: 843651985081548801, type: friends, get: 275
+Mon 27 Nov 2017 14:53:43 rest_api __get_users_follow 9944 Thread-4 [line:572] INFO 843651985081548801 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:43 rest_api __get_users_follow 9944 Thread-4 [line:576] INFO id: 843651985081548801, type: friends, total: 275
+Mon 27 Nov 2017 14:53:46 rest_api get_users_ids 16136 Thread-1 [line:212] INFO id: 972779329, type: friends, get: 453
+Mon 27 Nov 2017 14:53:46 rest_api __get_users_follow 16136 Thread-1 [line:572] INFO 972779329 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:46 rest_api __get_users_follow 16136 Thread-1 [line:576] INFO id: 972779329, type: friends, total: 453
+Mon 27 Nov 2017 14:53:54 rest_api get_users_ids 9944 Thread-4 [line:212] INFO id: 360650595, type: friends, get: 919
+Mon 27 Nov 2017 14:53:54 rest_api __get_users_follow 9944 Thread-4 [line:572] INFO 360650595 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:54 rest_api __get_users_follow 9944 Thread-4 [line:576] INFO id: 360650595, type: friends, total: 919
+Mon 27 Nov 2017 14:53:56 rest_api get_users_ids 5864 Thread-3 [line:212] INFO id: 18700457, type: friends, get: 419
+Mon 27 Nov 2017 14:53:56 rest_api __get_users_follow 5864 Thread-3 [line:572] INFO 18700457 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:53:56 rest_api __get_users_follow 5864 Thread-3 [line:576] INFO id: 18700457, type: friends, total: 419
+Mon 27 Nov 2017 14:54:01 TwitterError __init__ 16136 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Mon 27 Nov 2017 14:54:01 rest_api get_users_ids 16136 Thread-1 [line:191] ERROR Twitter request failed
+Mon 27 Nov 2017 14:54:01 TwitterError __init__ 16136 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Mon 27 Nov 2017 14:54:05 rest_api get_users_ids 13544 Thread-2 [line:212] INFO id: 21947182, type: friends, get: 2178
+Mon 27 Nov 2017 14:54:05 rest_api __get_users_follow 13544 Thread-2 [line:572] INFO 21947182 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:54:05 rest_api __get_users_follow 13544 Thread-2 [line:576] INFO id: 21947182, type: friends, total: 2178
+Mon 27 Nov 2017 14:54:06 rest_api get_users_ids 9944 Thread-4 [line:212] INFO id: 52065220, type: friends, get: 1300
+Mon 27 Nov 2017 14:54:06 rest_api __get_users_follow 9944 Thread-4 [line:572] INFO 52065220 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:54:06 rest_api __get_users_follow 9944 Thread-4 [line:576] INFO id: 52065220, type: friends, total: 1300
+Mon 27 Nov 2017 14:54:14 TwitterError __init__ 5864 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Mon 27 Nov 2017 14:54:14 rest_api get_users_ids 5864 Thread-3 [line:191] ERROR Twitter request failed
+Mon 27 Nov 2017 14:54:14 TwitterError __init__ 5864 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Mon 27 Nov 2017 14:54:14 rest_api get_users_ids 16136 Thread-1 [line:212] INFO id: 2800547376, type: friends, get: 427
+Mon 27 Nov 2017 14:54:14 rest_api __get_users_follow 16136 Thread-1 [line:572] INFO 2800547376 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 14:54:14 rest_api __get_users_follow 16136 Thread-1 [line:576] INFO id: 2800547376, type: friends, total: 427
+Mon 27 Nov 2017 14:54:26 TwitterError __init__ 13544 Thread-2 [line:34] INFO Status code 429: Twitter request failed
+Mon 27 Nov 2017 14:54:26 rest_api get_users_ids 13544 Thread-2 [line:191] ERROR Twitter request failed
+Mon 27 Nov 2017 14:54:26 TwitterError __init__ 13544 Thread-2 [line:34] INFO Status code 429: Twitter request failed

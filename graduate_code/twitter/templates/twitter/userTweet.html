@@ -1,0 +1,205 @@
+{% extends 'total_index/common.html' %}
+{% load static %}
+    {% block title %}Twitter用户详细信息采集{% endblock %}
+    {% block link %}
+    {% endblock %}
+
+    {% block body %}
+
+{#        <div id="Layer1" style="position:absolute; left:0; top:0; width:100%; height:100%">#}
+{#        <img src="/static/twitter/twitter_background.jpg" width="100%" height="100%"/>#}
+{#        </div>#}
+
+        <div id="wrapper">
+            <label><input name="type" type="radio" value="userRealtimeTweet" id="userRealtimeTweet"/>用户实时推文</label>
+            <label><input name="type" type="radio" value="historyTweet" id="historyTweet"/>用户历史推文</label>
+            <p><span style="display:inline-block;width:130px;text-align:right;">用户数据库:</span>
+                <select id="selectUserDatabase" style="width: 248px;background-color: rgba(10, 17, 45, 0.11);">
+                    <option selected>选择数据库</option>
+                    {% for i in user %}
+                    <option value={{ i }}>{{ i }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">推文数据库:</span>
+                <select id="selectTweetDatabase" style="width: 248px;background-color: rgba(10, 17, 45, 0.11);">
+                    <option selected>选择数据库</option>
+                    {% for i in tweet %}
+                    <option value={{ i }}>{{ i }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">用户名字列表:</span><input type="text" id="screenNameList" value="">用逗号隔开，如ra,yang</p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">用户ID列表:</span><input type="text" id="accountIdList" >用逗号隔开，如12345,6789</p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">上传用户列表:</span><input type="file" name="myfile" id="myfile"/></p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">历史推文条数:</span><input type="text" id="captureNum" value="200">最多3200条</p>
+            <button type="button" id='dataCapture'>开始采集</button>
+            <button type="button" id='terminate'>结束采集</button>
+            <br>
+            <br>
+            <textarea id='result' rows="3" cols="150"></textarea>
+            <div id="chart" style="height:400px;"></div>
+        <script src="/static/jquery_1.11.1.js"></script>
+        <script>
+            var processName = null;
+            var resultBefore = 0;
+            var totalViewNum = 5;
+            var dataList = [];
+            var len = 300;
+            var now = +new Date();
+            var internal = 3 * 1000;
+            for (var i = 0 ; i < len ; i++)
+            {
+                dataList.unshift({value:[now,0]});
+                now = new Date(+now - internal);
+            }
+            var timeOut = false;
+            var myChart = echarts.init(document.getElementById('chart'));
+
+            $(document).ready(function() {
+                $("#dataCapture").click(function () {
+                    var selectTweetDatabase = $("#selectTweetDatabase").val();
+                    if (selectTweetDatabase == '选择数据库')
+                    {
+                        alert("请选择推文数据库");
+                    }
+                    var selectUserDatabase = $("#selectUserDatabase").val();
+                    if (selectUserDatabase == '选择数据库')
+                    {
+                        alert("请选择用户数据库");
+                    }
+                    var captureNum = $("#captureNum").val();
+                    var screenNameList = $("#screenNameList").val();
+                    var accountIdList = $("#accountIdList").val();
+                    var str = document.getElementsByName("type");
+                    var fileObj = document.getElementById("myfile").files[0]; // 获取文件对象
+                    var form = new FormData();
+                    form.append("screenNameList", screenNameList);
+                    form.append("accountIdList", accountIdList);
+                    form.append("selectUserDatabase", selectUserDatabase);
+                    form.append("selectTweetDatabase", selectTweetDatabase);
+                    form.append("captureNum", captureNum);
+                    var type = null;
+                    var num = 0;
+                    if(str[0].checked == true)
+                    {
+                          type = str[0].value;
+                          num = 1;
+                    }else if(str[1].checked == true){
+                        type = str[1].value;
+                        num = 1;
+                    }
+                    if(num == 0)
+                    {
+                        alert("请先选择采集类型");
+                    }
+                    form.append("type", type);
+                    form.append("myfile", fileObj);
+                    if (selectUserDatabase != '选择数据库' && num != 0 && selectTweetDatabase != '选择数据库'){
+                        $.ajax({
+                        url: '/twitter/twitterCapture/',
+                        type: 'POST',
+                        cache: false,
+                        data: form,
+                        processData: false,
+                        contentType: false
+                        }).done(function(ret) {
+                            if (ret['level'] == 'normal'){
+                                processName = ret['processName'];
+                                $('#result').html(ret['content']);
+                                timeOut = false;
+                                option = {
+                                'title': {
+                                    text: type,
+                                    x:'center',
+                                    textStyle: {
+                                    fontSize: 18,
+                                    fontWeight: 'bolder',
+                                    color: '#333'          // 主标题文字颜色
+                                }
+                                },
+                                tooltip: {
+                                    trigger: 'axis',
+                                    formatter: function (params) {
+                                        params = params[0];
+                                        var date = new Date();
+                                        return params.value[1];
+                                    },
+                                    axisPointer: {
+                                        animation: false
+                                    }
+                                },
+
+                                xAxis: {
+                                    type: 'time',
+                                    splitLine: {
+                                        show: false
+                                    },
+                                    name:'时间轴'
+                                },
+                                yAxis: {
+                                    type: 'value',
+                                    splitLine: {
+                                        show: false
+                                    },
+                                    name:'采集进程IO速率：bytes/3每秒'
+                                },
+                                series: [{
+                                    name: '模拟数据',
+                                    type: 'line',
+                                    showSymbol: false,
+                                    hoverAnimation: false,
+                                    data: dataList
+                                }]
+                                };
+                            myChart.setOption(option);
+                            time();
+                       }
+                    });
+                    }
+                });
+
+                $("#checkSchedule").click(function () {
+                    var processName = $("#processName").val();
+                    $.get("/twitter/twitterCheck/", {
+                        'processName': processName,
+                    }, function (ret) {
+                        $('#result').html(ret)
+                    });
+                });
+
+                $("#terminate").click(function () {
+                    $.get("/twitter/twitterTerminate/", {
+                        'processName':processName
+                    }, function (ret) {
+                        $('#result').html(ret)
+                    });
+                });
+            });
+            function time() {
+{#                timeOut用于停止循环调用，现在用不到#}
+                if(timeOut) return;
+                clock();
+                setTimeout(time,3000); //time是指本身,延时递归调用自己,100为间隔调用时间,单位毫秒
+            }
+            function clock(){
+                $.get("/twitter/getProcessIO/", {
+                        'processName':processName
+                    }, function (ret) {
+                        if (ret['level'] == 'normal'){
+                            dataList.shift();
+                            dataList.push({value:[new Date(),ret['data'] - resultBefore]});
+                            myChart.setOption({
+                            series: [{
+                                data: dataList
+                            }]
+                            });
+                            resultBefore = ret['data'];
+                        }else{
+                            timeOut = true;
+                        }
+                    });
+            }
+        </script>
+        </div>
+    {% endblock %}

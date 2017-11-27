@@ -1,0 +1,7 @@
+Fri 24 Nov 2017 15:10:37 rest_api get_users_follow 10716 MainThread [line:506] INFO list: [u'xiaoyangjie3', u'heychuck']
+Fri 24 Nov 2017 15:10:57 rest_api get_users_ids 6772 Thread-1 [line:212] INFO screen_name: xiaoyangjie3, type: friends, get: 67
+Fri 24 Nov 2017 15:10:57 rest_api __get_users_follow 6772 Thread-1 [line:572] INFO xiaoyangjie3 finish, next_cursor=0, rest_num=0
+Fri 24 Nov 2017 15:10:57 rest_api __get_users_follow 6772 Thread-1 [line:576] INFO screen_name: xiaoyangjie3, type: friends, total: 67
+Fri 24 Nov 2017 15:11:06 rest_api get_users_ids 15620 Thread-2 [line:212] INFO screen_name: heychuck, type: friends, get: 632
+Fri 24 Nov 2017 15:11:06 rest_api __get_users_follow 15620 Thread-2 [line:572] INFO heychuck finish, next_cursor=0, rest_num=0
+Fri 24 Nov 2017 15:11:06 rest_api __get_users_follow 15620 Thread-2 [line:576] INFO screen_name: heychuck, type: friends, total: 632

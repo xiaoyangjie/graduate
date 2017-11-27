@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 import time
 
+from django.views.decorators.csrf import csrf_exempt
 import psutil
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -13,16 +14,20 @@ from program_code.TwitterCapture.TwitterUserCapture.UserFollowers import userFol
 from program_code.TwitterCapture.TwitterTweetCapture.FilterRealtimeTweet import filterRealtimeTweet as _filterTweetCapture
 from program_code.TwitterCapture.TwitterTweetCapture.UserRealtimeTweet import realtimeTweet as _realtimeTweetCapture
 from program_code.TwitterCapture.TwitterTweetCapture.HistoryTweet import historyTweet as _historyTweetCapture
+from program_code.TwitterCapture.TwitterTweetCapture.TwitterAPIKeywords import twitterAPIKeywords as _twitterAPIKeywordsCapture
 from program_code.TwitterCapture.GetMongoData import GetMongoData
 from multiprocessing import Process
 from pymongo import MongoClient
-from program_code.TwitterCapture.TwitterUserCapture.TwitterUserCapture.common.constants import MONGOHOST,PROCESS_DATABASE,PROCESS_COLLECTION,PROXY
-
+from program_code.TwitterCapture.TwitterUserCapture.TwitterUserCapture.common.constants import \
+    MONGOHOST,PROCESS_DATABASE,PROCESS_COLLECTION,PROXY,PROCESS_DB_COL_NAME
+from django.template import RequestContext
+from django.shortcuts import render_to_response
 def index(request):
     return render(request,'twitter/index.html')
 
 def userInfo(request):
-    return render(request, 'twitter/userInfo.html')
+    result = getDataAndColInfo()
+    return render(request,'twitter/userInfo.html',{'user':result['user']})
 
 def userFriends(request):
     return render(request, 'twitter/userFriends.html')
@@ -33,12 +38,26 @@ def userFollowers(request):
 def realtimeTweet(request):
     return render(request, 'twitter/userRealtimeTweet.html')
 
-def filterTweet(request):
-    return render(request, 'twitter/filterTweet.html')
+def keywordsTweet(request):
+    result = getDataAndColInfo()
+    return render(request, 'twitter/filterTweet.html',{'tweet':result['tweet']})
+
+def userTweet(request):
+    result = getDataAndColInfo()
+    return render(request, 'twitter/userTweet.html', {'tweet': result['tweet'],'user':result['user']})
+
+def monitor(request):
+    result = getDataAndColInfo()
+    return render(request, 'twitter/monitor.html', {'tweet': result['tweet'],'user':result['user']})
+
+def search(request):
+    result = getDataAndColInfo()
+    return render(request, 'twitter/search.html', {'tweet': result['tweet'],'user':result['user']})
 
 def historyTweet(request):
     return render(request, 'twitter/historyTweet.html')
 
+@csrf_exempt
 def twitterCapture(request):
     """
     信息采集
@@ -48,155 +67,225 @@ def twitterCapture(request):
     """
     ########初始化参数#########################
     _type = None
+    userHost = None
     userDatabase = None
     userCollection = None
     screenNameList = None
     accountIdList = None
+    tweetHost = None
     tweetDatabase = None
     tweetCollection = None
     keywords = None
     proxyList = [PROXY]
     description = None
     creator = None
-    requestNum = 0
-    eachNum = 200
+    captureNum = 100
     processName = None
+    processNameMap = {}
+    myFile = None
     kwargs = {}
     ################################################
 
     ###################获取参数#################################
-    _type = request.GET['type']   #前面三个参数必须要有
-    description = request.GET['description']
-    creator = request.GET['creator']
-    if _type is '':  #如果没有采集类型，直接返回报错
-        return HttpResponse('没有选择采集类型，请重新选填')
-    if description is '':
-        return HttpResponse('请重新选填')
-    if creator is '':
-        return HttpResponse('请重新选填')
+    print request.POST
+    _type = request.POST['type'].split(',')
     try:
-        userDatabase = request.GET['userDatabase']
+        selectUserDatabase = request.POST['selectUserDatabase']
+        userHost = selectUserDatabase.split('|')[0]
+        userDatabase = selectUserDatabase.split('|')[1]
+        userCollection = selectUserDatabase.split('|')[2]
     except:pass
     try:
-        userCollection = request.GET['userCollection']
+        screenNameList = request.POST['screenNameList'].split(',')
+        if screenNameList == ['']:
+            screenNameList = None
     except:pass
     try:
-        screenNameList = request.GET['screenNameList'].split(',')
-    except:pass
-    try:
-        accountIdList = request.GET['accountIdList'].split(',')
-    except:pass
-    try:
-        tweetDatabase = request.GET['tweetDatabase']
-    except:pass
-    try:
-        tweetCollection = request.GET['tweetCollection']
-    except:pass
-    try:
-        keywords = request.GET['keywords']
-    except:pass
-    try:
-        requestNum = int(request.GET['requestNum'])
-    except:pass
-    try:
-        eachNum = int(request.GET['eachNum'])
+        accountIdList = request.POST['accountIdList'].split(',')
+        if accountIdList == ['']:
+            accountIdList = None
     except:pass
 
+    myFile = request.FILES.get("myfile", None)  # 获取上传的文件，如果没有文件，则默认为None
+    if myFile:
+        cnt = myFile.read().split(':')
+        if cnt[0] == 'screenNameList':
+            if screenNameList :
+                screenNameList += cnt[1].split(',')
+            else:
+                screenNameList = cnt[1].split(',')
+    try:
+        selectTweetDatabase = request.POST['selectTweetDatabase']
+        tweetHost = selectTweetDatabase.split('|')[0]
+        tweetDatabase = selectTweetDatabase.split('|')[1]
+        tweetCollection = selectTweetDatabase.split('|')[2]
+    except:pass
+    try:
+        keywords = request.POST['keywords']
+        if keywords == '':
+            keywords = None
+    except:pass
+    try:
+        captureNum = int(request.POST['captureNum'])
+    except:pass
+
+    # try:
+    #     userDatabase = request.GET['userDatabase']
+    #     if userDatabase == '':
+    #         userDatabase = None
+    # except:pass
+    # try:
+    #     userCollection = request.GET['userCollection']
+    #     if userCollection == '':
+    #         userCollection = None
+    # except:pass
+    # try:
+    #     screenNameList = request.GET['screenNameList'].split(',')
+    #     if screenNameList == ['']:
+    #         screenNameList = None
+    # except:pass
+    # try:
+    #     accountIdList = request.GET['accountIdList'].split(',')
+    #     if accountIdList == ['']:
+    #         accountIdList = None
+    # except:pass
+    # try:
+    #     tweetDatabase = request.GET['tweetDatabase']
+    #     if tweetDatabase == '':
+    #         tweetDatabase = None
+    # except:pass
+    # try:
+    #     tweetCollection = request.GET['tweetCollection']
+    #     if tweetCollection == '':
+    #         tweetCollection = None
+    # except:pass
+    # try:
+    #     keywords = request.GET['keywords']
+    #     if keywords == '':
+    #         keywords = None
+    # except:pass
+    # try:
+    #     requestNum = int(request.GET['requestNum'])
+    # except:pass
+    # try:
+    #     eachNum = int(request.GET['eachNum'])
+    # except:pass
+    #
     ###################对于每个采集功能，各自开始判断运行###########################
-    if _type == 'userInfo':
-        if userDatabase is '' or userCollection is '':
-            return HttpResponse('没有填写用户数据库名字，请重新选填')
-        else:
-            kwargs['screenNameList'] = screenNameList
-            kwargs['accountIdList'] = accountIdList
-            kwargs['proxyList'] = proxyList
-            kwargs['userDatabase'] = userDatabase
-            kwargs['userCollection'] = userCollection
-            api = Process(target=_userInfoCapture, kwargs=kwargs)
-            api.start()
-            processName = storeProcessInfo(pid=api.pid,_type=_type,description=description,creator=creator,userDatabase=userDatabase,
-                             userCollection=userCollection,screenNameList=screenNameList,accountIdList=accountIdList)
+    if 'userInfo' in _type:
+        kwargs = {}
+        kwargs['screenNameList'] = screenNameList
+        kwargs['accountIdList'] = accountIdList
+        kwargs['proxyList'] = proxyList
+        kwargs['userHost'] = userHost
+        kwargs['userDatabase'] = userDatabase
+        kwargs['userCollection'] = userCollection
+        api = Process(target=_userInfoCapture, kwargs=kwargs)
+        api.start()
+        processName = storeProcessInfo(pid=api.pid,_type='userInfo',userHost=userHost,userDatabase=userDatabase,
+                         userCollection=userCollection,screenNameList=screenNameList,accountIdList=accountIdList)
+        processNameMap['userInfo'] = processName
 
-    if _type == 'userFriends':
-        if userDatabase is '' or userCollection is '':
-            return HttpResponse('没有填写用户数据库名字，请重新选填')
-        else:
-            kwargs['screenNameList'] = screenNameList
-            kwargs['accountIdList'] = accountIdList
-            kwargs['proxyList'] = proxyList
-            kwargs['userDatabase'] = userDatabase
-            kwargs['userFriendsDatabase'] = userDatabase
-            kwargs['userFriendsCollection'] = userCollection
-            kwargs['userCollection'] = userCollection
-            api = Process(target=_userFriendsCapture, kwargs=kwargs)
-            api.start()
-            processName = storeProcessInfo(pid=api.pid,_type=_type,description=description,creator=creator,userDatabase=userDatabase,
-                             userCollection=userCollection,screenNameList=screenNameList,accountIdList=accountIdList)
+    if 'userFriends' in _type:
+        kwargs = {}
+        kwargs['screenNameList'] = screenNameList
+        kwargs['accountIdList'] = accountIdList
+        kwargs['proxyList'] = proxyList
+        kwargs['userHost'] = userHost
+        kwargs['userDatabase'] = userDatabase
+        kwargs['userFriendsDatabase'] = userDatabase
+        kwargs['userFriendsCollection'] = userCollection
+        kwargs['userCollection'] = userCollection
+        api = Process(target=_userFriendsCapture, kwargs=kwargs)
+        api.start()
+        processName = storeProcessInfo(pid=api.pid,_type='userFriends',userHost=userHost,userDatabase=userDatabase,
+                         userCollection=userCollection,screenNameList=screenNameList,accountIdList=accountIdList)
+        processNameMap['userFriends'] = processName
 
-    if _type == 'userFollowers':
-        if userDatabase is '' or userCollection is '':
-            return HttpResponse('没有填写用户数据库名字，请重新选填')
-        else:
-            kwargs['screenNameList'] = screenNameList
-            kwargs['accountIdList'] = accountIdList
-            kwargs['proxyList'] = proxyList
-            kwargs['userFollowersDatabase'] = userDatabase
-            kwargs['userFollowersCollection'] = userCollection
-            kwargs['userDatabase'] = userDatabase
-            kwargs['userCollection'] = userCollection
-            api = Process(target=_userFollowersCapture, kwargs=kwargs)
-            api.start()
-            processName = storeProcessInfo(pid=api.pid,_type=_type,description=description,creator=creator,userDatabase=userDatabase,
-                             userCollection=userCollection,screenNameList=screenNameList,accountIdList=accountIdList)
+    if 'userFollowers' in _type:
+        kwargs = {}
+        kwargs['screenNameList'] = screenNameList
+        kwargs['accountIdList'] = accountIdList
+        kwargs['proxyList'] = proxyList
+        kwargs['userHost'] = userHost
+        kwargs['userFollowersDatabase'] = userDatabase
+        kwargs['userFollowersCollection'] = userCollection
+        kwargs['userDatabase'] = userDatabase
+        kwargs['userCollection'] = userCollection
+        api = Process(target=_userFollowersCapture, kwargs=kwargs)
+        api.start()
+        processName = storeProcessInfo(pid=api.pid,_type='userFollowers',userHost=userHost,userDatabase=userDatabase,
+                         userCollection=userCollection,screenNameList=screenNameList,accountIdList=accountIdList)
+        processNameMap['userFollowers'] = processName
 
-    if _type == 'userRealtimeTweet':
-        if userDatabase is None or userCollection is None:
-            return HttpResponse('没有填写用户数据库名字，请重新选填')
-        if tweetDatabase is None or tweetCollection is None:
-            return HttpResponse('没有填写推文数据库名字，请重新选填')
+    if 'userRealtimeTweet'in _type:
+        if accountIdList:
+            kwargs['tweetHost'] = tweetHost
+            kwargs['tweetDatabase'] = tweetDatabase
+            kwargs['tweetCollection'] = tweetCollection
+            kwargs['ids'] = accountIdList
+            kwargs['proxyList'] = proxyList
+            api = Process(target=_filterTweetCapture, kwargs=kwargs)
         else:
+            kwargs['tweetHost'] = tweetHost
             kwargs['tweetDatabase'] = tweetDatabase
             kwargs['tweetCollection'] = tweetCollection
             kwargs['proxyList'] = proxyList
+            kwargs['userHost'] = userHost
             kwargs['userDatabase'] = userDatabase
             kwargs['userCollection'] = userCollection
             api = Process(target=_realtimeTweetCapture, kwargs=kwargs)
-            api.start()
-            processName = storeProcessInfo(pid=api.pid,_type=_type,description=description,creator=creator,userDatabase=userDatabase,
-                             userCollection=userCollection,tweetDatabase=tweetDatabase,tweetCollection=tweetCollection)
+        api.start()
+        processName = storeProcessInfo(pid=api.pid,_type='userRealtimeTweet',tweetHost=tweetHost,userHost=userHost,userDatabase=userDatabase,
+                         userCollection=userCollection,tweetDatabase=tweetDatabase,tweetCollection=tweetCollection,
+                                       accountIdList=accountIdList)
 
-    if _type == 'historyTweet':
-        if tweetDatabase is '' or tweetCollection is '':
-            return HttpResponse('没有填写推文数据库名字，请重新选填')
-        else:
-            kwargs['tweetDatabase'] = tweetDatabase
-            kwargs['tweetCollection'] = tweetCollection
-            kwargs['screenNameList'] = screenNameList
-            kwargs['userIdList'] = accountIdList
-            kwargs['proxyList'] = proxyList
-            kwargs['userDatabase'] = userDatabase
-            kwargs['userCollection'] = userCollection
-            api = Process(target=_historyTweetCapture, kwargs=kwargs)
-            api.start()
-            processName = storeProcessInfo(pid=api.pid,_type=_type,description=description,creator=creator,userDatabase=userDatabase,
-                             userCollection=userCollection,tweetDatabase=tweetDatabase,tweetCollection=tweetCollection,
-                             screenNameList=screenNameList, accountIdList=accountIdList,)
+    if 'historyTweet'in _type:
+        kwargs['tweetHost'] = tweetHost
+        kwargs['tweetDatabase'] = tweetDatabase
+        kwargs['tweetCollection'] = tweetCollection
+        kwargs['screenNameList'] = screenNameList
+        kwargs['userIdList'] = accountIdList
+        kwargs['proxyList'] = proxyList
+        kwargs['userHost'] = userHost
+        kwargs['userDatabase'] = userDatabase
+        kwargs['userCollection'] = userCollection
+        kwargs['count'] = 100
+        kwargs['requestNum'] = captureNum / 100
+        api = Process(target=_historyTweetCapture, kwargs=kwargs)
+        api.start()
+        processName = storeProcessInfo(pid=api.pid,_type='historyTweet',tweetHost=tweetHost,userHost=userHost,userDatabase=userDatabase,
+                         userCollection=userCollection,tweetDatabase=tweetDatabase,tweetCollection=tweetCollection,
+                         screenNameList=screenNameList, accountIdList=accountIdList,)
 
-    if _type == 'filterTweet':
-        if tweetDatabase is '' or tweetCollection is '':
-            return HttpResponse('没有填写推文数据库名字，请重新选填')
-        else:
-            kwargs['proxyList'] = proxyList
-            kwargs['tweetDatabase'] = tweetDatabase
-            kwargs['tweetCollection'] = tweetCollection
-            kwargs['keywords'] = [keywords]
-            api = Process(target=_filterTweetCapture, kwargs=kwargs)
-            api.start()
-            processName = storeProcessInfo(pid=api.pid, _type=_type, description=description, creator=creator,
-                             tweetDatabase=tweetDatabase,tweetCollection=tweetCollection,
-                             keywords=keywords)
+    if 'filterTweet'in _type:
+        kwargs['proxyList'] = proxyList
+        kwargs['tweetHost'] = tweetHost
+        kwargs['tweetDatabase'] = tweetDatabase
+        kwargs['tweetCollection'] = tweetCollection
+        kwargs['keywords'] = [keywords]
+        api = Process(target=_filterTweetCapture, kwargs=kwargs)
+        api.start()
+        processName = storeProcessInfo(pid=api.pid, _type='filterTweet', tweetHost=tweetHost,
+                         tweetDatabase=tweetDatabase,tweetCollection=tweetCollection,
+                         keywords=keywords)
 
-    return HttpResponse("采集开始，采集程序的唯一标识是：" + processName)
+    if 'filterHistoryTweet'in _type:
+        kwargs['proxy'] = PROXY
+        kwargs['mongodb'] = tweetHost
+        kwargs['mongoDataName'] = tweetDatabase
+        kwargs['mongoColName'] = tweetCollection
+        kwargs['keywords'] = keywords
+        api = Process(target=_twitterAPIKeywordsCapture, kwargs=kwargs)
+        api.start()
+        processName = storeProcessInfo(pid=api.pid, _type='filterHistoryTweet', tweetHost=tweetHost,
+                         tweetDatabase=tweetDatabase,tweetCollection=tweetCollection,
+                         keywords=keywords)
+    print processName
+    if 'userInfo' in _type or 'userFollowers' in _type or 'userFriends' in _type:
+        return JsonResponse({'content': "采集开始", 'processName': processNameMap, 'level': 'normal'})
+    else:
+        return JsonResponse({'content':"采集开始" , 'processName': processName , 'level':'normal'})
 
 def infoGet(request):
     """
@@ -220,21 +309,33 @@ def infoGet(request):
         return JsonResponse({'level': 'error', 'content': '没有选择采集类型，请重新选填'})
     try:
         userDatabase = request.GET['userDatabase']
+        if userDatabase == '':
+            userDatabase = None
     except:pass
     try:
         userCollection = request.GET['userCollection']
+        if userCollection == '':
+            userCollection = None
     except:pass
     try:
         screenNameList = request.GET['screenNameList'].split(',')
+        if screenNameList == ['']:
+            screenNameList = None
     except:pass
     try:
         accountIdList = request.GET['accountIdList'].split(',')
+        if accountIdList == ['']:
+            accountIdList = None
     except:pass
     try:
         tweetDatabase = request.GET['tweetDatabase']
+        if tweetDatabase == '':
+            tweetDatabase = None
     except:pass
     try:
         tweetCollection = request.GET['tweetCollection']
+        if tweetCollection == '':
+            tweetCollection = None
     except:pass
     # try:
     #     keywords = request.GET['keywords']
@@ -244,7 +345,6 @@ def infoGet(request):
     result = []
     result = GetMongoData.infoGet(userDatabase=userDatabase,userCollection=userCollection,screenNameList=screenNameList,
                              accountIdList=accountIdList,tweetDatabase=tweetDatabase,tweetCollection=tweetCollection,_type=_type)
-
     return JsonResponse(result,safe=False)
 
 def realtimeInfoGet(request):
@@ -269,35 +369,49 @@ def realtimeInfoGet(request):
         return JsonResponse({'level': 'error', 'content': '没有选择采集类型，请重新选填'})
     try:
         userDatabase = request.GET['userDatabase']
+        if userDatabase == '':
+            userDatabase = None
     except:pass
     try:
         userCollection = request.GET['userCollection']
+        if userCollection == '':
+            userCollection = None
     except:pass
     try:
         screenNameList = request.GET['screenNameList'].split(',')
+        if screenNameList == ['']:
+            screenNameList = None
     except:pass
     try:
         accountIdList = request.GET['accountIdList'].split(',')
+        if accountIdList == ['']:
+            accountIdList = None
     except:pass
     try:
         tweetDatabase = request.GET['tweetDatabase']
+        if tweetDatabase == '':
+            tweetDatabase = None
     except:pass
     try:
         tweetCollection = request.GET['tweetCollection']
+        if tweetCollection == '':
+            tweetCollection = None
     except:pass
-
+    #
+    if tweetDatabase is None or tweetCollection is None:
+        return JsonResponse({'level': 'error', 'content': '没有填写数据库，请填写'})
 ##################获取实时数据(只用于显示filterTweet与realtimeTweet)#################################
     result = {}
     if _type not in ('userRealtimeTweet','filterTweet'):
-        return JsonResponse({'level':'error','content':'类型错误，这个实时数据按钮只接受userRealtimeTweet与filterTweet'}, safe=False)
+        return JsonResponse({'level':'error','content':'类型错误，这个实时数据按钮只接受关键词推文采集与实时用户推文采集'}, safe=False)
 
     result = GetMongoData.realtimeInfoGet(tweetDatabase=tweetDatabase,tweetCollection=tweetCollection)
     if result == {}:
         return JsonResponse({'level': 'error', 'content': '实时采集程序没有运行，请仔细检查'}, safe=False)
     return JsonResponse(result, safe=False)
 
-def storeProcessInfo(pid=None,_type=None,creator=None,description=None,userDatabase=None,userCollection=None,
-screenNameList=None,accountIdList=None,tweetDatabase=None,tweetCollection=None,keywords=None):
+def storeProcessInfo(pid=None,_type=None,userHost=None,userDatabase=None,userCollection=None,
+screenNameList=None,accountIdList=None,tweetHost=None,tweetDatabase=None,tweetCollection=None,keywords=None):
     """
     每次成功开启一个新的进程时，需要将一些必要的信息记录下来，包括进程ID，运行状态，功能描述，创建者，
     程序开始运行的时间，进程唯一标识，用户数据库，用户集合，推文数据库，推文集合,等
@@ -311,8 +425,6 @@ screenNameList=None,accountIdList=None,tweetDatabase=None,tweetCollection=None,k
     content = {}
     content['pid'] = pid
     content['state'] = 'running'
-    content['description'] = description
-    content['creator'] = creator
     content['startDate'] = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
     content['startUTC'] = int(time.time())
     content['processName'] = str(_type) + '_' + str(pid) + '_' + str(content['startUTC'])   #这个进程名是唯一标识，由采集类型+PID+创建进程时间构成
@@ -363,10 +475,53 @@ def twitterTerminate(request):
         return HttpResponse('processName不存在，请输入正确的processName')
 
 def twitterCheck(request):
+    """
+    判断采集进程采集进度
+    :param request:
+    :return:
+    """
     pass
 
 def runningProcessInfo(request):
-    pass
+    """
+    返回正在运行的进程的信息
+    :param request:
+    :return:
+    """
+    client = MongoClient(MONGOHOST)[PROCESS_DATABASE][PROCESS_COLLECTION]
+    for process in client.find({'state':'running'}):
+        pass
 
 def searchProcess(request):
+    """
+    搜索进程，并将满足条件的进程信息返回
+    :param request:
+    :return:
+    """
     pass
+
+def getDataAndColInfo():
+    """
+    获取数据库与集合名称
+    :return: {'user':[],'tweet':[]}
+    """
+    client = MongoClient(MONGOHOST)[PROCESS_DATABASE][PROCESS_DB_COL_NAME]
+    userList = []
+    tweetList = []
+    for i in client.find({'type':'user'}):
+        userList.append(i['HostName'] + '|' + i['DBName'] + '|' + i['COLName'])
+    for i in client.find({'type':'tweet'}):
+        tweetList.append(i['HostName'] + '|' + i['DBName'] + '|' + i['COLName'])
+    result = {}
+    result['user'] = userList
+    result['tweet'] = tweetList
+    return result
+
+def getProcessIO(request):
+    processName = request.GET['processName']
+    pid = int(processName.split('_')[1])
+    if psutil.pid_exists(pid):
+        result = psutil.Process(pid).io_counters()
+        return JsonResponse({'level':'normal','data':result.write_bytes})
+    else:
+        return JsonResponse({'level':'error'})

@@ -1,0 +1,6 @@
+Fri 24 Nov 2017 16:58:33 API.py [line:660] INFO start
+Fri 24 Nov 2017 16:58:33 API.py [line:692] INFO thread 0 start.
+Fri 24 Nov 2017 16:58:33 API.py [line:695] INFO thread 0's token_index 40
+Fri 24 Nov 2017 16:58:33 API.py [line:696] INFO {u'access_token': u'707583885324849152-Pm1aQHYvqtcwfG4ATau1rtTAkRe2Lhj', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'xLIK209uOFxWeziJaFUjGBSztTWWlaClcvdLqJ6s87O13'}
+Fri 24 Nov 2017 16:58:33 API.py [line:697] INFO [u'china']
+Fri 24 Nov 2017 16:58:33 API.py [line:698] INFO ['192.168.1.148:8118']

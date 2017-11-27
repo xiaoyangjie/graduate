@@ -1,0 +1,30 @@
+Fri 24 Nov 2017 20:05:14 API.py [line:660] INFO start
+Fri 24 Nov 2017 20:05:14 API.py [line:692] INFO thread 0 start.
+Fri 24 Nov 2017 20:05:14 API.py [line:695] INFO thread 0's token_index 421
+Fri 24 Nov 2017 20:05:14 API.py [line:696] INFO {u'access_token': u'725899115096203264-aVcBUOQvkiHDtkX6c11MzM0SI5w2bKc', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'ZCxMVmeQrAJCMwwX1iKtGMyxv9U5yFWbspIc6Uv7SFX58'}
+Fri 24 Nov 2017 20:05:14 API.py [line:697] INFO [u'china']
+Fri 24 Nov 2017 20:05:14 API.py [line:698] INFO ['192.168.1.148:8118']
+Fri 24 Nov 2017 20:05:22 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:05:22 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:05:34 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:05:34 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:05:54 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:05:54 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:06:18 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:06:18 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:06:40 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:06:40 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:07:04 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:07:04 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:07:32 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:07:32 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:07:56 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:07:56 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:08:18 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:08:18 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:08:48 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:08:48 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:09:08 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:09:08 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:09:28 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 20:09:28 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)

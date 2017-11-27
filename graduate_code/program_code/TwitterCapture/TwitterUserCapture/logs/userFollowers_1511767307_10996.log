@@ -1,0 +1,18 @@
+Mon 27 Nov 2017 15:22:12 rest_api get_users_ids 10780 Thread-2 [line:212] INFO id: 75849006, type: followers, get: 1262
+Mon 27 Nov 2017 15:22:13 rest_api get_users_ids 20764 Thread-1 [line:212] INFO id: 176954922, type: followers, get: 641
+Mon 27 Nov 2017 15:22:14 rest_api get_users_ids 20020 Thread-3 [line:212] INFO id: 14372486, type: followers, get: 5000
+Mon 27 Nov 2017 15:22:15 rest_api __get_users_follow 10780 Thread-2 [line:572] INFO 75849006 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 15:22:15 rest_api __get_users_follow 20764 Thread-1 [line:572] INFO 176954922 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 15:22:15 rest_api __get_users_follow 20020 Thread-3 [line:572] INFO 14372486 finish, next_cursor=1584294703032699643, rest_num=0
+Mon 27 Nov 2017 15:22:15 rest_api __get_users_follow 10780 Thread-2 [line:576] INFO id: 75849006, type: followers, total: 1262
+Mon 27 Nov 2017 15:22:15 rest_api __get_users_follow 20020 Thread-3 [line:576] INFO id: 14372486, type: followers, total: 5000
+Mon 27 Nov 2017 15:22:15 rest_api __get_users_follow 20764 Thread-1 [line:576] INFO id: 176954922, type: followers, total: 641
+Mon 27 Nov 2017 15:22:23 rest_api get_users_ids 11144 Thread-4 [line:212] INFO id: 558797310, type: followers, get: 5000
+Mon 27 Nov 2017 15:22:23 rest_api __get_users_follow 11144 Thread-4 [line:572] INFO 558797310 finish, next_cursor=1585178586953865661, rest_num=0
+Mon 27 Nov 2017 15:22:23 rest_api __get_users_follow 11144 Thread-4 [line:576] INFO id: 558797310, type: followers, total: 5000
+Mon 27 Nov 2017 15:22:39 rest_api get_users_ids 10780 Thread-2 [line:212] INFO id: 45067861, type: followers, get: 487
+Mon 27 Nov 2017 15:22:39 rest_api __get_users_follow 10780 Thread-2 [line:572] INFO 45067861 finish, next_cursor=0, rest_num=0
+Mon 27 Nov 2017 15:22:39 rest_api __get_users_follow 10780 Thread-2 [line:576] INFO id: 45067861, type: followers, total: 487
+Mon 27 Nov 2017 15:22:39 rest_api get_users_ids 20764 Thread-1 [line:212] INFO id: 401478793, type: followers, get: 5000
+Mon 27 Nov 2017 15:22:39 rest_api __get_users_follow 20764 Thread-1 [line:572] INFO 401478793 finish, next_cursor=1584379641927167171, rest_num=0
+Mon 27 Nov 2017 15:22:39 rest_api __get_users_follow 20764 Thread-1 [line:576] INFO id: 401478793, type: followers, total: 5000

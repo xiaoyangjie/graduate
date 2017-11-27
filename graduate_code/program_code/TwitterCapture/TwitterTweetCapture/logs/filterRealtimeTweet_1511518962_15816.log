@@ -1,0 +1,8 @@
+Fri 24 Nov 2017 18:22:43 API.py [line:660] INFO start
+Fri 24 Nov 2017 18:22:43 API.py [line:692] INFO thread 0 start.
+Fri 24 Nov 2017 18:22:43 API.py [line:695] INFO thread 0's token_index 431
+Fri 24 Nov 2017 18:22:43 API.py [line:696] INFO {u'access_token': u'725859267278835713-Mq1JhIL1GuTOzm2WVfuZEvcBHvstRoo', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'Bcup9zZCJCNe27k2K0Jej9Bc3CzFBfCzU3kgU5NfcN0z6'}
+Fri 24 Nov 2017 18:22:43 API.py [line:697] INFO [u'china']
+Fri 24 Nov 2017 18:22:43 API.py [line:698] INFO ['192.168.1.148:8118']
+Fri 24 Nov 2017 18:23:10 TwitterError.py [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Fri 24 Nov 2017 18:23:10 API.py [line:222] WARNING ('_ssl.c:645: The handshake operation timed out',)

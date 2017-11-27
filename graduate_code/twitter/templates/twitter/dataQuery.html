@@ -11,7 +11,16 @@
 {#        </div>#}
 
         <div id="wrapper">
-            <p><span style="display:inline-block;width:130px;text-align:right;">type:</span><input type="text" id="type" size="60" maxlength="120"></p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">type:</span>
+            <select class="typeButton" id="type" style="width: 248px;background-color: rgba(10, 17, 45, 0.11);">
+                <option selected>选择采集类型</option>
+                <option value="userInfo">用户详细信息采集</option>
+                <option value="userFriends">用户朋友ID采集</option>
+                <option value="userFollowers">用户粉丝ID采集</option>
+                <option value="filterTweet">关键词推文采集</option>
+                <option value="historyTweet">用户历史推文采集</option>
+                <option value="userRealtimeTweet">实时用户推文采集</option>
+            </select></p>
             <p><span style="display:inline-block;width:130px;text-align:right;">userDatabase:</span><input type="text" id="userDatabase"></p>
             <p><span style="display:inline-block;width:130px;text-align:right;">userCollection:</span><input type="text" id="userCollection"></p>
             <p><span style="display:inline-block;width:130px;text-align:right;">screenNameList:</span><input type="text" id="screenNameList"></p>
@@ -24,30 +33,51 @@
             <button type="button" id='twitterButton'>显示数据</button>
             <button type="button" id='realtimeButton'>显示实时数据</button>
             <button type="button" id='finishButton'>结束显示实时数据</button>
-            <button type="button" id='clearButton'>清除数据</button>
+            <button type="button" id='clearButton'>清除显示的数据</button>
 
             <div class="block" style="height: 900px;background-color: rgba(10, 17, 45, 0.11);padding: 15px 15px;
             box-shadow: 0 0 14px #B1ABAB;margin: 10px 0;"><p><span id='twitterQuery'></span></p></div>
 
-            <br>
-            <br>
-            <br>
         </div>
         <script src="/static/jquery_1.11.1.js"></script>
         <script>
-        var totalViewNum = 10;
-        var dataList = [];
-
-{#        var screenNameList = $("#screenNameList").val();#}
-{#        var accountIdList = $("#accountIdList").val();#}
-{#        var userDatabase = $("#userDatabase").val();#}
-{#        var userCollection = $("#userCollection").val();#}
-{#        var tweetDatabase = $("#tweetDatabase").val();#}
-{#        var tweetCollection = $("#tweetCollection").val();#}
-{#        var keywords = $("#keywords").val();#}
-{#        var type = $("#type").val();#}
-        var timeOut = false;
+            var totalViewNum = 5;
+            var dataList = [];
+            var timeOut = false;
             $(document).ready(function(){
+
+                $("#twitterButton").click(function() {
+                    var userDatabase = $("#userDatabase").val();
+                    var userCollection = $("#userCollection").val();
+                    var tweetDatabase = $("#tweetDatabase").val();
+                    var tweetCollection = $("#tweetCollection").val();
+                    var screenNameList = $("#screenNameList").val();
+                    var accountIdList = $("#accountIdList").val();
+                    var type = $("#type").val();
+                    var dataContent = "";
+                    $.get("/twitter/infoGet/",{'tweetDatabase':tweetDatabase,'tweetCollection':tweetCollection
+                    ,'type':type,'userDatabase':userDatabase,'userCollection':userCollection,'screenNameList':screenNameList,
+                        'accountIdList':accountIdList}, function(data) {
+                        for (var i = 0; i < data.length; i++) {
+                            dataContent = "";
+                            dataContent = dataContent + '用户屏显名：' + data[i]['screen_name'] + '<br>';
+                            dataContent = dataContent + '用户自我描述：' + data[i]['description'] + '<br>';
+                            dataContent = dataContent + '用户创建时间：' + data[i]['created_at'] + '<br>';
+                            dataContent = dataContent + '用户发推数量：' + data[i]['statuses_count'] + '<br>';
+                            dataContent = dataContent + '<br><br><br>';
+                            dataList.push(dataContent);
+                        }
+                    });
+{#                    if (dataList.length > totalViewNum){#}
+{#                    dataList.shift();#}
+{#                    }#}
+                    dataContent = "";
+                    for (var i = 0 ; i < dataList.length ;i++){
+                        dataContent += dataList[i];
+                    }
+                    $('#twitterQuery').html(dataContent);
+                });
+
                 $("#realtimeButton").click(function(){
 {#                    获取用户信息定时任务#}
                     timeOut = false;
@@ -76,11 +106,6 @@
                 var dataContent = "";
                 $.get("/twitter/realtimeInfoGet/",{'tweetDatabase':tweetDatabase,'tweetCollection':tweetCollection
                 ,'type':type}, function(data) {
-{#                for (var i = 0; i < data.length; i++) {#}
-{#                    $.each(data[i], function (key, value) {#}
-{#                        $('#twitterQuery').append(key + '----------' + value + '<br>')#}
-{#                    });#}
-{#                }#}
                 var str = "";
                 if (data['level'] == 'error'){
                     timeOut = true;
@@ -89,9 +114,14 @@
                 }
                 else{
                     $.each(data, function (key, value) {
-                        str += '<br>' + key + '----------' + value + '<br>';
+                        dataContent = "";
+                        dataContent = dataContent + '用户屏显名：' + data['user']['screen_name'] + '<br>';
+                        dataContent = dataContent + '用户自我描述：' + data['user']['description'] + '<br>';
+                        dataContent = dataContent + '推文创建时间：' + data['created_at'] + '<br>';
+                        dataContent = dataContent + '推文的内容：' + data['text'] + '<br>';
+                        dataContent = dataContent + '<br><br><br>';
                     });
-                    dataList.push(str);
+                    dataList.push(dataContent);
                   {#    超出了设定的可视化条数范围，就删除dataList前面的数据#}
                 if (dataList.length > totalViewNum){
                     dataList.shift();
