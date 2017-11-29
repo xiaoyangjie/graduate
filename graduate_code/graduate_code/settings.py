@@ -13,9 +13,6 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
-#运行Django之前，自定义需要处理的事情
-# from BeforeDjangoOperation import operation
-# operation()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

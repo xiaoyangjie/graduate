@@ -22,14 +22,12 @@ from search.views import index as searchIndex
 from search.views import create as searchCreate
 from search.views import finishCreart
 from total_index.views import add
-from total_index.views import test
 
 
 urlpatterns = [
     ############首页########################
     url(r'^$', totalIndex, name="totalIndex"),
     #############测试###############
-    url(r'^test/$', test, name="test"),
     url(r'^add/$', add, name="add"),
     ##############ES查找#################
     url(r'^search/$', searchIndex, name="searchIndex"),
@@ -40,3 +38,7 @@ urlpatterns = [
     ###############管理账户##########################
     url(r'^admin/', admin.site.urls),
 ]
+
+#运行Django之前，自定义需要处理的事情
+from BeforeDjangoOperation import operation
+operation()
