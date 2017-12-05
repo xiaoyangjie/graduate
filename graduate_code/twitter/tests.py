@@ -1,18 +1,8 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+import requests
 
-import os
-import time
-from django.test import TestCase
-from multiprocessing import Process, freeze_support
-
-
-# Create your tests here.
-import psutil
-# for pid in psutil.pids():
-    # print pid, psutil.Process(pid).name
-# print psutil.net_io_counters()
-print int('66666')
-# print psutil.pid_exists(16112)
-# print time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-
+r = requests.get('https://www.baidu.com')
+print r
+from urllib import quote_plus
+DEFAULTHOST = "mongodb://%s:%s@%s" % (quote_plus('@kb111'), quote_plus('ylb@(*wiki*)'), '222.197.180.245:30011')
+print DEFAULTHOST

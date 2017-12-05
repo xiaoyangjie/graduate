@@ -4,24 +4,25 @@ body {
     width: 100%;
     margin: 0;
 }
+
 div#wrapper{
     height: 100%;
-    width: 80%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
-div.user,div.tweet{
-    margin: 0 auto;
-    font-size: 32px;
-    height: 400px;
+div.title{
+    font-size: 36px;
+    height: 200px;
     width: 80%;
-    line-height: 123px;
+    line-height: 200px;
+    margin: auto;
+}
+div.aaa{
+    font-size: 30px;
+    height: 150px;
+    width: 60%;
+    line-height: 150px;
+    margin: auto;
 }
 
-div.near{
-    font-size: 19px;
-    float: left;
-    margin: 0 auto;
-    /* height: 30%; */
-    width: 30%;
-}

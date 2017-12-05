@@ -1,0 +1,2 @@
+Tue 28 Nov 2017 10:57:19 TwitterError __init__ 15440 Thread-2 [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/users/lookup.json (Caused by ProxyError('Cannot connect to proxy.', timeout('timed out',)))
+Tue 28 Nov 2017 10:57:19 rest_api get_users_lookup 15440 Thread-2 [line:120] ERROR HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/users/lookup.json (Caused by ProxyError('Cannot connect to proxy.', timeout('timed out',)))

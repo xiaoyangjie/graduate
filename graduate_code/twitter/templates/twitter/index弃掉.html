@@ -1,0 +1,30 @@
+{% extends 'twitter/common.html' %}
+{% load static %}
+    {% block title %}Twitter数据采集{% endblock %}
+    {% block link %}
+        <link rel="stylesheet" type="text/css" href="{% static 'twitter/index.css' %}">
+    {% endblock %}
+    {% block body %}
+
+        <div id="Layer1" style="position:absolute; left:0; top:0; width:100%; height:100%;z-index: -1;">
+        <img src="/static/twitter/twitter_background.jpg" width="100%" height="100%"/>
+        </div>
+
+        <div id="wrapper">
+            <div class="user"><h1>Twitter用户数据采集</h1>
+            <div class="near userInfo"><a href="/twitter/userInfo/"><h2>Twitter用户详细信息采集</h2></a></div>
+            <div class="near userFriends"><a href="/twitter/userFriends/"><h2>Twitter用户朋友信息采集</h2></a></div>
+            <div class="near userFollowers"><a href="/twitter/userFollowers/"><h2>Twitter用户粉丝信息采集</h2></a></div>
+            </div>
+            <div class="tweet"><h1>Twitter推文数据采集</h1>
+            <div class="near realtimeTweet"><a href="/twitter/realtimeTweet/"><h2>Twitter实时用户推文采集</h2></a></div>
+            <div class="near filterTweet"><a href="/twitter/filterTweet/"><h2>Twitter实时关键词推文采集</h2></a></div>
+            <div class="near historyTweet"><a href="/twitter/historyTweet/"><h2>Twitter用户历史推文采集</h2></a></div>
+            </div>
+            <div class="query"><h1>Twitter信息查询</h1>
+                <div class="processQuery"><a href="/twitter/processQuery/"><h2>Twitter采集进程查询</h2></a></div>
+                <div class="dataQuery"><a href="/twitter/dataQuery/"><h2>Twitter采集数据查询</h2></a></div>
+            </div>
+        </div>
+
+    {% endblock %}

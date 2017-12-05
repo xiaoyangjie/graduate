@@ -1,0 +1,476 @@
+Wed 29 Nov 2017 15:44:38 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 848921732, type: friends, get: 732
+Wed 29 Nov 2017 15:44:38 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 848921732 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:38 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 848921732, type: friends, total: 732
+Wed 29 Nov 2017 15:44:38 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 41183315, type: friends, get: 1878
+Wed 29 Nov 2017 15:44:38 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 41183315 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:38 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 41183315, type: friends, total: 1878
+Wed 29 Nov 2017 15:44:38 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 217631016, type: friends, get: 1652
+Wed 29 Nov 2017 15:44:38 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 217631016 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:38 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 217631016, type: friends, total: 1652
+Wed 29 Nov 2017 15:44:38 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 121487078, type: friends, get: 2651
+Wed 29 Nov 2017 15:44:38 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 121487078 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:38 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 121487078, type: friends, total: 2651
+Wed 29 Nov 2017 15:44:41 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 22940099, type: friends, get: 3660
+Wed 29 Nov 2017 15:44:41 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 22940099 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:41 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 22940099, type: friends, total: 3660
+Wed 29 Nov 2017 15:44:42 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 67370670, type: friends, get: 293
+Wed 29 Nov 2017 15:44:42 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 67370670 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:42 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 67370670, type: friends, total: 293
+Wed 29 Nov 2017 15:44:42 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 2923073026, type: friends, get: 1578
+Wed 29 Nov 2017 15:44:42 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 2923073026 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:42 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 2923073026, type: friends, total: 1578
+Wed 29 Nov 2017 15:44:43 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 109190834, type: friends, get: 2947
+Wed 29 Nov 2017 15:44:43 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 109190834 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:43 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 109190834, type: friends, total: 2947
+Wed 29 Nov 2017 15:44:45 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 3002666558, type: friends, get: 900
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 3002666558 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 3002666558, type: friends, total: 900
+Wed 29 Nov 2017 15:44:45 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 3619502174, type: friends, get: 787
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 3619502174 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 3619502174, type: friends, total: 787
+Wed 29 Nov 2017 15:44:45 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 1676357112, type: friends, get: 1208
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 1676357112 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 1676357112, type: friends, total: 1208
+Wed 29 Nov 2017 15:44:45 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 778804782, type: friends, get: 923
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 778804782 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 778804782, type: friends, total: 923
+Wed 29 Nov 2017 15:44:47 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 1262512554, type: friends, get: 584
+Wed 29 Nov 2017 15:44:47 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 1262512554 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:47 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 1262512554, type: friends, total: 584
+Wed 29 Nov 2017 15:44:48 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 134533620, type: friends, get: 193
+Wed 29 Nov 2017 15:44:48 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 134533620 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:48 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 134533620, type: friends, total: 193
+Wed 29 Nov 2017 15:44:48 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 486868238, type: friends, get: 613
+Wed 29 Nov 2017 15:44:48 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 486868238 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:48 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 486868238, type: friends, total: 613
+Wed 29 Nov 2017 15:44:51 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 196598352, type: friends, get: 204
+Wed 29 Nov 2017 15:44:51 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 196598352 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:51 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 946317649, type: friends, get: 352
+Wed 29 Nov 2017 15:44:51 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 196598352, type: friends, total: 204
+Wed 29 Nov 2017 15:44:51 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 946317649 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:51 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 946317649, type: friends, total: 352
+Wed 29 Nov 2017 15:44:51 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 98120592, type: friends, get: 1228
+Wed 29 Nov 2017 15:44:51 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 98120592 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:51 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 98120592, type: friends, total: 1228
+Wed 29 Nov 2017 15:44:51 TwitterError __init__ 11136 Thread-4 [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Wed 29 Nov 2017 15:44:51 rest_api get_users_ids 11136 Thread-4 [line:194] ERROR ('_ssl.c:645: The handshake operation timed out',)
+Wed 29 Nov 2017 15:44:54 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 559953039, type: friends, get: 1310
+Wed 29 Nov 2017 15:44:54 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 559953039 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:54 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 559953039, type: friends, total: 1310
+Wed 29 Nov 2017 15:44:54 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 1096646580, type: friends, get: 557
+Wed 29 Nov 2017 15:44:54 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 1096646580 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:54 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 1096646580, type: friends, total: 557
+Wed 29 Nov 2017 15:44:54 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 746169597758480384, type: friends, get: 381
+Wed 29 Nov 2017 15:44:54 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 746169597758480384 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:54 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 746169597758480384, type: friends, total: 381
+Wed 29 Nov 2017 15:44:56 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 14604427, type: friends, get: 488
+Wed 29 Nov 2017 15:44:56 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 14604427 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:56 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 14604427, type: friends, total: 488
+Wed 29 Nov 2017 15:44:57 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 732553075, type: friends, get: 335
+Wed 29 Nov 2017 15:44:57 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 732553075 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:57 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 732553075, type: friends, total: 335
+Wed 29 Nov 2017 15:44:57 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 175281334, type: friends, get: 1320
+Wed 29 Nov 2017 15:44:57 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 175281334 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:57 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 175281334, type: friends, total: 1320
+Wed 29 Nov 2017 15:44:59 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 320626966, type: friends, get: 337
+Wed 29 Nov 2017 15:44:59 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 320626966 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:44:59 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 320626966, type: friends, total: 337
+Wed 29 Nov 2017 15:45:00 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:00 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:00 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:00 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 2975294042, type: friends, get: 213
+Wed 29 Nov 2017 15:45:00 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 2975294042 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:00 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 2975294042, type: friends, total: 213
+Wed 29 Nov 2017 15:45:01 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 2419385664, type: friends, get: 225
+Wed 29 Nov 2017 15:45:01 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 2419385664 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:01 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 2419385664, type: friends, total: 225
+Wed 29 Nov 2017 15:45:02 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:02 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:02 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:03 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 387782710, type: friends, get: 370
+Wed 29 Nov 2017 15:45:03 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 387782710 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:03 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 387782710, type: friends, total: 370
+Wed 29 Nov 2017 15:45:04 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 902459858636636160, type: friends, get: 774
+Wed 29 Nov 2017 15:45:04 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 902459858636636160 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:04 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 902459858636636160, type: friends, total: 774
+Wed 29 Nov 2017 15:45:05 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 329119261, type: friends, get: 4268
+Wed 29 Nov 2017 15:45:05 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 329119261 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:05 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 329119261, type: friends, total: 4268
+Wed 29 Nov 2017 15:45:06 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:06 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:06 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:07 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 86367960, type: friends, get: 863
+Wed 29 Nov 2017 15:45:07 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 86367960 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:07 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 86367960, type: friends, total: 863
+Wed 29 Nov 2017 15:45:08 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 2485802396, type: friends, get: 1479
+Wed 29 Nov 2017 15:45:08 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 2485802396 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:08 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 2485802396, type: friends, total: 1479
+Wed 29 Nov 2017 15:45:08 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:08 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:08 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:08 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 121898336, type: friends, get: 176
+Wed 29 Nov 2017 15:45:08 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 121898336 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:08 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 121898336, type: friends, total: 176
+Wed 29 Nov 2017 15:45:09 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 1661085864, type: friends, get: 361
+Wed 29 Nov 2017 15:45:09 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 1661085864 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:09 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 1661085864, type: friends, total: 361
+Wed 29 Nov 2017 15:45:11 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 47854008, type: friends, get: 901
+Wed 29 Nov 2017 15:45:11 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 47854008 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:11 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 47854008, type: friends, total: 901
+Wed 29 Nov 2017 15:45:11 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 102157756, type: friends, get: 314
+Wed 29 Nov 2017 15:45:11 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 102157756 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:11 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 102157756, type: friends, total: 314
+Wed 29 Nov 2017 15:45:11 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:11 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:11 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:12 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 140561573, type: friends, get: 1934
+Wed 29 Nov 2017 15:45:12 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 140561573 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:12 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 140561573, type: friends, total: 1934
+Wed 29 Nov 2017 15:45:14 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 31603244, type: friends, get: 220
+Wed 29 Nov 2017 15:45:14 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 31603244 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:14 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 31603244, type: friends, total: 220
+Wed 29 Nov 2017 15:45:14 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:14 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:14 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:15 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 142515446, type: friends, get: 1325
+Wed 29 Nov 2017 15:45:15 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 142515446 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:15 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 142515446, type: friends, total: 1325
+Wed 29 Nov 2017 15:45:15 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 3785713813, type: friends, get: 1306
+Wed 29 Nov 2017 15:45:15 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 3785713813 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:15 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 3785713813, type: friends, total: 1306
+Wed 29 Nov 2017 15:45:17 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 513594006, type: friends, get: 420
+Wed 29 Nov 2017 15:45:17 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:18 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 415279515, type: friends, get: 899
+Wed 29 Nov 2017 15:45:18 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 96872637, type: friends, get: 2174
+Wed 29 Nov 2017 15:45:23 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 513594006 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:23 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:23 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 415279515 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:23 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 96872637 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:23 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:23 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 513594006, type: friends, total: 420
+Wed 29 Nov 2017 15:45:23 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 415279515, type: friends, total: 899
+Wed 29 Nov 2017 15:45:23 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 96872637, type: friends, total: 2174
+Wed 29 Nov 2017 15:45:25 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:25 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:25 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:25 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 17125190, type: friends, get: 481
+Wed 29 Nov 2017 15:45:25 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 17125190 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:25 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 17125190, type: friends, total: 481
+Wed 29 Nov 2017 15:45:25 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 189791069, type: friends, get: 1380
+Wed 29 Nov 2017 15:45:25 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 189791069 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:25 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 189791069, type: friends, total: 1380
+Wed 29 Nov 2017 15:45:26 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 39755916, type: friends, get: 5000
+Wed 29 Nov 2017 15:45:26 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 39755916 finish, next_cursor=1470030274607997810, rest_num=0
+Wed 29 Nov 2017 15:45:26 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 39755916, type: friends, total: 5000
+Wed 29 Nov 2017 15:45:28 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:28 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:28 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:29 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 704304949, type: friends, get: 511
+Wed 29 Nov 2017 15:45:29 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 704304949 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:29 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 704304949, type: friends, total: 511
+Wed 29 Nov 2017 15:45:29 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 559102730, type: friends, get: 901
+Wed 29 Nov 2017 15:45:29 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 559102730 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:29 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 559102730, type: friends, total: 901
+Wed 29 Nov 2017 15:45:29 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 1522355971, type: friends, get: 215
+Wed 29 Nov 2017 15:45:29 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 1522355971 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:29 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 1522355971, type: friends, total: 215
+Wed 29 Nov 2017 15:45:31 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:31 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:31 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:32 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 866751386901295105, type: friends, get: 148
+Wed 29 Nov 2017 15:45:32 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 866751386901295105 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:32 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 866751386901295105, type: friends, total: 148
+Wed 29 Nov 2017 15:45:32 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 1450483622, type: friends, get: 1930
+Wed 29 Nov 2017 15:45:32 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 1450483622 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:32 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 1450483622, type: friends, total: 1930
+Wed 29 Nov 2017 15:45:32 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 941233920, type: friends, get: 527
+Wed 29 Nov 2017 15:45:32 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 941233920 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:32 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 941233920, type: friends, total: 527
+Wed 29 Nov 2017 15:45:33 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:33 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:33 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:35 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 3259234440, type: friends, get: 166
+Wed 29 Nov 2017 15:45:35 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 3259234440 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:35 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 3259234440, type: friends, total: 166
+Wed 29 Nov 2017 15:45:35 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 2437912710, type: friends, get: 331
+Wed 29 Nov 2017 15:45:35 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 2437912710 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:35 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 2437912710, type: friends, total: 331
+Wed 29 Nov 2017 15:45:35 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 78262836, type: friends, get: 904
+Wed 29 Nov 2017 15:45:35 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 78262836 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:35 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 78262836, type: friends, total: 904
+Wed 29 Nov 2017 15:45:35 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:35 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:35 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:38 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 1105429902, type: friends, get: 393
+Wed 29 Nov 2017 15:45:38 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 1105429902 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:38 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 1105429902, type: friends, total: 393
+Wed 29 Nov 2017 15:45:39 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:39 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:39 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:39 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 2581207626, type: friends, get: 417
+Wed 29 Nov 2017 15:45:39 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 2581207626 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:39 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 2581207626, type: friends, total: 417
+Wed 29 Nov 2017 15:45:39 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 3160885145, type: friends, get: 557
+Wed 29 Nov 2017 15:45:39 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 3160885145 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:39 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 3160885145, type: friends, total: 557
+Wed 29 Nov 2017 15:45:41 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 188751985, type: friends, get: 559
+Wed 29 Nov 2017 15:45:41 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 188751985 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:41 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 188751985, type: friends, total: 559
+Wed 29 Nov 2017 15:45:42 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:42 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:42 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:42 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 1442094344, type: friends, get: 333
+Wed 29 Nov 2017 15:45:42 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 1442094344 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:42 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 1442094344, type: friends, total: 333
+Wed 29 Nov 2017 15:45:42 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 703695583404544000, type: friends, get: 446
+Wed 29 Nov 2017 15:45:42 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 703695583404544000 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:42 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 703695583404544000, type: friends, total: 446
+Wed 29 Nov 2017 15:45:44 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 864867984, type: friends, get: 910
+Wed 29 Nov 2017 15:45:44 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 864867984 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:44 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 864867984, type: friends, total: 910
+Wed 29 Nov 2017 15:45:44 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:44 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:44 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:44 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 3517596378, type: friends, get: 225
+Wed 29 Nov 2017 15:45:44 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 3517596378 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:44 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 3517596378, type: friends, total: 225
+Wed 29 Nov 2017 15:45:45 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 1450097815, type: friends, get: 156
+Wed 29 Nov 2017 15:45:45 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 1450097815 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:45 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 1450097815, type: friends, total: 156
+Wed 29 Nov 2017 15:45:48 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:48 rest_api get_users_ids 4688 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:48 TwitterError __init__ 4688 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:48 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 590942225, type: friends, get: 415
+Wed 29 Nov 2017 15:45:48 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 590942225 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:48 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 590942225, type: friends, total: 415
+Wed 29 Nov 2017 15:45:48 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 1885012730, type: friends, get: 177
+Wed 29 Nov 2017 15:45:48 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 1885012730 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:48 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 1885012730, type: friends, total: 177
+Wed 29 Nov 2017 15:45:48 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 896597640598626305, type: friends, get: 1121
+Wed 29 Nov 2017 15:45:48 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 896597640598626305 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:48 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 896597640598626305, type: friends, total: 1121
+Wed 29 Nov 2017 15:45:50 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 309194558, type: friends, get: 2076
+Wed 29 Nov 2017 15:45:50 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 309194558 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:50 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 309194558, type: friends, total: 2076
+Wed 29 Nov 2017 15:45:51 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 3485729713, type: friends, get: 318
+Wed 29 Nov 2017 15:45:51 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 3485729713 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:51 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 3485729713, type: friends, total: 318
+Wed 29 Nov 2017 15:45:51 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 3320284626, type: friends, get: 604
+Wed 29 Nov 2017 15:45:51 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 3320284626 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:51 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 3320284626, type: friends, total: 604
+Wed 29 Nov 2017 15:45:51 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 2409936367, type: friends, get: 251
+Wed 29 Nov 2017 15:45:51 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 2409936367 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:51 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 2409936367, type: friends, total: 251
+Wed 29 Nov 2017 15:45:54 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 838103212590714880, type: friends, get: 180
+Wed 29 Nov 2017 15:45:54 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 838103212590714880 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:54 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 838103212590714880, type: friends, total: 180
+Wed 29 Nov 2017 15:45:54 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 722560160825217024, type: friends, get: 185
+Wed 29 Nov 2017 15:45:54 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 722560160825217024 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:54 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 722560160825217024, type: friends, total: 185
+Wed 29 Nov 2017 15:45:54 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 2400231738, type: friends, get: 356
+Wed 29 Nov 2017 15:45:54 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 2400231738 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:54 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 2400231738, type: friends, total: 356
+Wed 29 Nov 2017 15:45:55 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 3224135907, type: friends, get: 750
+Wed 29 Nov 2017 15:45:55 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 3224135907 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:55 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 3224135907, type: friends, total: 750
+Wed 29 Nov 2017 15:45:57 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 25472012, type: friends, get: 2769
+Wed 29 Nov 2017 15:45:57 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 25472012 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:57 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 25472012, type: friends, total: 2769
+Wed 29 Nov 2017 15:45:57 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 1169891, type: friends, get: 1453
+Wed 29 Nov 2017 15:45:57 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 1169891 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:57 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 1169891, type: friends, total: 1453
+Wed 29 Nov 2017 15:45:58 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 82778043, type: friends, get: 244
+Wed 29 Nov 2017 15:45:58 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 82778043 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:58 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 82778043, type: friends, total: 244
+Wed 29 Nov 2017 15:45:58 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 18980837, type: friends, get: 907
+Wed 29 Nov 2017 15:45:58 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 18980837 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:58 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 18980837, type: friends, total: 907
+Wed 29 Nov 2017 15:46:00 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 2212813062, type: friends, get: 302
+Wed 29 Nov 2017 15:46:00 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 2212813062 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:00 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 2212813062, type: friends, total: 302
+Wed 29 Nov 2017 15:46:01 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 17462690, type: friends, get: 2091
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 17462690 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 17462690, type: friends, total: 2091
+Wed 29 Nov 2017 15:46:01 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 624195464, type: friends, get: 321
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 624195464 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 624195464, type: friends, total: 321
+Wed 29 Nov 2017 15:46:01 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 31940398, type: friends, get: 805
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 31940398 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 31940398, type: friends, total: 805
+Wed 29 Nov 2017 15:46:04 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 21506792, type: friends, get: 3687
+Wed 29 Nov 2017 15:46:04 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 21506792 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:04 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 21506792, type: friends, total: 3687
+Wed 29 Nov 2017 15:46:04 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 1961405888, type: friends, get: 581
+Wed 29 Nov 2017 15:46:04 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 1961405888 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:04 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 1961405888, type: friends, total: 581
+Wed 29 Nov 2017 15:46:04 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 222795994, type: friends, get: 617
+Wed 29 Nov 2017 15:46:04 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 222795994 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:04 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 222795994, type: friends, total: 617
+Wed 29 Nov 2017 15:46:05 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 2535443246, type: friends, get: 3667
+Wed 29 Nov 2017 15:46:05 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 2535443246 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:05 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 2535443246, type: friends, total: 3667
+Wed 29 Nov 2017 15:46:07 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 386112406, type: friends, get: 508
+Wed 29 Nov 2017 15:46:07 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 386112406 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:07 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 386112406, type: friends, total: 508
+Wed 29 Nov 2017 15:46:07 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 3431643087, type: friends, get: 998
+Wed 29 Nov 2017 15:46:07 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 3431643087 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:07 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 3431643087, type: friends, total: 998
+Wed 29 Nov 2017 15:46:08 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 172815309, type: friends, get: 824
+Wed 29 Nov 2017 15:46:08 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 172815309 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:08 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 172815309, type: friends, total: 824
+Wed 29 Nov 2017 15:46:08 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 54246318, type: friends, get: 772
+Wed 29 Nov 2017 15:46:08 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 54246318 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:08 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 54246318, type: friends, total: 772
+Wed 29 Nov 2017 15:46:10 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 38915067, type: friends, get: 1400
+Wed 29 Nov 2017 15:46:10 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 38915067 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:10 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 38915067, type: friends, total: 1400
+Wed 29 Nov 2017 15:46:10 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 67902710, type: friends, get: 874
+Wed 29 Nov 2017 15:46:10 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 67902710 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:10 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 67902710, type: friends, total: 874
+Wed 29 Nov 2017 15:46:11 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 5700362, type: friends, get: 577
+Wed 29 Nov 2017 15:46:11 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 5700362 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:11 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 5700362, type: friends, total: 577
+Wed 29 Nov 2017 15:46:12 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 24852137, type: friends, get: 1548
+Wed 29 Nov 2017 15:46:12 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 24852137 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:12 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 24852137, type: friends, total: 1548
+Wed 29 Nov 2017 15:46:13 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 1367635650, type: friends, get: 937
+Wed 29 Nov 2017 15:46:13 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 1367635650 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:13 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 1367635650, type: friends, total: 937
+Wed 29 Nov 2017 15:46:14 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 1218967194, type: friends, get: 584
+Wed 29 Nov 2017 15:46:14 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 1218967194 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:14 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 1218967194, type: friends, total: 584
+Wed 29 Nov 2017 15:46:14 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 3331808741, type: friends, get: 277
+Wed 29 Nov 2017 15:46:14 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 3331808741 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:14 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 3331808741, type: friends, total: 277
+Wed 29 Nov 2017 15:46:16 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 26502029, type: friends, get: 1633
+Wed 29 Nov 2017 15:46:16 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 26502029 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:16 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 26502029, type: friends, total: 1633
+Wed 29 Nov 2017 15:46:16 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 459628863, type: friends, get: 529
+Wed 29 Nov 2017 15:46:16 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 459628863 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:16 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 459628863, type: friends, total: 529
+Wed 29 Nov 2017 15:46:17 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 228823097, type: friends, get: 602
+Wed 29 Nov 2017 15:46:17 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 228823097 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:17 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 228823097, type: friends, total: 602
+Wed 29 Nov 2017 15:46:17 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 18396959, type: friends, get: 301
+Wed 29 Nov 2017 15:46:17 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 18396959 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:17 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 18396959, type: friends, total: 301
+Wed 29 Nov 2017 15:46:19 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 21059590, type: friends, get: 243
+Wed 29 Nov 2017 15:46:19 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 21059590 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:19 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 21059590, type: friends, total: 243
+Wed 29 Nov 2017 15:46:19 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 76084522, type: friends, get: 1771
+Wed 29 Nov 2017 15:46:19 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 76084522 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:19 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 76084522, type: friends, total: 1771
+Wed 29 Nov 2017 15:46:20 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 888049571699490816, type: friends, get: 372
+Wed 29 Nov 2017 15:46:20 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 888049571699490816 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:20 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 888049571699490816, type: friends, total: 372
+Wed 29 Nov 2017 15:46:21 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 26614565, type: friends, get: 2979
+Wed 29 Nov 2017 15:46:21 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 26614565 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:21 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 26614565, type: friends, total: 2979
+Wed 29 Nov 2017 15:46:22 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 2941693833, type: friends, get: 1670
+Wed 29 Nov 2017 15:46:22 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 2941693833 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:22 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 2941693833, type: friends, total: 1670
+Wed 29 Nov 2017 15:46:22 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 1644528265, type: friends, get: 1711
+Wed 29 Nov 2017 15:46:22 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 1644528265 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:22 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 1644528265, type: friends, total: 1711
+Wed 29 Nov 2017 15:46:23 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 2574448909, type: friends, get: 3598
+Wed 29 Nov 2017 15:46:23 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 2574448909 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:23 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 2574448909, type: friends, total: 3598
+Wed 29 Nov 2017 15:46:24 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 764951045738987520, type: friends, get: 2214
+Wed 29 Nov 2017 15:46:24 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 764951045738987520 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:24 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 764951045738987520, type: friends, total: 2214
+Wed 29 Nov 2017 15:46:26 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 254034511, type: friends, get: 680
+Wed 29 Nov 2017 15:46:26 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 254034511 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:26 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 254034511, type: friends, total: 680
+Wed 29 Nov 2017 15:46:26 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 945128460, type: friends, get: 1464
+Wed 29 Nov 2017 15:46:26 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 945128460 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:26 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 945128460, type: friends, total: 1464
+Wed 29 Nov 2017 15:46:26 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 2851435446, type: friends, get: 3317
+Wed 29 Nov 2017 15:46:26 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 2851435446 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:26 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 2851435446, type: friends, total: 3317
+Wed 29 Nov 2017 15:46:27 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 59618649, type: friends, get: 902
+Wed 29 Nov 2017 15:46:27 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 59618649 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:27 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 59618649, type: friends, total: 902
+Wed 29 Nov 2017 15:46:29 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 47252193, type: friends, get: 136
+Wed 29 Nov 2017 15:46:29 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 47252193 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:29 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 47252193, type: friends, total: 136
+Wed 29 Nov 2017 15:46:29 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 14929087, type: friends, get: 187
+Wed 29 Nov 2017 15:46:29 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 14929087 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:29 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 1138714878, type: friends, get: 297
+Wed 29 Nov 2017 15:46:29 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 14929087, type: friends, total: 187
+Wed 29 Nov 2017 15:46:29 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 1138714878 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:29 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 1138714878, type: friends, total: 297
+Wed 29 Nov 2017 15:46:29 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 33526316, type: friends, get: 534
+Wed 29 Nov 2017 15:46:29 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 33526316 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:29 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 33526316, type: friends, total: 534
+Wed 29 Nov 2017 15:46:32 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 3319394305, type: friends, get: 541
+Wed 29 Nov 2017 15:46:32 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 3319394305 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:32 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 3319394305, type: friends, total: 541
+Wed 29 Nov 2017 15:46:32 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 167201799, type: friends, get: 441
+Wed 29 Nov 2017 15:46:32 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 167201799 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:32 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 167201799, type: friends, total: 441
+Wed 29 Nov 2017 15:46:32 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 1942681974, type: friends, get: 1108
+Wed 29 Nov 2017 15:46:32 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 1942681974 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:32 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 1942681974, type: friends, total: 1108
+Wed 29 Nov 2017 15:46:32 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 573921434, type: friends, get: 1385
+Wed 29 Nov 2017 15:46:32 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 573921434 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:32 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 573921434, type: friends, total: 1385
+Wed 29 Nov 2017 15:46:35 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 1270097292, type: friends, get: 452
+Wed 29 Nov 2017 15:46:35 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 1270097292 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:35 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 1270097292, type: friends, total: 452
+Wed 29 Nov 2017 15:46:35 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 1011047005, type: friends, get: 220
+Wed 29 Nov 2017 15:46:35 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 1011047005 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:35 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 1011047005, type: friends, total: 220
+Wed 29 Nov 2017 15:46:35 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 4317265283, type: friends, get: 606
+Wed 29 Nov 2017 15:46:35 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 4317265283 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:35 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 4317265283, type: friends, total: 606
+Wed 29 Nov 2017 15:46:36 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 43035059, type: friends, get: 599
+Wed 29 Nov 2017 15:46:36 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 43035059 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:36 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 43035059, type: friends, total: 599
+Wed 29 Nov 2017 15:46:38 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 2288929392, type: friends, get: 683
+Wed 29 Nov 2017 15:46:38 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 2288929392 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:38 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 2288929392, type: friends, total: 683
+Wed 29 Nov 2017 15:46:39 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 785288614628487168, type: friends, get: 409
+Wed 29 Nov 2017 15:46:39 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 785288614628487168 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:39 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 785288614628487168, type: friends, total: 409
+Wed 29 Nov 2017 15:46:39 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 2734675328, type: friends, get: 650
+Wed 29 Nov 2017 15:46:39 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 2734675328 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:39 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 2734675328, type: friends, total: 650
+Wed 29 Nov 2017 15:46:40 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 39757618, type: friends, get: 4752
+Wed 29 Nov 2017 15:46:40 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 39757618 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:40 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 39757618, type: friends, total: 4752
+Wed 29 Nov 2017 15:46:41 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 2819993457, type: friends, get: 1069
+Wed 29 Nov 2017 15:46:41 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 2819993457 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:41 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 2819993457, type: friends, total: 1069
+Wed 29 Nov 2017 15:46:42 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 266968602, type: friends, get: 1372
+Wed 29 Nov 2017 15:46:42 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 266968602 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:42 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 266968602, type: friends, total: 1372
+Wed 29 Nov 2017 15:46:42 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 54873135, type: friends, get: 621
+Wed 29 Nov 2017 15:46:42 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 54873135 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:42 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 54873135, type: friends, total: 621
+Wed 29 Nov 2017 15:46:43 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 24237231, type: friends, get: 891
+Wed 29 Nov 2017 15:46:43 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 24237231 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:43 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 24237231, type: friends, total: 891
+Wed 29 Nov 2017 15:46:45 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 21414175, type: friends, get: 241
+Wed 29 Nov 2017 15:46:45 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 21414175 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:45 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 21414175, type: friends, total: 241
+Wed 29 Nov 2017 15:46:45 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 19592720, type: friends, get: 2228
+Wed 29 Nov 2017 15:46:45 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 19592720 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:45 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 19592720, type: friends, total: 2228
+Wed 29 Nov 2017 15:46:46 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 875734450310721536, type: friends, get: 2996
+Wed 29 Nov 2017 15:46:46 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 875734450310721536 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:46 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 875734450310721536, type: friends, total: 2996
+Wed 29 Nov 2017 15:46:46 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 24736637, type: friends, get: 1235
+Wed 29 Nov 2017 15:46:46 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 24736637 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:46 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 24736637, type: friends, total: 1235
+Wed 29 Nov 2017 15:46:48 rest_api get_users_ids 12104 Thread-2 [line:212] INFO id: 1904760740, type: friends, get: 270
+Wed 29 Nov 2017 15:46:48 rest_api __get_users_follow 12104 Thread-2 [line:572] INFO 1904760740 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:48 rest_api __get_users_follow 12104 Thread-2 [line:576] INFO id: 1904760740, type: friends, total: 270
+Wed 29 Nov 2017 15:46:48 rest_api get_users_ids 4688 Thread-1 [line:212] INFO id: 31482181, type: friends, get: 272
+Wed 29 Nov 2017 15:46:48 rest_api __get_users_follow 4688 Thread-1 [line:572] INFO 31482181 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:48 rest_api __get_users_follow 4688 Thread-1 [line:576] INFO id: 31482181, type: friends, total: 272
+Wed 29 Nov 2017 15:46:50 rest_api get_users_ids 11580 Thread-3 [line:212] INFO id: 853016828502712321, type: friends, get: 2955
+Wed 29 Nov 2017 15:46:50 rest_api __get_users_follow 11580 Thread-3 [line:572] INFO 853016828502712321 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:50 rest_api __get_users_follow 11580 Thread-3 [line:576] INFO id: 853016828502712321, type: friends, total: 2955
+Wed 29 Nov 2017 15:46:50 rest_api get_users_ids 11136 Thread-4 [line:212] INFO id: 145053036, type: friends, get: 517
+Wed 29 Nov 2017 15:46:50 rest_api __get_users_follow 11136 Thread-4 [line:572] INFO 145053036 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:50 rest_api __get_users_follow 11136 Thread-4 [line:576] INFO id: 145053036, type: friends, total: 517

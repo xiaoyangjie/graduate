@@ -2,28 +2,34 @@
 from __future__ import unicode_literals
 
 import time
+from multiprocessing import Process
 
-from django.views.decorators.csrf import csrf_exempt
 import psutil
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
-from program_code.TwitterCapture.TwitterUserCapture.UserInfo import userInfo as _userInfoCapture
-from program_code.TwitterCapture.TwitterUserCapture.UserFriends import userFriends as _userFriendsCapture
-from program_code.TwitterCapture.TwitterUserCapture.UserFollowers import userFollowers as _userFollowersCapture
-from program_code.TwitterCapture.TwitterTweetCapture.FilterRealtimeTweet import filterRealtimeTweet as _filterTweetCapture
-from program_code.TwitterCapture.TwitterTweetCapture.UserRealtimeTweet import realtimeTweet as _realtimeTweetCapture
-from program_code.TwitterCapture.TwitterTweetCapture.HistoryTweet import historyTweet as _historyTweetCapture
-from program_code.TwitterCapture.TwitterTweetCapture.TwitterAPIKeywords import twitterAPIKeywords as _twitterAPIKeywordsCapture
-from program_code.TwitterCapture.GetMongoData import GetMongoData
-from multiprocessing import Process
+from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from pymongo import MongoClient
-from program_code.TwitterCapture.TwitterUserCapture.TwitterUserCapture.common.constants import \
-    MONGOHOST,PROCESS_DATABASE,PROCESS_COLLECTION,PROXY,PROCESS_DB_COL_NAME
-from django.template import RequestContext
-from django.shortcuts import render_to_response
+
+from BeforeDjangoOperation import info
+from TwitterCapture.GetMongoData import GetMongoData
+from TwitterCapture.TwitterTweetCapture.FilterRealtimeTweet import filterRealtimeTweet as _filterTweetCapture
+from TwitterCapture.TwitterTweetCapture.HistoryTweet import historyTweet as _historyTweetCapture
+from TwitterCapture.TwitterTweetCapture.TwitterAPIKeywords import twitterAPIKeywords as _twitterAPIKeywordsCapture
+from TwitterCapture.TwitterTweetCapture.UserRealtimeTweet import realtimeTweet as _realtimeTweetCapture
+from TwitterCapture.TwitterUserCapture.UserFriends import userFriends as _userFriendsCapture
+from TwitterCapture.TwitterUserCapture.UserInfo import userInfo as _userInfoCapture
+from twitter.TwitterCapture.TwitterUserCapture.UserFollowers import userFollowers as _userFollowersCapture
+from twitter.TwitterCapture.constants import \
+    DEFAULTHOST,PROCESS_DATABASE,PROCESS_COLLECTION,PROXY,PROCESS_DB_COL_NAME
+from twitter.TwitterCapture.ProxyConstant import PROXY_LIST
+
+
 def index(request):
     return render(request,'twitter/index.html')
+
+def infoCapture(request):
+    return render(request, 'twitter/infoCapture.html')
 
 def userInfo(request):
     result = getDataAndColInfo()
@@ -275,7 +281,7 @@ def twitterCapture(request):
         kwargs['mongodb'] = tweetHost
         kwargs['mongoDataName'] = tweetDatabase
         kwargs['mongoColName'] = tweetCollection
-        kwargs['keywords'] = keywords
+        kwargs['keyword'] = keywords
         api = Process(target=_twitterAPIKeywordsCapture, kwargs=kwargs)
         api.start()
         processName = storeProcessInfo(pid=api.pid, _type='filterHistoryTweet', tweetHost=tweetHost,
@@ -287,6 +293,7 @@ def twitterCapture(request):
     else:
         return JsonResponse({'content':"采集开始" , 'processName': processName , 'level':'normal'})
 
+@csrf_exempt
 def infoGet(request):
     """
     用于获取数据
@@ -294,57 +301,71 @@ def infoGet(request):
     :return:
     """
     ##############初始化参数#########################
+    userHost = None
     userDatabase = None
     userCollection = None
-    screenNameList = None
-    accountIdList = None
+    screenName = None
+    accountId = None
+    tweetId = None
+    tweetHost = None
     tweetDatabase = None
     tweetCollection = None
     _type = None
-    # keywords = None
+    keywords = None
+    extend = None
 
     #################################################
-    _type = request.GET['type']
-    if _type is '':  # 如果没有采集类型，直接返回报错
-        return JsonResponse({'level': 'error', 'content': '没有选择采集类型，请重新选填'})
+    _type = request.POST['type']
+    print request.POST
+
     try:
-        userDatabase = request.GET['userDatabase']
-        if userDatabase == '':
-            userDatabase = None
+        selectUserDatabase = request.POST['selectUserDatabase']
+        userHost = selectUserDatabase.split('|')[0]
+        userDatabase = selectUserDatabase.split('|')[1]
+        userCollection = selectUserDatabase.split('|')[2]
+    except:pass
+
+    try:
+        screenName = request.POST['screenName']
+        if screenName == '':
+            screenName = None
     except:pass
     try:
-        userCollection = request.GET['userCollection']
-        if userCollection == '':
-            userCollection = None
+        accountId = request.POST['accountId']
+        if accountId == '':
+            accountId = None
+        else:
+            accountId = int(accountId)
     except:pass
     try:
-        screenNameList = request.GET['screenNameList'].split(',')
-        if screenNameList == ['']:
-            screenNameList = None
+        tweetId = request.POST['tweetId']
+        if tweetId == '':
+            tweetId = None
+        else:
+            tweetId = int(tweetId)
     except:pass
     try:
-        accountIdList = request.GET['accountIdList'].split(',')
-        if accountIdList == ['']:
-            accountIdList = None
+        selectTweetDatabase = request.POST['selectTweetDatabase']
+        tweetHost = selectTweetDatabase.split('|')[0]
+        tweetDatabase = selectTweetDatabase.split('|')[1]
+        tweetCollection = selectTweetDatabase.split('|')[2]
     except:pass
     try:
-        tweetDatabase = request.GET['tweetDatabase']
-        if tweetDatabase == '':
-            tweetDatabase = None
+        keywords = request.POST['keywords']
+        if keywords == '':
+            keywords = None
     except:pass
     try:
-        tweetCollection = request.GET['tweetCollection']
-        if tweetCollection == '':
-            tweetCollection = None
+        extend = request.POST['extend']
+        if extend == '':
+            extend = None
     except:pass
-    # try:
-    #     keywords = request.GET['keywords']
-    # except:pass
 
     #################获取所有的数据###############################
     result = []
-    result = GetMongoData.infoGet(userDatabase=userDatabase,userCollection=userCollection,screenNameList=screenNameList,
-                             accountIdList=accountIdList,tweetDatabase=tweetDatabase,tweetCollection=tweetCollection,_type=_type)
+    result = GetMongoData.infoGet(userHost=userHost, userDatabase=userDatabase, userCollection=userCollection, screenName=screenName, tweetId=tweetId,
+                                  accountId=accountId, tweetHost=tweetHost, tweetDatabase=tweetDatabase, tweetCollection=tweetCollection, _type=_type,
+                                  keywords=keywords, extend=extend)
     return JsonResponse(result,safe=False)
 
 def realtimeInfoGet(request):
@@ -354,60 +375,13 @@ def realtimeInfoGet(request):
     :return:
     """
     ##############初始化参数#########################
-    userDatabase = None
-    userCollection = None
-    screenNameList = None
-    accountIdList = None
-    tweetDatabase = None
-    tweetCollection = None
-    _type = None
-    # keywords = None
+    processName = None
 
     #################################################
-    _type = request.GET['type']
-    if _type is '':  # 如果没有采集类型，直接返回报错
-        return JsonResponse({'level': 'error', 'content': '没有选择采集类型，请重新选填'})
-    try:
-        userDatabase = request.GET['userDatabase']
-        if userDatabase == '':
-            userDatabase = None
-    except:pass
-    try:
-        userCollection = request.GET['userCollection']
-        if userCollection == '':
-            userCollection = None
-    except:pass
-    try:
-        screenNameList = request.GET['screenNameList'].split(',')
-        if screenNameList == ['']:
-            screenNameList = None
-    except:pass
-    try:
-        accountIdList = request.GET['accountIdList'].split(',')
-        if accountIdList == ['']:
-            accountIdList = None
-    except:pass
-    try:
-        tweetDatabase = request.GET['tweetDatabase']
-        if tweetDatabase == '':
-            tweetDatabase = None
-    except:pass
-    try:
-        tweetCollection = request.GET['tweetCollection']
-        if tweetCollection == '':
-            tweetCollection = None
-    except:pass
-    #
-    if tweetDatabase is None or tweetCollection is None:
-        return JsonResponse({'level': 'error', 'content': '没有填写数据库，请填写'})
-##################获取实时数据(只用于显示filterTweet与realtimeTweet)#################################
-    result = {}
-    if _type not in ('userRealtimeTweet','filterTweet'):
-        return JsonResponse({'level':'error','content':'类型错误，这个实时数据按钮只接受关键词推文采集与实时用户推文采集'}, safe=False)
+    processName = request.GET['processName']
 
-    result = GetMongoData.realtimeInfoGet(tweetDatabase=tweetDatabase,tweetCollection=tweetCollection)
-    if result == {}:
-        return JsonResponse({'level': 'error', 'content': '实时采集程序没有运行，请仔细检查'}, safe=False)
+    result = GetMongoData.realtimeInfoGet(processName=processName)
+
     return JsonResponse(result, safe=False)
 
 def storeProcessInfo(pid=None,_type=None,userHost=None,userDatabase=None,userCollection=None,
@@ -421,21 +395,30 @@ screenNameList=None,accountIdList=None,tweetHost=None,tweetDatabase=None,tweetCo
     :param description:
     :return:
     """
-    client = MongoClient(MONGOHOST)[PROCESS_DATABASE][PROCESS_COLLECTION]
+    client = MongoClient(DEFAULTHOST)[PROCESS_DATABASE][PROCESS_COLLECTION]
     content = {}
     content['pid'] = pid
     content['state'] = 'running'
     content['startDate'] = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
     content['startUTC'] = int(time.time())
     content['processName'] = str(_type) + '_' + str(pid) + '_' + str(content['startUTC'])   #这个进程名是唯一标识，由采集类型+PID+创建进程时间构成
+    content['userHost'] = userHost
     content['userDatabase'] = userDatabase
     content['userCollection'] = userCollection
     content['screenNameList'] = screenNameList
     content['accountIdList'] = accountIdList
+    content['tweetHost'] = tweetHost
     content['tweetDatabase'] = tweetDatabase
     content['tweetCollection'] = tweetCollection
     content['keywords'] = keywords
     content['_type'] = _type
+    content['isES'] = False
+    if tweetHost == None:
+        count = MongoClient(userHost)[userDatabase][userCollection].count()
+    else:
+        count = MongoClient(tweetHost)[tweetDatabase][tweetCollection].count()
+    content['count'] = count
+    content['countBefore'] = count
 
     client.insert(content)
 
@@ -456,7 +439,7 @@ def twitterTerminate(request):
     if processName is '':
         return HttpResponse('processName为空，请输入processName')
 
-    processClient = MongoClient(MONGOHOST)[PROCESS_DATABASE][PROCESS_COLLECTION]
+    processClient = MongoClient(DEFAULTHOST)[PROCESS_DATABASE][PROCESS_COLLECTION]
     process = processClient.find_one({'processName':processName})
     if process is not None:
         if process['state'] == 'running':
@@ -488,9 +471,27 @@ def runningProcessInfo(request):
     :param request:
     :return:
     """
-    client = MongoClient(MONGOHOST)[PROCESS_DATABASE][PROCESS_COLLECTION]
+    client = MongoClient(DEFAULTHOST)[PROCESS_DATABASE][PROCESS_COLLECTION]
     for process in client.find({'state':'running'}):
         pass
+
+
+def getBasicInfo(request):
+    """
+    获取基本信息，包括正在运行的进程、代理情况、服务器资源使用情况等
+    :param request:
+    :return:
+    """
+
+
+    client = MongoClient(DEFAULTHOST)[PROCESS_DATABASE][PROCESS_COLLECTION]
+    processList = []
+    for process in client.find({'state': 'running'}):
+        process.pop('_id')
+        process['_processName'] = process['processName'].split('_')[0] + '_' + process['processName'].split('_')[1] + '_*'
+        processList.append(process)
+    return JsonResponse({'proxyResult':info['proxyList'],'serverInfo':info,'process':processList})
+
 
 def searchProcess(request):
     """
@@ -505,7 +506,7 @@ def getDataAndColInfo():
     获取数据库与集合名称
     :return: {'user':[],'tweet':[]}
     """
-    client = MongoClient(MONGOHOST)[PROCESS_DATABASE][PROCESS_DB_COL_NAME]
+    client = MongoClient(DEFAULTHOST)[PROCESS_DATABASE][PROCESS_DB_COL_NAME]
     userList = []
     tweetList = []
     for i in client.find({'type':'user'}):
@@ -517,11 +518,124 @@ def getDataAndColInfo():
     result['tweet'] = tweetList
     return result
 
+
 def getProcessIO(request):
     processName = request.GET['processName']
-    pid = int(processName.split('_')[1])
+    client = MongoClient(DEFAULTHOST)[PROCESS_DATABASE][PROCESS_COLLECTION]
+    process = client.find_one({'processName':processName})
+    pid = process['pid']
     if psutil.pid_exists(pid):
-        result = psutil.Process(pid).io_counters()
-        return JsonResponse({'level':'normal','data':result.write_bytes})
+        result = process['count'] - process['countBefore']
+        return JsonResponse({'level':'normal','data':result})
     else:
-        return JsonResponse({'level':'error'})
+        str = "采集完成"
+        if process['_type'] == 'userFollowers':
+            str = "粉丝ID" + str
+        if process['_type'] == 'userFriends':
+            str = "朋友ID" + str
+        if process['_type'] == 'userInfo':
+            str = "用户信息" + str
+        return JsonResponse({'level':'error','data':str})
+
+def createColHtml(request):
+
+    result = getDataAndColInfo()
+    return render(request, 'twitter/createCol.html', {'tweet': result['tweet'],'user':result['user']})
+
+def createCol(request):
+    """
+
+    :param request:
+    :return:
+    """
+    _type = None
+    userDatabase = None
+    userCollection = None
+    userHost = None
+    tweetHost = None
+    tweetDatabase = None
+    tweetCollection = None
+
+    client = MongoClient(DEFAULTHOST)[PROCESS_DATABASE][PROCESS_DB_COL_NAME]
+    _type = request.GET['type']
+    if _type == 'user':
+        userHost = request.GET['userHost']
+        userDatabase = request.GET['userDatabase']
+        userCollection = request.GET['userCollection']
+        if userCollection in MongoClient(userHost)[userDatabase].collection_names():
+            return HttpResponse("集合已经存在，请重新输入")
+        else:
+            MongoClient(userHost)[userDatabase][userCollection].ensure_index('id', unique=True)
+            MongoClient(userHost)[userDatabase][userCollection].ensure_index('screen_name', unique=True)
+            MongoClient(userHost)[userDatabase][userCollection].ensure_index('captured_friends_count')
+            MongoClient(userHost)[userDatabase][userCollection].ensure_index('captured_followers_count')
+            client.insert({'type':'user','HostName':userHost,'DBName':userDatabase,'COLName':userCollection})
+            return HttpResponse("创建集合成功")
+    elif _type == 'tweet':
+        tweetHost = request.GET['tweetHost']
+        tweetDatabase = request.GET['tweetDatabase']
+        tweetCollection = request.GET['tweetCollection']
+        if tweetCollection in MongoClient(tweetHost)[tweetDatabase].collection_names():
+            return HttpResponse("集合已经存在，请重新输入")
+        else:
+            MongoClient(tweetHost)[tweetDatabase][tweetCollection].ensure_index('id', unique=True)
+            client.insert({'type':'tweet','HostName':tweetHost,'DBName':tweetDatabase,'COLName':tweetCollection})
+            return HttpResponse("创建集合成功")
+    #删除集合
+    else:
+        try:
+            selectUserDatabase = request.GET['selectUserDatabase']
+            userHost = selectUserDatabase.split('|')[0]
+            userDatabase = selectUserDatabase.split('|')[1]
+            userCollection = selectUserDatabase.split('|')[2]
+        except:
+            pass
+        try:
+            selectTweetDatabase = request.GET['selectTweetDatabase']
+            tweetHost = selectTweetDatabase.split('|')[0]
+            tweetDatabase = selectTweetDatabase.split('|')[1]
+            tweetCollection = selectTweetDatabase.split('|')[2]
+        except:
+            pass
+
+        print userHost,tweetHost
+        if tweetHost != '已存在的数据库':
+            if tweetCollection in MongoClient(tweetHost)[tweetDatabase].collection_names():
+                MongoClient(tweetHost)[tweetDatabase].drop_collection(tweetCollection)
+            client.delete_one({'type':'tweet','HostName':tweetHost,'DBName':tweetDatabase,'COLName':tweetCollection})
+        if userHost != '已存在的数据库':
+            if userCollection in MongoClient(userHost)[userDatabase].collection_names():
+                MongoClient(userHost)[userDatabase].drop_collection(userCollection)
+            client.delete_one(
+                {'type': 'user', 'HostName': userHost, 'DBName': userDatabase, 'COLName': userCollection})
+
+        return HttpResponse("删除集合成功")
+
+def getProxyIP(request):
+    try:
+        real_ip = request.META['HTTP_X_FORWARDED_FOR']
+        regip = real_ip.split(",")[0]
+    except:
+        try:
+            regip = request.META['REMOTE_ADDR']
+        except:
+            regip = ""
+    if regip != PROXY_LIST[0]['host']:
+        fp = open('./TwitterCapture/ProxyConstant.py','w')
+        ProxyList = []
+        _proxy = {}
+        _proxy['host'] = regip
+        _proxy['port'] = 8118
+        _proxy['state'] = 'breakdown'
+        ProxyList.append(_proxy)
+        _str = "# coding=utf-8 \n" \
+               "" \
+               "# 专门用于代理常量\n" \
+               "" \
+               "PROXY_LIST=" + str(ProxyList)
+        print _str
+        fp.write(_str.encode('utf-8'))
+        print 2222222222222
+        fp.close()
+
+    return HttpResponse(regip)

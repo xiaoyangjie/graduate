@@ -1,75 +1,40 @@
-2017-11-10 11:32:27,301 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 11:32:27,302 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 11:32:27,302 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 11:32:27,302 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 11:32:27,302 [WARNING] mongo_connector.connector:167 - MongoConnector: Can't find D:\YjProject\GraduateCode\graduate_code\oplog.timestamp, attempting to create an empty progress log
-2017-11-10 11:32:27,313 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 11:32:27,313 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
-2017-11-10 11:32:49,670 [WARNING] elasticsearch:82 - POST http://localhost:9200/_bulk [status:N/A request:10.001s]
-Traceback (most recent call last):
-  File "d:\programsoftware\python2.7\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 78, in perform_request
-    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
-  File "d:\programsoftware\python2.7\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
-    _stacktrace=sys.exc_info()[2])
-  File "d:\programsoftware\python2.7\lib\site-packages\urllib3\util\retry.py", line 333, in increment
-    raise six.reraise(type(error), error, _stacktrace)
-  File "d:\programsoftware\python2.7\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
-    chunked=chunked)
-  File "d:\programsoftware\python2.7\lib\site-packages\urllib3\connectionpool.py", line 389, in _make_request
-    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
-  File "d:\programsoftware\python2.7\lib\site-packages\urllib3\connectionpool.py", line 309, in _raise_timeout
-    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
-ReadTimeoutError: HTTPConnectionPool(host=u'localhost', port=9200): Read timed out. (read timeout=10)
-2017-11-10 11:32:49,673 [CRITICAL] mongo_connector.oplog_manager:670 - Exception during collection dump
-Traceback (most recent call last):
-  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\oplog_manager.py", line 625, in do_dump
-    upsert_all(dm)
-  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\oplog_manager.py", line 611, in upsert_all
-    mapped_ns, long_ts)
-  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 46, in wrapped
-    reraise(new_type, exc_value, exc_tb)
-  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 35, in wrapped
-    return f(*args, **kwargs)
-  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\doc_managers\elastic2_doc_manager.py", line 367, in bulk_upsert
-    for ok, resp in responses:
-  File "d:\programsoftware\python2.7\lib\site-packages\elasticsearch\helpers\__init__.py", line 160, in streaming_bulk
-    for result in _process_bulk_chunk(client, bulk_actions, raise_on_exception, raise_on_error, **kwargs):
-  File "d:\programsoftware\python2.7\lib\site-packages\elasticsearch\helpers\__init__.py", line 89, in _process_bulk_chunk
-    raise e
-ConnectionFailed: ConnectionTimeout caused by - ReadTimeoutError(HTTPConnectionPool(host=u'localhost', port=9200): Read timed out. (read timeout=10))
-2017-11-10 11:32:49,674 [ERROR] mongo_connector.oplog_manager:678 - OplogThread: Failed during dump collection cannot recover! Collection(Database(MongoClient(host=['localhost:27020'], document_class=dict, tz_aware=False, connect=True, replicaset=u'rs'), u'local'), u'oplog.rs')
-2017-11-10 11:32:50,329 [ERROR] mongo_connector.connector:398 - MongoConnector: OplogThread <OplogThread(Thread-3, started 35656)> unexpectedly stopped! Shutting down
-2017-11-10 11:32:57,687 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 11:32:57,688 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 11:32:57,688 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 11:32:57,690 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 11:32:57,700 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 11:32:57,700 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
-2017-11-10 15:14:38,664 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 15:14:38,665 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 15:14:38,665 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 15:14:38,665 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 15:14:38,681 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 15:14:38,681 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
-2017-11-10 15:19:26,111 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 15:19:26,111 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 15:19:26,112 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 15:19:26,112 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 15:19:26,121 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 15:19:26,121 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
-2017-11-10 15:29:02,891 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 15:29:02,891 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 15:29:02,891 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 15:29:02,891 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 15:29:02,901 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 15:29:02,901 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
-2017-11-10 15:31:59,684 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 15:31:59,684 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 15:31:59,686 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 15:31:59,686 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 15:31:59,694 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 15:31:59,694 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
-2017-11-10 15:32:54,993 [ERROR] mongo_connector.util:106 - Fatal Exception
+2017-11-28 19:56:33,684 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 19:56:33,703 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 19:56:33,703 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 19:56:33,703 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 19:56:33,713 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 19:56:33,713 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 19:56:33,713 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 19:56:33,713 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 19:56:33,721 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 19:56:33,723 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 19:56:33,721 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 19:56:33,723 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 19:57:35,701 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 19:57:35,701 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 19:57:35,703 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 19:57:35,703 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 19:57:35,819 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 19:57:35,819 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 19:57:35,821 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 19:57:35,821 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 19:57:35,828 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 19:57:35,828 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 19:57:35,828 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 19:57:35,828 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 19:57:35,845 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 19:57:35,845 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 19:57:35,848 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 19:57:35,848 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 19:57:35,858 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 19:57:35,858 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 19:57:35,887 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 19:57:35,888 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 19:57:35,888 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 19:57:35,888 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 19:57:35,898 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 19:57:35,898 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 19:57:48,930 [ERROR] mongo_connector.util:106 - Fatal Exception
 Traceback (most recent call last):
   File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 104, in wrapped
     func(*args, **kwargs)
@@ -77,26 +42,8 @@ Traceback (most recent call last):
     self.write_oplog_progress()
   File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 246, in write_oplog_progress
     os.rename(self.oplog_checkpoint, backup_file)
-WindowsError: [Error 5] 
-2017-11-10 15:33:05,237 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 15:33:05,239 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 15:33:05,240 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 15:33:05,240 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 15:33:05,249 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 15:33:05,249 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
-2017-11-10 15:50:03,490 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 15:50:03,490 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 15:50:03,490 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 15:50:03,490 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 15:50:03,500 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 15:50:03,500 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
-2017-11-10 16:13:44,703 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 16:13:44,710 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 16:13:44,710 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 16:13:44,710 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 16:13:44,723 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 16:13:44,723 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
-2017-11-10 16:16:29,977 [ERROR] mongo_connector.util:106 - Fatal Exception
+WindowsError: [Error 32] 
+2017-11-28 19:58:15,982 [ERROR] mongo_connector.util:106 - Fatal Exception
 Traceback (most recent call last):
   File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 104, in wrapped
     func(*args, **kwargs)
@@ -105,16 +52,162 @@ Traceback (most recent call last):
   File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 246, in write_oplog_progress
     os.rename(self.oplog_checkpoint, backup_file)
 WindowsError: [Error 2] 
-2017-11-10 16:17:00,582 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 16:17:00,582 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 16:17:00,582 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 16:17:00,582 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 16:17:00,582 [WARNING] mongo_connector.connector:167 - MongoConnector: Can't find D:\YjProject\GraduateCode\graduate_code\oplog.timestamp, attempting to create an empty progress log
-2017-11-10 16:17:00,592 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 16:17:00,594 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
-2017-11-10 16:17:26,413 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
-2017-11-10 16:17:26,413 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
-2017-11-10 16:17:26,414 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
-2017-11-10 16:17:26,414 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
-2017-11-10 16:17:26,421 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
-2017-11-10 16:17:26,421 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:00:35,946 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:00:35,946 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:00:35,946 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:00:35,947 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:00:35,947 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:00:35,947 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:00:35,948 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:00:35,948 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:00:35,983 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:00:35,983 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:00:36,005 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:00:36,005 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:00:36,085 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:00:36,085 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:00:36,085 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:00:36,085 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:00:36,095 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:00:36,095 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:00:36,134 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:00:36,135 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:00:36,135 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:00:36,135 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:00:36,144 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:00:36,144 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:34:29,931 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:34:29,931 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:34:29,931 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:34:29,931 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:34:29,931 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:34:29,931 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:34:29,931 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:34:29,933 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:34:29,933 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:34:29,933 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:34:29,933 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:34:29,933 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:34:29,933 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:34:29,933 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:34:29,933 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:34:29,933 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:34:29,944 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:34:29,944 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:34:29,944 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:34:29,944 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:34:29,944 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:34:29,944 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:34:29,946 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:34:29,946 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:34:29,973 [ERROR] mongo_connector.util:106 - Fatal Exception
+Traceback (most recent call last):
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 104, in wrapped
+    func(*args, **kwargs)
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 404, in run
+    self.write_oplog_progress()
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 246, in write_oplog_progress
+    os.rename(self.oplog_checkpoint, backup_file)
+WindowsError: [Error 183] 
+2017-11-28 20:34:29,999 [ERROR] mongo_connector.util:106 - Fatal Exception
+Traceback (most recent call last):
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 104, in wrapped
+    func(*args, **kwargs)
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 404, in run
+    self.write_oplog_progress()
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 264, in write_oplog_progress
+    os.remove(backup_file)
+WindowsError: [Error 2] : 'D:\\YjProject\\GraduateCode\\graduate_code\\oplog.timestamp.backup'
+2017-11-28 20:35:28,346 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:35:28,346 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:35:28,348 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:35:28,348 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:35:28,380 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:35:28,380 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:35:28,440 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:35:28,440 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:35:28,440 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:35:28,440 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:35:28,460 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:35:28,461 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:35:28,499 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:35:28,499 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:35:28,500 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:35:28,500 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:35:28,509 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:35:28,509 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:35:28,555 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:35:28,555 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:35:28,555 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:35:28,555 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:35:28,572 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:35:28,572 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:36:43,256 [ERROR] mongo_connector.util:106 - Fatal Exception
+Traceback (most recent call last):
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 104, in wrapped
+    func(*args, **kwargs)
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 404, in run
+    self.write_oplog_progress()
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 246, in write_oplog_progress
+    os.rename(self.oplog_checkpoint, backup_file)
+WindowsError: [Error 2] 
+2017-11-28 20:40:54,272 [ERROR] mongo_connector.util:106 - Fatal Exception
+Traceback (most recent call last):
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 104, in wrapped
+    func(*args, **kwargs)
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 404, in run
+    self.write_oplog_progress()
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 264, in write_oplog_progress
+    os.remove(backup_file)
+WindowsError: [Error 2] : 'D:\\YjProject\\GraduateCode\\graduate_code\\oplog.timestamp.backup'
+2017-11-28 20:43:10,621 [ERROR] mongo_connector.util:106 - Fatal Exception
+Traceback (most recent call last):
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 104, in wrapped
+    func(*args, **kwargs)
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 404, in run
+    self.write_oplog_progress()
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 246, in write_oplog_progress
+    os.rename(self.oplog_checkpoint, backup_file)
+WindowsError: [Error 183] 
+2017-11-28 20:47:23,917 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:47:23,917 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:47:23,917 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:47:23,917 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:47:23,920 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:47:23,921 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:47:23,921 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:47:23,921 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:47:23,938 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:47:23,938 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:47:23,957 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:47:23,957 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:47:24,003 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:47:24,003 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:47:24,005 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:47:24,005 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:47:24,012 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:47:24,013 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:47:24,071 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 20:47:24,072 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 20:47:24,072 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 20:47:24,072 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 20:47:24,081 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 20:47:24,081 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2017-11-28 20:47:54,058 [ERROR] mongo_connector.util:106 - Fatal Exception
+Traceback (most recent call last):
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 104, in wrapped
+    func(*args, **kwargs)
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 404, in run
+    self.write_oplog_progress()
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 246, in write_oplog_progress
+    os.rename(self.oplog_checkpoint, backup_file)
+WindowsError: [Error 32] 
+2017-11-28 20:51:59,644 [ERROR] mongo_connector.util:106 - Fatal Exception
+Traceback (most recent call last):
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\util.py", line 104, in wrapped
+    func(*args, **kwargs)
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 404, in run
+    self.write_oplog_progress()
+  File "d:\programsoftware\python2.7\lib\site-packages\mongo_connector\connector.py", line 246, in write_oplog_progress
+    os.rename(self.oplog_checkpoint, backup_file)
+WindowsError: [Error 183] 

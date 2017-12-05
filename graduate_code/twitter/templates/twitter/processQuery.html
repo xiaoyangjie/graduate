@@ -1,4 +1,4 @@
-{% extends 'total_index/common.html' %}
+{% extends 'twitter/common.html' %}
 {% load static %}
     {% block title %}Twitter数据查询{% endblock %}
     {% block link %}
@@ -31,7 +31,6 @@
             box-shadow: 0 0 14px #B1ABAB;margin: 10px 0;"><p><span id='result'></span></p></div>
 
         </div>
-        <script src="/static/jquery_1.11.1.js"></script>
         <script>
         var totalViewNum = 10;
         var dataList = [];

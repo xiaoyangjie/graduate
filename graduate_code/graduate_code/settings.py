@@ -27,7 +27,7 @@ SECRET_KEY = '_kgdxw8uf@1j)km9t)p_8i!8sjh8mgslasct#e_urfp3c_&*=v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.148','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,10 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'twitter',
-    'total_index',
-    'linkedin',
-    'search',
-    # 'query',
 ]
 
 MIDDLEWARE = [
@@ -130,7 +126,7 @@ STATIC_URL = '/static/'
 # 其它 存放静态文件的文件夹，可以用来存放项目中公用的静态文件，里面不能包含 STATIC_ROOT
 # 如果不想用 STATICFILES_DIRS 可以不用，都放在 app 里的 static 中也可以
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "common_static"),
+    os.path.join(BASE_DIR, "static"),
     # '/path/to/others/static/',  # 用不到的时候可以不写这一行
 )
 

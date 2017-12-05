@@ -1,0 +1,10 @@
+Wed 29 Nov 2017 15:41:03 API.py [line:660] INFO start
+Wed 29 Nov 2017 15:41:03 API.py [line:692] INFO thread 0 start.
+Wed 29 Nov 2017 15:41:03 API.py [line:695] INFO thread 0's token_index 32
+Wed 29 Nov 2017 15:41:03 API.py [line:696] INFO {u'access_token': u'709390682671030273-T9s0pnBa8pWdxPjrdsw3dE5ycPTB2YM', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'xNhHo7DeHDbRAeMwcDY0s7Zw0Tb6SRsI5RrIwovOd8xLS'}
+Wed 29 Nov 2017 15:41:03 API.py [line:697] INFO [u'china']
+Wed 29 Nov 2017 15:41:03 API.py [line:698] INFO ['192.168.1.148:8118']
+Wed 29 Nov 2017 15:41:03 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Wed 29 Nov 2017 15:41:03 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Wed 29 Nov 2017 15:41:08 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))
+Wed 29 Nov 2017 15:41:08 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error('Invalid response from tunnel request',)))

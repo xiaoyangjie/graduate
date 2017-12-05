@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <style>
+        body {
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        div#wrapper{
+            margin-top: 30px;
+            height: 100%;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'twitter/global.ico' %}" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.css' %}">
+    <script src="{% static 'twitter/echarts.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.js' %}"></script>
+    <script src="{% static 'vendor/jquery/jquery.js' %}"></script>
+    <title>{% block title %}默认标题{% endblock %} - 社交网络数据采集系统</title>
+    {% block link %}{% endblock %}
+</head>
+<body>
+    {% include 'twitter/navigation.html' %}
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,7 @@
+2017-11-28 19:27:41,786 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2017-11-28 19:27:41,786 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)]
+2017-11-28 19:27:41,788 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2017-11-28 19:27:41,788 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.4.0
+2017-11-28 19:27:41,788 [WARNING] mongo_connector.connector:167 - MongoConnector: Can't find D:\YjProject\GraduateCode\graduate_code\twitter\oplog.timestamp, attempting to create an empty progress log
+2017-11-28 19:27:41,799 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.2.10
+2017-11-28 19:27:41,799 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0

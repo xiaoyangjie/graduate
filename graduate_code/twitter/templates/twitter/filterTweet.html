@@ -1,4 +1,4 @@
-{% extends 'total_index/common.html' %}
+{% extends 'twitter/common.html' %}
 {% load static %}
     {% block title %}Twitter用户详细信息采集{% endblock %}
     {% block link %}
@@ -26,28 +26,43 @@
             <button type="button" id='terminate'>结束采集</button>
             <br>
             <br>
-            <br>
-            <textarea id='result' rows="3" cols="150"></textarea>
+            <textarea id='result' rows="3" cols="159"></textarea>
+
+            <div id="show" style="height: 600px;background-color: rgba(10, 17, 45, 0.11);padding: 15px 15px;
+            box-shadow: 0 0 14px #B1ABAB;margin: 10px 0;"></div>
             <div id="chart" style="height:400px;"></div>
-        <script src="/static/jquery_1.11.1.js"></script>
         <script>
             var processName = null;
-            var resultBefore = 0;
-            var totalViewNum = 5;
             var dataList = [];
-            var len = 300;
+            var tweetList = [];
+            var tweetIdList = [];
+            var tweetShowNum = 3;
+            var len = 100;
             var now = +new Date();
-            var internal = 3 * 1000;
+            var internalChart = 60 * 1000;
+            var internalTweet = 3 * 1000;
             for (var i = 0 ; i < len ; i++)
             {
                 dataList.unshift({value:[now,0]});
-                now = new Date(+now - internal);
+                now = new Date(+now - internalChart);
             }
-            var timeOut = false;
+            var timeOutChart = false;
+            var timeOutTweet = false;
             var myChart = echarts.init(document.getElementById('chart'));
 
             $(document).ready(function() {
                 $("#dataCapture").click(function () {
+{#                    初始化变量#}
+                    dataList = [];
+                    tweetList = [];
+                    tweetIdList = [];
+                    now = +new Date();
+                    for (var i = 0 ; i < len ; i++)
+                    {
+                        dataList.unshift({value:[now,0]});
+                        now = new Date(+now - internalChart);
+                    }
+{#                    #}
                     var selectTweetDatabase = $("#selectTweetDatabase").val();
                     if (selectTweetDatabase == '选择数据库')
                     {
@@ -78,7 +93,8 @@
                        if (ret['level'] == 'normal'){
                             processName = ret['processName'];
                             $('#result').html(ret['content']);
-                            timeOut = false;
+                            timeOutChart = false;
+                            timeOutTweet = false;
                             option = {
                                 title: {
                                     text: type,
@@ -113,7 +129,7 @@
                                     splitLine: {
                                         show: false
                                     },
-                                    name:'采集进程IO速率：bytes/3每秒'
+                                    name:'采集进程采集速率：个/每分钟'
                                 },
                                 series: [{
                                     name: '模拟数据',
@@ -125,9 +141,8 @@
                                 };
                             myChart.setOption(option);
                             time();
-{#                                $("#finishButton").click(function(){#}
-{#                                     timeOut = true;#}
-{#                                });#}
+
+                            timeTweet();
                        }
                     });
                     }
@@ -150,10 +165,16 @@
                 });
             });
             function time() {
-{#                timeOut用于停止循环调用，现在用不到#}
-                if(timeOut) return;
+{#                timeOutChart用于停止循环调用，现在用不到#}
+                if(timeOutChart) return;
                 clock();
-                setTimeout(time,3000); //time是指本身,延时递归调用自己,100为间隔调用时间,单位毫秒
+                setTimeout(time,internalChart); //time是指本身,延时递归调用自己,100为间隔调用时间,单位毫秒
+            }
+            function timeTweet() {
+{#                timeOutChart用于停止循环调用，现在用不到#}
+                if(timeOutChart) return;
+                clockTweet();
+                setTimeout(timeTweet,internalTweet); //time是指本身,延时递归调用自己,100为间隔调用时间,单位毫秒
             }
             function clock(){
                 $.get("/twitter/getProcessIO/", {
@@ -161,19 +182,49 @@
                     }, function (ret) {
                         if (ret['level'] == 'normal'){
                             dataList.shift();
-                            dataList.push({value:[new Date(),ret['data'] - resultBefore]});
+                            dataList.push({value:[new Date(),ret['data']]});
                             myChart.setOption({
                             series: [{
                                 data: dataList
                             }]
                             });
-                            resultBefore = ret['data'];
                         }else{
-                            timeOut = true;
+                            $('#result').html(ret['data']);
+                            timeOutChart = true;
+                        }
+                    });
+
+            }
+            function clockTweet() {
+                $.get("/twitter/realtimeInfoGet/", {
+                        'processName':processName
+                    }, function (data) {
+                        if (data['id'] != null){
+                            if (tweetIdList.indexOf(data['id']) == -1){
+                                var dataContent = "";
+                                dataContent = dataContent + "推文创建的时间：" + data['created_at'] + '<br>';
+                                dataContent = dataContent + "推文发布者：" + data['user']['screen_name'] + '<br>';
+                                dataContent = dataContent + "推文ID：" + data['id'] + '<br>';
+                                dataContent = dataContent + "推文内容：" + data['text'] + '<br><br><br>';
+                                if (tweetList.length > tweetShowNum){
+                                    tweetList.push(dataContent);
+                                    tweetList.shift();
+                                    tweetIdList.push(data['id']);
+                                    tweetIdList.shift();
+                                }else {
+                                     tweetList.push(dataContent);
+                                     tweetIdList.push(data['id']);
+                                }
+
+                            }
+                            dataContent = "";
+                            for (var i = 0 ; i < tweetList.length; i++){
+                                dataContent = dataContent + tweetList[i];
+                            }
+                            $('#show').html(dataContent);
                         }
 
                     });
-
             }
         </script>
         </div>

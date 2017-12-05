@@ -1,0 +1,4 @@
+Tue 28 Nov 2017 11:22:47 TwitterError __init__ 15440 Thread-4 [line:34] INFO Status code 403: Twitter request failed
+Tue 28 Nov 2017 11:22:47 rest_api get_users_lookup 15440 Thread-4 [line:105] ERROR Twitter request failed
+Tue 28 Nov 2017 11:22:47 TwitterError __init__ 15440 Thread-4 [line:34] INFO Status code 403: Twitter request failed
+Tue 28 Nov 2017 11:23:08 rest_api get_users_lookup 19080 Thread-5 [line:140] INFO users: 100, success: 100

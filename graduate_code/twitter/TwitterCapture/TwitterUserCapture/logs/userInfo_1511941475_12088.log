@@ -1,0 +1,153 @@
+Wed 29 Nov 2017 15:44:43 TwitterError __init__ 12072 Thread-5 [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Wed 29 Nov 2017 15:44:43 rest_api get_users_lookup 12072 Thread-5 [line:120] ERROR ('_ssl.c:645: The handshake operation timed out',)
+Wed 29 Nov 2017 15:44:44 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:44 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:44 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:45 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:45 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:45 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:45 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:48 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:48 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:50 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:51 TwitterError __init__ 11824 Thread-7 [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Wed 29 Nov 2017 15:44:51 rest_api get_users_lookup 11824 Thread-7 [line:120] ERROR ('_ssl.c:645: The handshake operation timed out',)
+Wed 29 Nov 2017 15:44:52 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 99
+Wed 29 Nov 2017 15:44:52 rest_api get_users_lookup 10512 Thread-3 [line:142] INFO failed id: [172655685]
+Wed 29 Nov 2017 15:44:52 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:52 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:53 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:53 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:54 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:59 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:59 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:44:59 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:00 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:00 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:00 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:01 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:04 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:06 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:06 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:07 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:08 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:08 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:08 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:08 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:09 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:10 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:11 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:14 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:14 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 99
+Wed 29 Nov 2017 15:45:14 rest_api get_users_lookup 10512 Thread-3 [line:142] INFO failed id: [2657763177L]
+Wed 29 Nov 2017 15:45:15 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:16 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:16 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:16 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:17 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:17 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:19 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:20 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 99
+Wed 29 Nov 2017 15:45:20 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:23 rest_api get_users_lookup 10512 Thread-3 [line:142] INFO failed id: [557213894]
+Wed 29 Nov 2017 15:45:31 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:31 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:32 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:32 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:32 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:32 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:32 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:32 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:34 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:35 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:38 TwitterError __init__ 7500 Thread-6 [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Wed 29 Nov 2017 15:45:38 rest_api get_users_lookup 7500 Thread-6 [line:120] ERROR ('_ssl.c:645: The handshake operation timed out',)
+Wed 29 Nov 2017 15:45:39 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:40 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:40 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:40 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:41 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:41 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:42 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:46 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:47 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:47 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:47 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 99
+Wed 29 Nov 2017 15:45:47 rest_api get_users_lookup 11824 Thread-7 [line:142] INFO failed id: [4482258208L]
+Wed 29 Nov 2017 15:45:48 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:48 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:49 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:51 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:53 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:53 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:54 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:55 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:55 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:56 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 99
+Wed 29 Nov 2017 15:45:56 rest_api get_users_lookup 10512 Thread-3 [line:142] INFO failed id: [161072551]
+Wed 29 Nov 2017 15:45:56 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 99
+Wed 29 Nov 2017 15:45:56 rest_api get_users_lookup 11428 Thread-1 [line:142] INFO failed id: [2313315648L]
+Wed 29 Nov 2017 15:45:57 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:45:59 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:00 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:01 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:01 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:02 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:03 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:04 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:04 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:05 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:07 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:08 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:09 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:10 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:11 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:11 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:12 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:13 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:13 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:14 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:14 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:15 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:18 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:18 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:20 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:20 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:20 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:20 TwitterError __init__ 11824 Thread-7 [line:22] WARNING 400 statuses/filter text ('_ssl.c:645: The handshake operation timed out',)
+Wed 29 Nov 2017 15:46:20 rest_api get_users_lookup 11824 Thread-7 [line:120] ERROR ('_ssl.c:645: The handshake operation timed out',)
+Wed 29 Nov 2017 15:46:21 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:21 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:22 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:23 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:26 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:27 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:27 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:28 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:29 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:29 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:29 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:32 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:33 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:34 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:34 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:34 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:36 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:37 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 99
+Wed 29 Nov 2017 15:46:37 rest_api get_users_lookup 10512 Thread-3 [line:142] INFO failed id: [168285558]
+Wed 29 Nov 2017 15:46:37 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:38 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:40 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:40 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:41 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:41 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:42 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:44 rest_api get_users_lookup 10512 Thread-3 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:44 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:46 rest_api get_users_lookup 12256 Thread-2 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:47 rest_api get_users_lookup 10576 Thread-4 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:48 rest_api get_users_lookup 7500 Thread-6 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:49 rest_api get_users_lookup 11428 Thread-1 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:49 rest_api get_users_lookup 11840 Thread-8 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:50 rest_api get_users_lookup 12072 Thread-5 [line:140] INFO users: 100, success: 100
+Wed 29 Nov 2017 15:46:50 rest_api get_users_lookup 11824 Thread-7 [line:140] INFO users: 100, success: 100

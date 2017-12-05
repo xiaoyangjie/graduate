@@ -1,0 +1,10 @@
+Sat 02 Dec 2017 10:03:16 API.py [line:660] INFO start
+Sat 02 Dec 2017 10:03:16 API.py [line:692] INFO thread 0 start.
+Sat 02 Dec 2017 10:03:16 API.py [line:695] INFO thread 0's token_index 384
+Sat 02 Dec 2017 10:03:16 API.py [line:696] INFO {u'access_token': u'725494612735881216-sNMfbZJPtxAcSDPODlp1aSSf6MoDlXY', u'consumer_secret': u'LivsS9DTKh4Xmfo2vOG2tpKmrj8lxsYqiDgZLamPBJahFqnjUo', u'consumer_key': u'fO4lXV6LLz5e1Ew6uRDtvXpIQ', u'access_token_secret': u'oSIgqcDJdBNeGOJduMyvdWMgQRrlfXSdf5F42EW4ZQwgs'}
+Sat 02 Dec 2017 10:03:16 API.py [line:697] INFO [u'china']
+Sat 02 Dec 2017 10:03:16 API.py [line:698] INFO ['127.0.0.1:9000']
+Sat 02 Dec 2017 10:03:17 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error(10061, '')))
+Sat 02 Dec 2017 10:03:17 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', error(10061, '')))
+Sat 02 Dec 2017 10:03:27 TwitterError.py [line:22] WARNING 400 statuses/filter text HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', timeout('timed out',)))
+Sat 02 Dec 2017 10:03:27 API.py [line:222] WARNING HTTPSConnectionPool(host='stream.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/filter.json (Caused by ProxyError('Cannot connect to proxy.', timeout('timed out',)))

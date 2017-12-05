@@ -1,4 +1,4 @@
-{% extends 'total_index/common.html' %}
+{% extends 'twitter/common.html' %}
 {% load static %}
     {% block title %}Twitter用户详细信息采集{% endblock %}
     {% block link %}
@@ -36,22 +36,17 @@
             <div id="chartUserFriends" style="height:400px;margin: 0 auto;float:left;width: 30%;"></div>
             <div id="chartUserFollowers" style="height:400px;margin: 0 auto;float:left;width: 30%;"></div>
 
-        <script src="/static/jquery_1.11.1.js"></script>
         <script>
 {#            定义一个全局进程标识，可以用于结束进程使用#}
             var processNameUserInfo = null;
             var processNameUserFriends = null;
             var processNameUserFollowers = null;
-            var resultBeforeUserInfo = 0;
-            var resultBeforeUserFriends = 0;
-            var resultBeforeUserFollowers = 0;
-            var totalViewNum = 5;
             var dataListUserInfo = [];
             var dataListUserFriends = [];
             var dataListUserFollowers = [];
-            var len = 300;
+            var len = 100;
             var now = +new Date();
-            var internal = 3 * 1000;
+            var internal = 60 * 1000;
             for (var i = 0 ; i < len ; i++)
             {
                 dataListUserInfo.unshift({value:[now,0]});
@@ -221,7 +216,6 @@
                     $.get("/twitter/twitterTerminate/", {
                         'processName':processNameUserInfo
                     }, function (ret) {
-                        resultBeforeUserInfo = 0;
                         now = +new Date();
                         dataListUserInfo = [];
                         for (var i = 0 ; i < len ; i++)
@@ -237,7 +231,6 @@
                     $.get("/twitter/twitterTerminate/", {
                         'processName':processNameUserFriends
                     }, function (ret) {
-                        resultBeforeUserFriends = 0;
                         now = +new Date();
                         dataListUserFriends = [];
                         for (var i = 0 ; i < len ; i++)
@@ -260,7 +253,6 @@
                             dataListUserFollowers.unshift({value:[now,0]});
                             now = new Date(+now - internal);
                         }
-                        resultBeforeUserFollowers = 0;
                         $('#result').html(ret)
                     });
                 });
@@ -272,7 +264,7 @@
                 if(type=='userFriends' && timeOutUserFriends) return;
                 if(type=='userFollowers' && timeOutUserFollowers) return;
                 clock(type);
-                setTimeout(time,3000,type); //time是指本身,延时递归调用自己,100为间隔调用时间,单位毫秒
+                setTimeout(time,internal,type); //time是指本身,延时递归调用自己,100为间隔调用时间,单位毫秒
             }
             function clock(type){
                 if (type == 'userInfo'){
@@ -281,14 +273,14 @@
                     }, function (ret) {
                         if (ret['level'] == 'normal'){
                             dataListUserInfo.shift();
-                            dataListUserInfo.push({value:[new Date(),ret['data'] - resultBeforeUserInfo]});
+                            dataListUserInfo.push({value:[new Date(),ret['data']]});
                             chartUserInfo.setOption({
                             series: [{
                                 data: dataListUserInfo
                             }]
                             });
-                            resultBeforeUserInfo = ret['data'];
                         }else{
+                            $('#result').html(ret['data']);
                             timeOutUserInfo = true;
                         }
                     });
@@ -299,14 +291,14 @@
                     }, function (ret) {
                         if (ret['level'] == 'normal'){
                             dataListUserFriends.shift();
-                            dataListUserFriends.push({value:[new Date(),ret['data'] - resultBeforeUserFriends]});
+                            dataListUserFriends.push({value:[new Date(),ret['data']]});
                             chartUserFriends.setOption({
                             series: [{
                                 data: dataListUserFriends
                             }]
                             });
-                            resultBeforeUserFriends = ret['data'];
                         }else{
+                            $('#result').html(ret['data']);
                             timeOutUserFriends = true;
                         }
                     });
@@ -317,51 +309,18 @@
                     }, function (ret) {
                         if (ret['level'] == 'normal'){
                             dataListUserFollowers.shift();
-                            dataListUserFollowers.push({value:[new Date(),ret['data'] - resultBeforeUserFollowers]});
+                            dataListUserFollowers.push({value:[new Date(),ret['data']]});
                             chartUserFollowers.setOption({
                             series: [{
                                 data: dataListUserFollowers
                             }]
                             });
-                            resultBeforeUserFollowers = ret['data'];
                         }else{
+                            $('#result').html(ret['data']);
                             timeOutUserFollowers = true;
                         }
                     });
                 }
-{#                var tweetDatabase = $("#tweetDatabase").val();#}
-{#                var tweetCollection = $("#tweetCollection").val();#}
-{#                var type = $("#type").val();#}
-{#                var dataContent = "";#}
-{#                $.get("/twitter/realtimeInfoGet/",{'tweetDatabase':tweetDatabase,'tweetCollection':tweetCollection#}
-{#                ,'type':type}, function(data) {#}
-{#                var str = "";#}
-{#                if (data['level'] == 'error'){#}
-{#                    timeOut = true;#}
-{#                    str = str + data['content'];#}
-{#                    dataContent = str;#}
-{#                }#}
-{#                else{#}
-{#                    $.each(data, function (key, value) {#}
-{#                        dataContent = "";#}
-{#                        dataContent = dataContent + '用户屏显名：' + data['user']['screen_name'] + '<br>';#}
-{#                        dataContent = dataContent + '用户自我描述：' + data['user']['description'] + '<br>';#}
-{#                        dataContent = dataContent + '推文创建时间：' + data['created_at'] + '<br>';#}
-{#                        dataContent = dataContent + '推文的内容：' + data['text'] + '<br>';#}
-{#                        dataContent = dataContent + '<br><br><br>';#}
-{#                    });#}
-{#                    dataList.push(dataContent);#}
-                  {#    超出了设定的可视化条数范围，就删除dataList前面的数据#}
-{#                if (dataList.length > totalViewNum){#}
-{#                    dataList.shift();#}
-{#                }#}
-{#                dataContent = "";#}
-{#                for (var i = 0 ; i < dataList.length ;i++){#}
-{#                    dataContent += dataList[i];#}
-{#                }#}
-{#                }#}
-{#                $('#twitterQuery').html(dataContent);#}
-{#            });#}
         }
         </script>
         </div>

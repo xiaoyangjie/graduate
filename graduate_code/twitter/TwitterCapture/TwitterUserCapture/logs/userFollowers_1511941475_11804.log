@@ -1,0 +1,423 @@
+Wed 29 Nov 2017 15:44:38 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:44:38 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:44:38 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:44:40 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 239394793, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:40 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 239394793 finish, next_cursor=1585010916514110655, rest_num=0
+Wed 29 Nov 2017 15:44:40 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 284197383, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:40 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 284197383 finish, next_cursor=1581716436340264217, rest_num=0
+Wed 29 Nov 2017 15:44:40 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 284197383, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:40 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 239394793, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:40 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 828742454, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:40 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 828742454 finish, next_cursor=1585290743484393642, rest_num=0
+Wed 29 Nov 2017 15:44:40 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 828742454, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:43 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 43815496, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:43 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 43815496 finish, next_cursor=1585005692753242388, rest_num=0
+Wed 29 Nov 2017 15:44:43 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 43815496, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:43 TwitterError __init__ 7616 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:44:43 rest_api get_users_ids 7616 Thread-3 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:44:43 TwitterError __init__ 7616 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:44:45 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 1251828655, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 1251828655 finish, next_cursor=1582972488998472645, rest_num=0
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 1251828655, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:45 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 15846407, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 15846407 finish, next_cursor=1585373728627809679, rest_num=0
+Wed 29 Nov 2017 15:44:45 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 15846407, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:46 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 444413055, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:46 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 444413055 finish, next_cursor=1582117719124493576, rest_num=0
+Wed 29 Nov 2017 15:44:46 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 444413055, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:46 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 174266952, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:46 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 174266952 finish, next_cursor=1584727462579950734, rest_num=0
+Wed 29 Nov 2017 15:44:47 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 174266952, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:48 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 38140836, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:48 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 38140836 finish, next_cursor=1581842388611293254, rest_num=0
+Wed 29 Nov 2017 15:44:48 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 38140836, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:49 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 14372143, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:49 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 14372143 finish, next_cursor=1577997462778975808, rest_num=0
+Wed 29 Nov 2017 15:44:49 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 14372143, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:51 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 21366823, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:51 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 21366823 finish, next_cursor=1585263163001243833, rest_num=0
+Wed 29 Nov 2017 15:44:51 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 21366823, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:52 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 76577609, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:52 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 76577609 finish, next_cursor=1577792824156891186, rest_num=0
+Wed 29 Nov 2017 15:44:52 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 76577609, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:52 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 115624161, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:52 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 115624161 finish, next_cursor=1581138356074140263, rest_num=0
+Wed 29 Nov 2017 15:44:52 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 115624161, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:52 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 38400130, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:52 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 38400130 finish, next_cursor=1584199796453921081, rest_num=0
+Wed 29 Nov 2017 15:44:52 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 38400130, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:53 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:44:53 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:44:53 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:44:54 TwitterError __init__ 1688 Thread-4 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:44:54 rest_api get_users_ids 1688 Thread-4 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:44:54 TwitterError __init__ 1688 Thread-4 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:44:55 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 2735591, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:55 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 2735591 finish, next_cursor=1584368014670265366, rest_num=0
+Wed 29 Nov 2017 15:44:55 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 2735591, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:55 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 37890902, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:55 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 37890902 finish, next_cursor=1581112864471064116, rest_num=0
+Wed 29 Nov 2017 15:44:55 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 37890902, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:57 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 14561327, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:57 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 14561327 finish, next_cursor=1581195928932026419, rest_num=0
+Wed 29 Nov 2017 15:44:57 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 14561327, type: followers, total: 5000
+Wed 29 Nov 2017 15:44:58 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 56883209, type: followers, get: 5000
+Wed 29 Nov 2017 15:44:58 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 56883209 finish, next_cursor=1582458088986284093, rest_num=0
+Wed 29 Nov 2017 15:44:59 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 56883209, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:00 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 1671811, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:00 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 1671811 finish, next_cursor=1578763113784079146, rest_num=0
+Wed 29 Nov 2017 15:45:00 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 1671811, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:00 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 34565395, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:00 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 34565395 finish, next_cursor=1580844621560271638, rest_num=0
+Wed 29 Nov 2017 15:45:00 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 34565395, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:01 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 1305940272, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:01 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 1305940272 finish, next_cursor=1582875520784904562, rest_num=0
+Wed 29 Nov 2017 15:45:01 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 1305940272, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:01 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 114356023, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:01 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 114356023 finish, next_cursor=1583552087865170174, rest_num=0
+Wed 29 Nov 2017 15:45:01 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 114356023, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:02 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 27807739, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:02 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 27807739 finish, next_cursor=1580878563108054734, rest_num=0
+Wed 29 Nov 2017 15:45:02 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 27807739, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:03 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 59072662, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:03 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 59072662 finish, next_cursor=1583456084193778948, rest_num=0
+Wed 29 Nov 2017 15:45:03 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 59072662, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:04 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:04 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:04 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:06 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 51263711, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:06 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 51263711 finish, next_cursor=1583496977303160235, rest_num=0
+Wed 29 Nov 2017 15:45:06 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 51263711, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:07 TwitterError __init__ 11788 Thread-2 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:07 rest_api get_users_ids 11788 Thread-2 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:07 TwitterError __init__ 11788 Thread-2 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:07 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:07 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:07 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:08 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 29498906, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:08 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 29498906 finish, next_cursor=1580928440326352915, rest_num=0
+Wed 29 Nov 2017 15:45:08 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 29498906, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:10 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:10 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:10 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:10 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 60642052, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:10 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 60642052 finish, next_cursor=1581872251533557387, rest_num=0
+Wed 29 Nov 2017 15:45:10 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 60642052, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:10 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 44196397, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:10 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 44196397 finish, next_cursor=1585378560579759001, rest_num=0
+Wed 29 Nov 2017 15:45:10 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 44196397, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:11 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 15736190, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:11 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 15736190 finish, next_cursor=1581766660935252529, rest_num=0
+Wed 29 Nov 2017 15:45:11 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 15736190, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:12 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:12 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:12 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:13 TwitterError __init__ 1688 Thread-4 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:13 rest_api get_users_ids 1688 Thread-4 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:13 TwitterError __init__ 1688 Thread-4 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:13 TwitterError __init__ 11788 Thread-2 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:13 rest_api get_users_ids 11788 Thread-2 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:13 TwitterError __init__ 11788 Thread-2 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:15 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:15 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:15 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:15 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 37874853, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:15 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 37874853 finish, next_cursor=1584234176915659118, rest_num=0
+Wed 29 Nov 2017 15:45:15 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 37874853, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:16 TwitterError __init__ 11788 Thread-2 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:17 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 253340062, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:18 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:19 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 57034487, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:23 rest_api get_users_ids 11788 Thread-2 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:23 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 253340062 finish, next_cursor=1584409895313259098, rest_num=0
+Wed 29 Nov 2017 15:45:23 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:23 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 57034487 finish, next_cursor=1581968409502694002, rest_num=0
+Wed 29 Nov 2017 15:45:23 TwitterError __init__ 11788 Thread-2 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:23 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:23 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 253340062, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:23 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 57034487, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:25 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:25 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:25 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:26 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 68321763, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:26 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 68321763 finish, next_cursor=1584095916088529657, rest_num=0
+Wed 29 Nov 2017 15:45:26 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 68321763, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:27 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 168857946, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:27 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 168857946 finish, next_cursor=1583299077129594939, rest_num=0
+Wed 29 Nov 2017 15:45:27 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 168857946, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:27 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 113130846, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:27 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 113130846 finish, next_cursor=1585050340759070597, rest_num=0
+Wed 29 Nov 2017 15:45:27 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 113130846, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:28 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:28 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:28 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:30 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 2916305152, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:30 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 2916305152 finish, next_cursor=1585090225348718867, rest_num=0
+Wed 29 Nov 2017 15:45:30 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 2916305152, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:31 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:31 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:31 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:31 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 197962366, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:31 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 197962366 finish, next_cursor=1584581842867918213, rest_num=0
+Wed 29 Nov 2017 15:45:31 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 197962366, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:32 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 285019665, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:32 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 285019665 finish, next_cursor=1582415273399794690, rest_num=0
+Wed 29 Nov 2017 15:45:32 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 285019665, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:33 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:33 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:33 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:33 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 50090898, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:33 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 50090898 finish, next_cursor=1584633439964184407, rest_num=0
+Wed 29 Nov 2017 15:45:33 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 50090898, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:35 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 275686563, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:35 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 275686563 finish, next_cursor=1585226322896307349, rest_num=0
+Wed 29 Nov 2017 15:45:35 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 275686563, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:35 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 13334762, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:35 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 13334762 finish, next_cursor=1584812695551268342, rest_num=0
+Wed 29 Nov 2017 15:45:35 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 13334762, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:36 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:36 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:36 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:37 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 41085467, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:37 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 41085467 finish, next_cursor=1583959736635843876, rest_num=0
+Wed 29 Nov 2017 15:45:37 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 41085467, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:39 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:39 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:39 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:39 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 34568673, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:39 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 34568673 finish, next_cursor=1584562999463648480, rest_num=0
+Wed 29 Nov 2017 15:45:39 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 34568673, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:40 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 16548023, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:40 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 16548023 finish, next_cursor=1585361660897336487, rest_num=0
+Wed 29 Nov 2017 15:45:40 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 16548023, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:41 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:41 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:41 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:42 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 574253, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:42 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 574253 finish, next_cursor=1583249826251896569, rest_num=0
+Wed 29 Nov 2017 15:45:42 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 574253, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:42 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 606437303, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:42 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 606437303 finish, next_cursor=1584650127863338748, rest_num=0
+Wed 29 Nov 2017 15:45:42 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 606437303, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:43 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 307781209, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:43 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 307781209 finish, next_cursor=1584185825372393877, rest_num=0
+Wed 29 Nov 2017 15:45:43 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 307781209, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:44 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:44 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:44 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:45 TwitterError __init__ 7616 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:45 rest_api get_users_ids 7616 Thread-3 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:45 TwitterError __init__ 7616 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:46 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 564919357, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:46 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 564919357 finish, next_cursor=1584005758489628072, rest_num=0
+Wed 29 Nov 2017 15:45:46 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 564919357, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:47 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 91985735, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:47 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 91985735 finish, next_cursor=1583631164420887863, rest_num=0
+Wed 29 Nov 2017 15:45:47 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 91985735, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:48 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:48 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:48 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 403: Twitter request failed
+Wed 29 Nov 2017 15:45:49 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 752673, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:49 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 752673 finish, next_cursor=1579513168069027955, rest_num=0
+Wed 29 Nov 2017 15:45:49 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 752673, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:49 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 580524757, type: followers, get: 186
+Wed 29 Nov 2017 15:45:49 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 580524757 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:49 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 580524757, type: followers, total: 186
+Wed 29 Nov 2017 15:45:49 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 571202103, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:49 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 571202103 finish, next_cursor=1584264534165680244, rest_num=0
+Wed 29 Nov 2017 15:45:49 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 571202103, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:51 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:51 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:51 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:52 TwitterError __init__ 1688 Thread-4 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:52 rest_api get_users_ids 1688 Thread-4 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:52 TwitterError __init__ 1688 Thread-4 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:53 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 634946394, type: followers, get: 162
+Wed 29 Nov 2017 15:45:53 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 634946394 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:53 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 634946394, type: followers, total: 162
+Wed 29 Nov 2017 15:45:53 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 19086859, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:53 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 19086859 finish, next_cursor=1584381445682676125, rest_num=0
+Wed 29 Nov 2017 15:45:53 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 19086859, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:56 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 826401558, type: followers, get: 417
+Wed 29 Nov 2017 15:45:56 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 826401558 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:45:56 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 826401558, type: followers, total: 417
+Wed 29 Nov 2017 15:45:56 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 67577830, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:56 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 67577830 finish, next_cursor=1583244155644649210, rest_num=0
+Wed 29 Nov 2017 15:45:56 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 67577830, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:57 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 925902272, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:57 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 925902272 finish, next_cursor=1558158690632342648, rest_num=0
+Wed 29 Nov 2017 15:45:57 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 925902272, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:57 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 37716556, type: followers, get: 5000
+Wed 29 Nov 2017 15:45:57 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 37716556 finish, next_cursor=1570963590202836845, rest_num=0
+Wed 29 Nov 2017 15:45:57 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 37716556, type: followers, total: 5000
+Wed 29 Nov 2017 15:45:59 TwitterError __init__ 1688 Thread-4 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:45:59 rest_api get_users_ids 1688 Thread-4 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:45:59 TwitterError __init__ 1688 Thread-4 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:46:01 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 753034902308696065, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 753034902308696065 finish, next_cursor=1580753946448455036, rest_num=0
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 753034902308696065, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:01 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 191477653, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 191477653 finish, next_cursor=1575855516395115836, rest_num=0
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 191477653, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:01 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 16955870, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 16955870 finish, next_cursor=1577721297502316488, rest_num=0
+Wed 29 Nov 2017 15:46:01 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 16955870, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:03 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 19119809, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:03 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 19119809 finish, next_cursor=1583702668594858247, rest_num=0
+Wed 29 Nov 2017 15:46:03 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 19119809, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:04 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:46:04 rest_api get_users_ids 10248 Thread-1 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:46:04 TwitterError __init__ 10248 Thread-1 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:46:05 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 301506817, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:05 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 301506817 finish, next_cursor=1577248681263146724, rest_num=0
+Wed 29 Nov 2017 15:46:05 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 301506817, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:05 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 137512415, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:05 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 137512415 finish, next_cursor=1573349176394407132, rest_num=0
+Wed 29 Nov 2017 15:46:05 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 137512415, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:07 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 74820061, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:07 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 74820061 finish, next_cursor=1583470174625269741, rest_num=0
+Wed 29 Nov 2017 15:46:07 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 74820061, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:09 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 242364755, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:09 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 242364755 finish, next_cursor=1549524354801729620, rest_num=0
+Wed 29 Nov 2017 15:46:09 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 242364755, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:10 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 463765807, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:10 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 463765807 finish, next_cursor=1583456146322450886, rest_num=0
+Wed 29 Nov 2017 15:46:10 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 463765807, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:10 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 128942984, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:10 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 128942984 finish, next_cursor=1522795851671983273, rest_num=0
+Wed 29 Nov 2017 15:46:10 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 128942984, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:11 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 189689088, type: followers, get: 1085
+Wed 29 Nov 2017 15:46:11 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 189689088 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:11 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 189689088, type: followers, total: 1085
+Wed 29 Nov 2017 15:46:12 TwitterError __init__ 7616 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:46:12 rest_api get_users_ids 7616 Thread-3 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:46:12 TwitterError __init__ 7616 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:46:13 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 47267355, type: followers, get: 415
+Wed 29 Nov 2017 15:46:13 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 47267355 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:13 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 47267355, type: followers, total: 415
+Wed 29 Nov 2017 15:46:13 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 1457641728, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:13 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 1457641728 finish, next_cursor=1550471340466802933, rest_num=0
+Wed 29 Nov 2017 15:46:13 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 1457641728, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:14 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 862420720210518016, type: followers, get: 39
+Wed 29 Nov 2017 15:46:14 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 862420720210518016 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:14 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 862420720210518016, type: followers, total: 39
+Wed 29 Nov 2017 15:46:17 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 423923757, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:17 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 423923757 finish, next_cursor=1583183380118579354, rest_num=0
+Wed 29 Nov 2017 15:46:17 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 423923757, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:17 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 33383103, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:17 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 33383103 finish, next_cursor=1583828693031908189, rest_num=0
+Wed 29 Nov 2017 15:46:17 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 33383103, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:18 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 996270930, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:18 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 996270930 finish, next_cursor=1570246242421470699, rest_num=0
+Wed 29 Nov 2017 15:46:18 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 996270930, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:19 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 424688658, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:19 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 424688658 finish, next_cursor=1498434824562442008, rest_num=0
+Wed 29 Nov 2017 15:46:19 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 424688658, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:20 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 801100140, type: followers, get: 417
+Wed 29 Nov 2017 15:46:20 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 801100140 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:20 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 801100140, type: followers, total: 417
+Wed 29 Nov 2017 15:46:21 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 1898849064, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:21 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 1898849064 finish, next_cursor=1549385492612037051, rest_num=0
+Wed 29 Nov 2017 15:46:21 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 1898849064, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:21 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 1414437870, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:21 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 1414437870 finish, next_cursor=1550652052066404959, rest_num=0
+Wed 29 Nov 2017 15:46:21 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 1414437870, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:22 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 176560213, type: followers, get: 370
+Wed 29 Nov 2017 15:46:22 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 176560213 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:22 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 176560213, type: followers, total: 370
+Wed 29 Nov 2017 15:46:22 TwitterError __init__ 7616 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:46:22 rest_api get_users_ids 7616 Thread-3 [line:191] ERROR Twitter request failed
+Wed 29 Nov 2017 15:46:22 TwitterError __init__ 7616 Thread-3 [line:34] INFO Status code 429: Twitter request failed
+Wed 29 Nov 2017 15:46:24 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 1713975960, type: followers, get: 113
+Wed 29 Nov 2017 15:46:24 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 1713975960 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:24 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 1713975960, type: followers, total: 113
+Wed 29 Nov 2017 15:46:25 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 759457517365633024, type: followers, get: 509
+Wed 29 Nov 2017 15:46:25 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 759457517365633024 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:25 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 759457517365633024, type: followers, total: 509
+Wed 29 Nov 2017 15:46:25 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 22642788, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:25 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 22642788 finish, next_cursor=1583016668152380920, rest_num=0
+Wed 29 Nov 2017 15:46:25 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 22642788, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:27 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 7684882, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:27 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 7684882 finish, next_cursor=1568869016324439655, rest_num=0
+Wed 29 Nov 2017 15:46:27 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 7684882, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:28 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 1924071992, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:28 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 1924071992 finish, next_cursor=1582862476371588496, rest_num=0
+Wed 29 Nov 2017 15:46:28 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 1924071992, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:28 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 25598396, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:28 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 25598396 finish, next_cursor=1581168720647587295, rest_num=0
+Wed 29 Nov 2017 15:46:28 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 25598396, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:29 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 946901479, type: followers, get: 4270
+Wed 29 Nov 2017 15:46:29 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 946901479 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:29 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 946901479, type: followers, total: 4270
+Wed 29 Nov 2017 15:46:30 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 902007226856067072, type: followers, get: 289
+Wed 29 Nov 2017 15:46:30 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 902007226856067072 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:30 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 902007226856067072, type: followers, total: 289
+Wed 29 Nov 2017 15:46:30 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 1139189364, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:30 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 1139189364 finish, next_cursor=1578488361756277848, rest_num=0
+Wed 29 Nov 2017 15:46:30 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 1139189364, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:31 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 869172015151935488, type: followers, get: 3537
+Wed 29 Nov 2017 15:46:31 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 869172015151935488 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:31 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 869172015151935488, type: followers, total: 3537
+Wed 29 Nov 2017 15:46:31 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 250195173, type: followers, get: 1204
+Wed 29 Nov 2017 15:46:31 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 250195173 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:31 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 250195173, type: followers, total: 1204
+Wed 29 Nov 2017 15:46:33 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 217959930, type: followers, get: 360
+Wed 29 Nov 2017 15:46:33 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 217959930 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:33 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 217959930, type: followers, total: 360
+Wed 29 Nov 2017 15:46:33 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 247884379, type: followers, get: 419
+Wed 29 Nov 2017 15:46:33 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 247884379 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:33 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 247884379, type: followers, total: 419
+Wed 29 Nov 2017 15:46:34 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 63264375, type: followers, get: 1876
+Wed 29 Nov 2017 15:46:34 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 63264375 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:35 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 63264375, type: followers, total: 1876
+Wed 29 Nov 2017 15:46:35 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 2916964699, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:35 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 2916964699 finish, next_cursor=1563277440335582775, rest_num=0
+Wed 29 Nov 2017 15:46:35 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 2916964699, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:37 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 34370512, type: followers, get: 4139
+Wed 29 Nov 2017 15:46:37 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 34370512 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:37 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 34370512, type: followers, total: 4139
+Wed 29 Nov 2017 15:46:37 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 20068679, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:37 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 20068679 finish, next_cursor=1581815080234532246, rest_num=0
+Wed 29 Nov 2017 15:46:37 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 20068679, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:38 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 1375581494, type: followers, get: 234
+Wed 29 Nov 2017 15:46:38 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 1375581494 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:38 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 1375581494, type: followers, total: 234
+Wed 29 Nov 2017 15:46:39 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 2899043793, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:39 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 2899043793 finish, next_cursor=1576079257404265519, rest_num=0
+Wed 29 Nov 2017 15:46:39 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 2899043793, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:40 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 885566957256232960, type: followers, get: 245
+Wed 29 Nov 2017 15:46:40 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 885566957256232960 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:40 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 885566957256232960, type: followers, total: 245
+Wed 29 Nov 2017 15:46:40 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 226429105, type: followers, get: 1046
+Wed 29 Nov 2017 15:46:40 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 226429105 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:40 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 226429105, type: followers, total: 1046
+Wed 29 Nov 2017 15:46:41 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 879315963640000513, type: followers, get: 38
+Wed 29 Nov 2017 15:46:41 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 879315963640000513 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:41 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 879315963640000513, type: followers, total: 38
+Wed 29 Nov 2017 15:46:43 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 1345685642, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:43 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 1345685642 finish, next_cursor=1582981478701550989, rest_num=0
+Wed 29 Nov 2017 15:46:43 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 1345685642, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:44 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 130496027, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:44 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 130496027 finish, next_cursor=1584969073787050123, rest_num=0
+Wed 29 Nov 2017 15:46:44 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 130496027, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:44 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 322498675, type: followers, get: 1931
+Wed 29 Nov 2017 15:46:44 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 322498675 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:44 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 322498675, type: followers, total: 1931
+Wed 29 Nov 2017 15:46:44 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 55717900, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:44 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 55717900 finish, next_cursor=1583084956254237709, rest_num=0
+Wed 29 Nov 2017 15:46:45 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 55717900, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:47 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 776192268420075520, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:47 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 776192268420075520 finish, next_cursor=1549722071062066276, rest_num=0
+Wed 29 Nov 2017 15:46:47 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 776192268420075520, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:48 rest_api get_users_ids 7616 Thread-3 [line:212] INFO id: 1300268107, type: followers, get: 470
+Wed 29 Nov 2017 15:46:48 rest_api __get_users_follow 7616 Thread-3 [line:572] INFO 1300268107 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:48 rest_api __get_users_follow 7616 Thread-3 [line:576] INFO id: 1300268107, type: followers, total: 470
+Wed 29 Nov 2017 15:46:48 rest_api get_users_ids 11788 Thread-2 [line:212] INFO id: 46213956, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:48 rest_api __get_users_follow 11788 Thread-2 [line:572] INFO 46213956 finish, next_cursor=1581656051666286281, rest_num=0
+Wed 29 Nov 2017 15:46:48 rest_api __get_users_follow 11788 Thread-2 [line:576] INFO id: 46213956, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:48 rest_api get_users_ids 10248 Thread-1 [line:212] INFO id: 32871086, type: followers, get: 5000
+Wed 29 Nov 2017 15:46:48 rest_api __get_users_follow 10248 Thread-1 [line:572] INFO 32871086 finish, next_cursor=1584920851812754861, rest_num=0
+Wed 29 Nov 2017 15:46:48 rest_api __get_users_follow 10248 Thread-1 [line:576] INFO id: 32871086, type: followers, total: 5000
+Wed 29 Nov 2017 15:46:51 rest_api get_users_ids 1688 Thread-4 [line:212] INFO id: 1551217382, type: followers, get: 2349
+Wed 29 Nov 2017 15:46:51 rest_api __get_users_follow 1688 Thread-4 [line:572] INFO 1551217382 finish, next_cursor=0, rest_num=0
+Wed 29 Nov 2017 15:46:51 rest_api __get_users_follow 1688 Thread-4 [line:576] INFO id: 1551217382, type: followers, total: 2349

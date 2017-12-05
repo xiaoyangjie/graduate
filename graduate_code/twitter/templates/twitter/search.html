@@ -1,4 +1,4 @@
-{% extends 'total_index/common.html' %}
+{% extends 'twitter/common.html' %}
 {% load static %}
     {% block title %}Twitter用户详细信息采集{% endblock %}
     {% block link %}
@@ -44,13 +44,18 @@
             <button type="button" id='dataCapture'>查询</button>
             <br>
             <br>
-        <div class="block" style="height: 900px;background-color: rgba(10, 17, 45, 0.11);padding: 15px 15px;
-            box-shadow: 0 0 14px #B1ABAB;margin: 10px 0;"><p><span id='result'></span></p></div>
+        <div class="block" style="height: 1200px;background-color: rgba(10, 17, 45, 0.11);padding: 15px 15px;
+            box-shadow: 0 0 14px #B1ABAB;margin: 10px 0;float: left;width: 49%;margin-right: 20px;">
+            <div id="22" style="margin: 10px 0;width: 40%;height: 200px"><img id="profileImage" src="{% static "twitter/default_profile.png" %}" width="100%" height="100%"/></div>
+            <div id="resultUser"></div>
+        </div>
+        <div id="resultTweet" style="height: 1200px;background-color: rgba(10, 17, 45, 0.11);padding: 15px 15px;
+            box-shadow: 0 0 14px #B1ABAB;margin: 10px 0;float: left;width: 49%;">
+{#            <div id="22" style="margin: 10px 0;width: 20%;height: 200px"><img id="profileImage" src="" width="100%" height="100%"/></div>#}
+        </div>
 {#            <textarea id='result' rows="3" cols="150"></textarea>#}
-        <script src="/static/jquery_1.11.1.js"></script>
         <script>
-
-            var totalViewNum = 5;
+            var storageUserInfo = null;
 
             $(document).ready(function() {
 
@@ -113,13 +118,110 @@
                     }
 
                     if (flag == 1){
+                        $.post("/twitter/infoGet/",{'selectTweetDatabase': selectTweetDatabase, 'type': type,
+                            'selectUserDatabase':selectUserDatabase,'extend':extend,'screenName':screenName,
+                            'tweetId':tweetId,'accountId':accountId, 'keywords': keywords}, function(data) {
+                            var dataContent = "";
+                            if (type == 'userInfoSearch'){
+                                dataContent = "";
+                                data = data[0];
+                                storageUserInfo = data;
+                                $("#profileImage").attr("src",data['profile_image_url_https']);
+                                dataContent = dataContent + "用户屏显名：" + data['screen_name'] + '<br>';
+                                dataContent = dataContent + "用户ID：" + data['id'] + '<br>';
+                                dataContent = dataContent + "是否存活：" + data['alive'] + '<br>';
+                                dataContent = dataContent + "粉丝数量：" + data['followers_count'] + '<br>';
+                                dataContent = dataContent + "朋友数量：" + data['friends_count'] + '<br>';
+                                dataContent = dataContent + "发推数量：" + data['statuses_count'] + '<br>';
+                                dataContent = dataContent + "自我描述：" + data['description'] + '<br>';
+                                dataContent = dataContent + "用户昵称：" + data['name'] + '<br>';
+                                dataContent = dataContent + "创建时间：" + data['created_at'] + '<br>';
+                                dataContent = dataContent + "使用的时区：" + data['time_zone'] + '<br>';
+                                dataContent = dataContent + "所在地：" + data['location'] + '<br>';
+                                dataContent = dataContent + "使用的语言：" + data['lang'] + '<br>';
+                                dataContent = dataContent + "点赞推文的数量：" + data['favourites_count'] + '<br>';
+                                dataContent = dataContent + "个人信息链接：" + data['url'] + '<br>';
+                                dataContent = dataContent + "<button type='button' id='lookup' onclick='show()'>查看最新发布的推文</button>";
+                                $('#resultUser').html(dataContent);
+                            }
 
+                            if (type == 'tweetInfoSearch'){
+                                dataContent = "";
+                                data = data[0];
+{#                                $("#profileImage").attr("src",data['profile_image_url_https']);#}
+                                dataContent = dataContent + "推文ID：" + data['id'] + '<br>';
+                                dataContent = dataContent + "推文内容：" + data['text'] + '<br>';
+                                dataContent = dataContent + "推文是否为引用推文：" + data['is_quote_status'] + '<br>';
+                                dataContent = dataContent + "推文被点赞的次数：" + data['favorite_count'] + '<br>';
+                                dataContent = dataContent + "引用推文的ID：" + data['quoted_status_id'] + '<br>';
+                                dataContent = dataContent + "发布本推文的客户端：" + data['source'] + '<br>';
+                                dataContent = dataContent + "回复推文的屏显名：" + data['in_reply_to_screen_name'] + '<br>';
+                                dataContent = dataContent + "回复推文的ID：" + data['in_reply_to_status_id'] + '<br>';
+                                dataContent = dataContent + "回复推文的用户ID：" + data['in_reply_to_user_id'] + '<br>';
+                                dataContent = dataContent + "推文相关地点：" + data['place'] + '<br>';
+                                dataContent = dataContent + "推文创建的时间：" + data['created_at'] + '<br>';
+                                $('#resultTweet').html(dataContent);
+                            }
+
+                            if (type == 'userFilterSearch'){
+                                dataContent = "";
+                                for (i = 0 ; i < data.length ; i++){
+                                    dataContent = dataContent + "推特用户ID：" + data[i]['id'] + '<br>';
+                                    dataContent = dataContent + "推特用户屏显名：" + data[i]['screen_name'] + '<br>';
+                                    dataContent = dataContent + "推特用户创建时间：" + data[i]['created_at'] + '<br>';
+                                    dataContent = dataContent + "推特用户描述：" + data[i]['description'] + '<br>';
+                                    dataContent = dataContent + '<br><br>'
+                                }
+                            }
+
+                            if (type == 'tweetFilterSearch'){
+                                dataContent = "";
+                                for (var i = 0 ; i < data.length ; i++){
+                                    dataContent = dataContent + "推文ID：" + data[i]['id'] + '<br>';
+                                    dataContent = dataContent + "推文创建时间：" + data[i]['created_at'] + '<br>';
+                                    dataContent = dataContent + "推文用户ID：" + data[i]['user']['id'] + '<br>';
+                                    dataContent = dataContent + "推文用户屏显名：" + data[i]['user']['screen_name'] + '<br>';
+                                    dataContent = dataContent + "推文内容：" + data[i]['text'] + '<br>';
+                                    dataContent = dataContent + '<br><br>'
+                                }
+                            }
+
+
+
+{#                            for (var i = 0; i < data.length; i++) {#}
+{#                                dataContent = "";#}
+{#                                dataContent = dataContent + '用户屏显名：' + data[i]['screen_name'] + '<br>';#}
+{#                                dataContent = dataContent + '用户自我描述：' + data[i]['description'] + '<br>';#}
+{#                                dataContent = dataContent + '用户创建时间：' + data[i]['created_at'] + '<br>';#}
+{#                                dataContent = dataContent + '用户发推数量：' + data[i]['statuses_count'] + '<br>';#}
+{#                                dataContent = dataContent + '<br><br><br>';#}
+{#                                dataList.push(dataContent);#}
+{#                            }#}
+                        });
                     }
 
 
                 });
             });
 
+            function show(){
+                dataContent = "";
+                data = storageUserInfo['status'];
+{#              $("#profileImage").attr("src",data['profile_image_url_https']);#}
+                dataContent = dataContent + "推文ID：" + data['id'] + '<br>';
+                dataContent = dataContent + "推文内容：" + data['text'] + '<br>';
+                dataContent = dataContent + "推文是否为引用推文：" + data['is_quote_status'] + '<br>';
+                dataContent = dataContent + "推文被点赞的次数：" + data['favorite_count'] + '<br>';
+                dataContent = dataContent + "引用推文的ID：" + data['quoted_status_id'] + '<br>';
+                dataContent = dataContent + "发布本推文的客户端：" + data['source'] + '<br>';
+                dataContent = dataContent + "回复推文的屏显名：" + data['in_reply_to_screen_name'] + '<br>';
+                dataContent = dataContent + "回复推文的ID：" + data['in_reply_to_status_id'] + '<br>';
+                dataContent = dataContent + "回复推文的用户ID：" + data['in_reply_to_user_id'] + '<br>';
+                dataContent = dataContent + "推文相关地点：" + data['place'] + '<br>';
+                dataContent = dataContent + "推文创建的时间：" + data['created_at'] + '<br>';
+                $('#resultTweet').html(dataContent);
+
+            }
 
         </script>
         </div>

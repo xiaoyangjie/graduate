@@ -1,0 +1,101 @@
+{% extends 'twitter/common.html' %}
+{% load static %}
+    {% block title %}Twitter用户详细信息采集{% endblock %}
+    {% block link %}
+    {% endblock %}
+
+    {% block body %}
+
+{#        <div id="Layer1" style="position:absolute; left:0; top:0; width:100%; height:100%">#}
+{#        <img src="/static/twitter/twitter_background.jpg" width="100%" height="100%"/>#}
+{#        </div>#}
+
+        <div id="wrapper">
+            <label><input name="type" type="radio" value="user" id="user"/>创建用户集合</label>
+            <label><input name="type" type="radio" value="tweet" id="tweet"/>创建推文集合</label>
+            <label><input name="type" type="radio" value="delete" id="delete"/>删除集合</label>
+            <p><span style="display:inline-block;width:130px;text-align:right;">用户数据库:</span>
+                <select id="selectUserDatabase" style="width: 248px;background-color: rgba(10, 17, 45, 0.11);">
+                    <option selected>已存在的数据库</option>
+                    {% for i in user %}
+                    <option value={{ i }}>{{ i }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">推文数据库:</span>
+                <select id="selectTweetDatabase" style="width: 248px;background-color: rgba(10, 17, 45, 0.11);">
+                    <option selected>已存在的数据库</option>
+                    {% for i in tweet %}
+                    <option value={{ i }}>{{ i }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">用户Host:</span><input type="text" id="userHost" value="" style="width:500px;"></p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">用户DB名:</span><input type="text" id="userDatabase" value="" style="width:500px;"></p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">用户集合名:</span><input type="text" id="userCollection" value="" style="width:500px;"/></p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">推文Host:</span><input type="text" id="tweetHost" value="" style="width:500px;"></p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">推文DB名:</span><input type="text" id="tweetDatabase" value="" style="width:500px;"></p>
+            <p><span style="display:inline-block;width:130px;text-align:right;">推文集合名:</span><input type="text" id="tweetCollection" value="" style="width:500px;"/></p>
+            <button type="button" id='dataCapture'>运行</button>
+            <br>
+            <br>
+            <textarea id='result' rows="3" cols="150"></textarea>
+        <script>
+            $(document).ready(function() {
+                $("#dataCapture").click(function () {
+                    var flag = 1;
+                    var type = null;
+                    var str = document.getElementsByName("type");
+                    var userHost = $("#userHost").val();
+                    var userDatabase = $("#userDatabase").val();
+                    var userCollection = $("#userCollection").val();
+                    var tweetHost = $("#tweetHost").val();
+                    var tweetDatabase = $("#tweetDatabase").val();
+                    var tweetCollection = $("#tweetCollection").val();
+                    var selectTweetDatabase = $("#selectTweetDatabase").val();
+                    var selectUserDatabase = $("#selectUserDatabase").val();
+                    for (var i = 0; i < str.length; i++) {
+                        if (str[i].checked == true) {
+                            type = str[i].value;
+                        }
+                    }
+                    if (type == null) {
+                        alert("请选择创建类型类型");
+                        flag = 0;
+                    } else {
+                        if (type == 'user') {
+                            if (userHost == '' && userDatabase == '' && userCollection == '') {
+                                alert("请填写完整的用户集合信息");
+                                flag = 0;
+                            }
+                        } else if(type == 'tweet') {
+                            if (tweetHost == '' && tweetDatabase == '' && tweetCollection == '') {
+                                alert("请填写完整的推文集合信息");
+                                flag = 0;
+                            }
+                        }
+                        else{
+                            if (selectUserDatabase == '已存在的数据库' && selectTweetDatabase == '已存在的数据库' ) {
+                                alert("请选择数据库");
+                                flag = 0;
+                            }
+                        }
+                    }
+
+                    if (flag == 1) {
+                        $.get("/twitter/createCol/", {
+                                'type': type,
+                                'userHost': userHost, 'userDatabase': userDatabase, 'userCollection': userCollection,
+                                'tweetHost': tweetHost, 'tweetDatabase': tweetDatabase, 'tweetCollection': tweetCollection,
+                            'selectUserDatabase':selectUserDatabase,'selectTweetDatabase':selectTweetDatabase
+                            }, function (ret) {
+                                $('#result').html(ret)
+                            }
+                        )
+                    }
+                });
+            });
+
+        </script>
+        </div>
+    {% endblock %}

@@ -1,0 +1,14 @@
+div#navigator{height: 40px}
+a{
+    color: black;
+}
+#navList li{
+    text-align: center;
+    font-size: 20px;
+    float: left;
+    width: 10%;
+    height: 40px;
+    margin-right: 4px;
+    display: inline;
+    background-color: #ced4da;
+}

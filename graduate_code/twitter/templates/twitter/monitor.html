@@ -1,10 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'twitter/common.html' %}
+{% load static %}
+    {% block title %}Twitter用户详细信息采集{% endblock %}
+    {% block link %}
+    {% endblock %}
 
-</body>
-</html>
+    {% block body %}
+
+{#        <div id="Layer1" style="position:absolute; left:0; top:0; width:100%; height:100%">#}
+{#        <img src="/static/twitter/twitter_background.jpg" width="100%" height="100%"/>#}
+{#        </div>#}
+
+        <div id="wrapper">
+            <div style="height: 450px;">
+                <div class="block" style="height: 400px;background-color: rgba(10, 17, 45, 0.11);padding: 15px 15px;
+                box-shadow: 0 0 14px #B1ABAB;margin: 10px auto;float: left;width: 48%;margin-left: 10px;
+                margin-right: 20px;text-align: center;font-family:Arial,Helvetica,sans-serif;font-size:27px;">
+                    <div id='titleProxy' style="">代理监控</div>
+                    <div id='host' style="float: left;width:33%;font-size:21px;"></div>
+                    <div id='port' style="float: left;width:33%;font-size:21px;"></div>
+                    <div id='state' style="float: left;width:33%;font-size:21px;"></div>
+                </div>
+                <div class="block" style="height: 400px;background-color: rgba(10, 17, 45, 0.11);padding: 15px 15px;
+                box-shadow: 0 0 14px #B1ABAB;margin: 10px auto;float: left;width: 48%;
+                text-align: center;font-family:Arial,Helvetica,sans-serif;font-size:27px;">
+                    <div id='titleServer' style="">服务器资源</div>
+                    <div id='resultServer' style="font-size:21px;"></div>
+                </div>
+            </div>
+            <div style="height: 660px;">
+                <div class="block1" style="height: 600px;background-color: rgba(10, 17, 45, 0.11);padding: 15px 15px;
+                box-shadow: 0 0 14px #B1ABAB;margin: 10px 0;text-align: center;
+                font-family:Arial,Helvetica,sans-serif;font-size:27px;">
+                    <div id='titleProcess' style="">进程信息</div>
+                    <div id='nameProcess' style="float: left;width:15%;font-size:21px;">进程名</div>
+                    <div id='typeProcess' style="float: left;width:15%;font-size:21px;">进程类型</div>
+                    <div id='createdATProcess' style="float: left;width:20%;font-size:21px;">创建时间</div>
+                    <div id='stateProcess' style="float: left;width:15%;font-size:21px;">运行状态</div>
+                    <div id='speedProcess' style="float: left;width:20%;font-size:21px;">采集速率（个/min）</div>
+                    <div id='ternimateProcess' style="float: left;width:15%;font-size:21px;">结束进程</div>
+                </div>
+            </div>
+        <script src="/static/jquery_1.11.1.js"></script>
+        <script>
+            var timeOut = false;
+            var internal = 60 * 1000;
+            time();
+            function time() {
+{#                timeOut用于停止循环调用，现在用不到#}
+                if(timeOut) return;
+                getBasicInfo();
+                setTimeout(time,internal); //time是指本身,延时递归调用自己,100为间隔调用时间,单位毫秒
+            }
+            function getBasicInfo(){
+                $.get("/twitter/getBasicInfo/", function(ret) {
+                    var proxyList = ret['proxyResult'];
+                    var serverInfo = ret['serverInfo'];
+                    var processList = ret['process'];
+                    var host = "代理IP<br>";
+                    var port = "代理端口<br>";
+                    var state = "代理状态<br>";
+                    for (var i = 0; i < proxyList.length; i++){
+                        host = host + proxyList[i]['host'] + '<br>';
+                        port = port + proxyList[i]['port'] + '<br>';
+                        state = state + proxyList[i]['state'] + '<br>';
+                    }
+                    var server = "";
+                    server = server + 'CPU占用率（单位%）：' + serverInfo['CPU'] + '<br>';
+                    server = server + '内存大小（单位M）：' + serverInfo['memory']['total'] + '<br>';
+                    server = server + '使用内存（单位M）：' + serverInfo['memory']['used'] + '<br>';
+                    server = server + '剩余内存（单位M）：' + serverInfo['memory']['free'] + '<br>';
+                    server = server + '内存使用率（单位%）：' + serverInfo['memory']['percent'] + '<br>';
+                    server = server + '磁盘大小（单位G）：' + serverInfo['disk']['total'] + '<br>';
+                    server = server + '使用磁盘（单位G）：' + serverInfo['disk']['used'] + '<br>';
+                    server = server + '剩余磁盘（单位G）：' + serverInfo['disk']['free'] + '<br>';
+                    server = server + '磁盘使用率（单位%）：' + serverInfo['disk']['percent'] + '<br>';
+{#                    server = server + '网络发包（单位G）：' + serverInfo['netIORecv'] + '<br>';#}
+{#                    server = server + '网络收包（单位G）：' + serverInfo['netIOSend'] + '<br>';#}
+
+                    var nameProcess = "进程名<br>";
+                    var typeProcess = "进程类型<br>";
+                    var createdATProcess = "进程创建时间<br>";
+                    var stateProcess = "进程运行状态<br>";
+                    var speedProcess = "采集速率（个/min）<br>";
+                    var ternimateProcess = "结束进程<br>";
+
+                    for (i = 0; i < processList.length; i++){
+                        nameProcess = nameProcess + processList[i]['_processName'] + '<br>';
+                        typeProcess = typeProcess + processList[i]['_type'] + '<br>';
+                        createdATProcess = createdATProcess + processList[i]['startDate'] + '<br>';
+                        stateProcess = stateProcess + processList[i]['state'] + '<br>';
+                        speedProcess = speedProcess + (processList[i]['count'] - processList[i]['countBefore']) + '<br>';
+                        ternimateProcess = ternimateProcess + "<button type='button' id=terminate" +  i.toString() + " value=" + processList[i]['processName'] + " onclick='terminate(" + i.toString() + ")'>结束进程</button><br>";
+                    }
+
+                    $('#host').html(host);
+                    $('#port').html(port);
+                    $('#state').html(state);
+
+                    $('#resultServer').html(server);
+
+                    $('#nameProcess').html(nameProcess);
+                    $('#typeProcess').html(typeProcess);
+                    $('#createdATProcess').html(createdATProcess);
+                    $('#stateProcess').html(stateProcess);
+                    $('#speedProcess').html(speedProcess);
+                    $('#ternimateProcess').html(ternimateProcess);
+
+                });
+            }
+            function terminate(i){
+                var id = "#terminate" + i.toString();
+                var processName = $(id).val();
+                $.get("/twitter/twitterTerminate/", {
+                        'processName':processName
+                    }, function (ret) {
+                        alert("进程结束");
+{#                        $('#result').html(ret)#}
+                    });
+            }
+
+
+
+        </script>
+        </div>
+    {% endblock %}
