@@ -1,0 +1,453 @@
+{% extends 'adaptionCapture/common.html' %}
+{% load static %}
+    {% block title %}自适应网页采集{% endblock %}
+
+    {% block body %}
+        <!--导航   -->
+        <nav class="navbar navbar-light bg-faded navbar-fixed-top">
+            <div class="container-fluid">
+                <img src="/static/img/logo.png" class="img-rounded center-block" alt="Responsive image">
+                 <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" id="dataCaptureNav" href="#"><h4>数据采集</h4></a>
+                    </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="#" id="statusShowNav" ><h4>状态监控</h4></a>
+                    </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="#" id="dataSearchNav" ><h4>数据查询</h4></a>
+                    </li>
+                 </ul>
+            </div>
+        </nav>
+
+        <!-- 导航结束 -->
+
+        <!--  内容-->
+        <div style="background: gainsboro;">
+            <!--数据采集 -->
+            <div class="container content-panel" style="display:block ; background: white;margin-top: 10px;margin-bottom: 10px;" id="dataCapture">
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-2">
+                        <h4><span class="capture-button-color" id="captureUrlsButton" onmousemove="changeColor(this)" onmouseleave="changeColorBack(this)">获取链接</span></h4>
+                    </div>
+                    <div class="col-sm-2">
+                        <h4><span class="capture-button-color" id="generateLabelsButton" onmousemove="changeColor(this)" onmouseleave="changeColorBack(this)">生成标签</span></h4>
+                    </div>
+                    <div class="col-sm-2">
+                        <h4><span class="capture-button-color" id="captureDataButton" onmousemove="changeColor(this)" onmouseleave="changeColorBack(this)">采集数据</span></h4>
+                    </div>
+                </div>
+                <div><p style="background: #000; height: 1px;margin-top: 10px"></p></div>
+                <div style="display: block;" id="captureUrls" class="capture-content-panel">
+                    <span>ssssssmm</span>
+                </div>
+                <div style="display: none;" id="generateLabels" class="capture-content-panel">
+                    <form>
+                        <div class="form">
+                            <label for="url"><h4>链接地址（url）:</h4></label>
+                            <input type="url" class="form-control" id="url" placeholder="Enter url">
+                        </div>
+                        <div class="row" style=";margin-top: 20px;margin-bottom: 5px;">
+                        <div class="col-md-6" id="urlResult"></div>
+                        <div class="col-md-6"><button aria-label="center" type="button" class="btn btn-primary" id="getHtml">访问网页</button></div>
+                        </div>
+                    </form>
+                    <div><p style="background: #000; height: 1px;margin-top: 20px"></p></div>
+
+                        <div id="labelList">
+                            </div>
+                            <div id="labelContentList">
+                            </div>
+                            <a style="margin-top: 10px;margin-bottom: 10px;" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                添加标签
+                            </a>
+
+                        <div class="collapse" id="collapseExample" style="margin-top: 20px;">
+                            <fieldset class="form-group">
+                                <label ><h4>标签名</h4></label>
+                                <input type="text" class="form-control" id="labelName" placeholder="标签名">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label ><h4>标签内容</h4></label>
+                                <textarea class="form-control" id="labelContent" rows="3"></textarea>
+                            </fieldset>
+                            <button type="button" class="btn btn-primary" id="getMaybeContent">获取可能的数据</button>
+                            <p style="background: #000; height: 1px;margin-top: 10px"></p>
+                            <div class="row">
+                                <div class="col" style="background-color:green;">
+                                    <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    选择按钮1
+                                    </label>
+                                    <fieldset class="form-group">
+                                        <textarea class="form-control" id="radios1Content" rows="9"></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col" style="background-color:orange;"><label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                     选择按钮2
+                                     </label>
+                                    <fieldset class="form-group">
+                                        <textarea class="form-control" id="radios2Content" rows="9"></textarea>
+                                    </fieldset></div>
+                                <div class="col" style="background-color:lavender;">
+                                    <label>
+                                     <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                    选择按钮3
+                                  </label>
+                                    <fieldset class="form-group">
+                                        <textarea class="form-control" id="radios3Content" rows="9"></textarea>
+                                    </fieldset></div>
+                                <div id="extend"></div>
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <h4>标签类型</h4>
+                                <label>
+                                        <input type="radio" name="type" id="typeText" value="text" checked>
+                                         文本
+                                </label>
+                                <label>
+                                        <input type="radio" name="type" id="typeImage" value="image">
+                                         图片
+                                </label>
+                            </div>
+                            <div style="margin-top: 10px;"><button type="button" class="btn btn-primary" id="generateLabel">生成标签</button></div>
+                        </div>
+                    </div>
+                </div>
+
+            <!--状态监控 -->
+            <div class="container content-panel" style="display:none ;background: white;margin-top: 10px;margin-bottom: 10px;" id="statusShow">
+                <span>sss</span>
+            </div>
+            <!--数据查询 -->
+            <div class="container content-panel" style="display:none ;background: white;margin-top: 10px;margin-bottom: 10px;" id="dataSearch">
+                <span>sss</span>
+            </div>
+{#        <div class="container" style="background : wheat ;margin-top: 20px;">#}
+{#            <div id="labelList">#}
+{#            </div>#}
+{#            <div id="labelContentList">#}
+{#            </div>#}
+{#            <a style="margin-top: 10px;margin-bottom: 10px;" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">#}
+{#                添加标签#}
+{#            </a>#}
+{##}
+{#        <div class="collapse" id="collapseExample" style="margin-top: 20px;">#}
+{#            <fieldset class="form-group">#}
+{#                <label ><h4>标签名</h4></label>#}
+{#                <input type="text" class="form-control" id="labelName" placeholder="标签名">#}
+{#            </fieldset>#}
+{#            <fieldset class="form-group">#}
+{#                <label ><h4>标签内容</h4></label>#}
+{#                <textarea class="form-control" id="labelContent" rows="3"></textarea>#}
+{#            </fieldset>#}
+{#            <button type="button" class="btn btn-primary" id="getMaybeContent">获取可能的数据</button>#}
+{#            <p style="background: #000; height: 1px;margin-top: 10px"></p>#}
+{#            <div class="row">#}
+{#                <div class="col" style="background-color:green;">#}
+{#                    <label>#}
+{#                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>#}
+{#                    选择按钮1#}
+{#                    </label>#}
+{#                    <fieldset class="form-group">#}
+{#                        <textarea class="form-control" id="radios1Content" rows="9"></textarea>#}
+{#                    </fieldset>#}
+{#                </div>#}
+{#                <div class="col" style="background-color:orange;"><label>#}
+{#                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">#}
+{#                     选择按钮2#}
+{#                     </label>#}
+{#                    <fieldset class="form-group">#}
+{#                        <textarea class="form-control" id="radios2Content" rows="9"></textarea>#}
+{#                    </fieldset></div>#}
+{#                <div class="col" style="background-color:lavender;">#}
+{#                    <label>#}
+{#                     <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>#}
+{#                    选择按钮3#}
+{#                  </label>#}
+{#                    <fieldset class="form-group">#}
+{#                        <textarea class="form-control" id="radios3Content" rows="9"></textarea>#}
+{#                    </fieldset></div>#}
+{#                <div id="extend"></div>#}
+{#            </div>#}
+{#            <div style="margin-top: 20px;">#}
+{#                <h4>标签类型</h4>#}
+{#                <label>#}
+{#                        <input type="radio" name="type" id="typeText" value="text" checked>#}
+{#                         文本#}
+{#                </label>#}
+{#                <label>#}
+{#                        <input type="radio" name="type" id="typeImage" value="image">#}
+{#                         图片#}
+{#                </label>#}
+{#            </div>#}
+{#            <div style="margin-top: 10px;"><button type="button" class="btn btn-primary" id="generateLabel">生成标签</button></div>#}
+{#        </div>#}
+{#        </div>#}
+{#        <div class="container"><p style="background: #000; height: 1px;margin-top: 20px"></p></div>#}
+{#        <div class="container" style="background: wheat;padding-top: 10px;margin-bottom: 20px;padding-bottom: 10px;">#}
+{#            <div class="row">#}
+{#                <div class="col-md-2"><h5><label style="">链接数据库 :</label></h5></div>#}
+{#               <div class="col-md-8">#}
+{#                <select id="selectUserDatabase" style="width: 100%;background-color: rgba(10, 17, 45, 0.11);">#}
+{#                    <option selected>选择数据库</option>#}
+{#                    {% for i in user %}#}
+{#                    <option value={{ i }}>{{ i }}</option>#}
+{#                    {% endfor %}#}
+{#                    </select>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="col-md-2"><h5><label style="">内容数据库 :</label></h5></div>#}
+{#                <div class="col-md-8">#}
+{#                <select id="selectUserDatabase" style="width: 100%;background-color: rgba(10, 17, 45, 0.11);">#}
+{#                    <option selected>选择数据库</option>#}
+{#                    {% for i in user %}#}
+{#                    <option value={{ i }}>{{ i }}</option>#}
+{#                    {% endfor %}#}
+{#                </select>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="col-md-6">#}
+{#                <button type="button" class="btn btn-primary" id="overCapture">结束采集</button>#}
+{#                </div>#}
+{#                <div class="col-md-6">#}
+{#                <button type="button" class="btn btn-primary" id="startCapture">开始采集</button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+        </div>
+        <script>
+{#            返回内容#}
+            var contentList = [];
+            var recordContentList = 1;
+            var labelList = [];
+            var labelContentList = [];
+
+            $(document).ready(function() {
+{#                获取网页#}
+                $("#getHtml").click(function () {
+                    $('#urlResult').html('');
+                    var url = $("#url").val();
+                    if (url == ''){
+                        alert("请填写网页链接地址");
+                    }
+                    else {
+                        var htmlStr = "<img src='/static/img/loading.gif' class='img-circle center-block' style='display:block;width:10%'>";
+                        $('#urlResult').html(htmlStr);
+                        $.get("/adaptionCapture/getHtml/", {
+                            'url': url
+                        }, function(ret){
+                            if (ret['level'] == 'normal'){
+                                var htmlStr = "<a href='/adaptionCapture/getTemplate/'><h4>查看获取数据的网页</h4></a>";
+                                $('#urlResult').html(htmlStr);
+                            }else{
+                                $('#urlResult').html("获取网页失败")
+                            }
+                        }
+                    )
+                    }
+                });
+                    {#获取叶子节点的内容  #}
+                 $("#getMaybeContent").click(function () {
+                     $('#extend').html('');
+                    var labelName = $("#labelName").val();
+                    var labelContent = $("#labelContent").val();
+                    if (labelName == ''){
+                        alert("请填写标签名");
+                    }
+                    else {
+                        $.post("/adaptionCapture/getMaybeContent/", {
+                            'name': labelName, 'content' : labelContent
+                        }, function(ret){
+                            if (ret['level'] == 'normal'){
+                                contentList = ret['content'];
+                                var _contentList = contentList[0];
+                                for (var i = 0 ; i < _contentList.length ; i++){
+                                    if (i == 0){
+                                        $('#radios1Content').html(_contentList[0]['content']);
+                                    }
+                                    if (i == 1){
+                                        $('#radios2Content').html(_contentList[1]['content']);
+                                    }
+                                    if (i == 2){
+                                        $('#radios3Content').html(_contentList[2]['content']);
+                                    }
+                                }
+                                if (contentList.length > 1){
+                                    recordContentList = 1;
+                                    $('#extend').html("<button type='button' class='btn btn-primary' onclick='extendShow()' style='margin: auto'>其它</button>")
+                                }
+                            }else{
+                                $('#radios1Content').html("匹配失败");
+                                $('#radios2Content').html("匹配失败");
+                                $('#radios3Content').html("匹配失败");
+                            }
+                        }
+                    )
+                    }
+                 });
+                {# 产生标签#}
+                 $("#generateLabel").click(function () {
+
+                     var str = document.getElementsByName("optionsRadios");
+                     var typeList = document.getElementsByName("type");
+                     var data = null;
+                     var type = null;
+                     var _contentList = [];
+                     if (contentList != []){
+                         _contentList = contentList[recordContentList - 1];
+                        for (var i = 0 ; i < str.length ; i++){
+                             if(str[i].checked == true){
+                                 if (_contentList.length > i){
+                                     data = _contentList[i];
+                                 }
+                             }
+                        }
+                        var count = 0;
+                        for (i = 0 ; i < typeList.length ; i++){
+                             if(typeList[i].checked == true){
+                                 count = i;
+                                 break;
+                             }
+                        }
+                        if (count == 0){
+                            type = 'text';
+                        }
+                        if (count == 1){
+                            type = 'image';
+                        }
+                     }
+                     if (data == null || data == "匹配失败"){
+                         alert("请选择有数据的按钮")
+                     }
+                     else{
+                         var labelName = $("#labelName").val();
+                         var labelContent = data['content'];
+                         var labelImageUrlList = data['imageUrlList'];
+                         $.post("/adaptionCapture/generateLabel/", {
+                            'num': data['num'], 'name' : labelName, 'type' :type
+                         }, function(ret){
+                            if (ret['level'] == 'normal'){
+                                labelList.push(labelName);
+                                labelContentList.push(labelContent);
+
+                                var labelStr = "";
+                                var labelContentStr = "";
+                                for (var i = 0 ; i < labelList.length ; i++){
+                                    labelStr = labelStr + "<a class='btn btn-primary' data-toggle='collapse' href='#collapseLabel" + i.toString() + "' aria-expanded='false' aria-controls='collapseExample' style='margin-top: 5px;margin-right:5px;'>" + labelList[i] + "</a>";
+                                    if (type == 'text'){
+                                        labelContentStr = labelContentStr +  "<div class='container collapse' id='collapseLabel" + i.toString() + "' style='margin-top: 20px;'>" + labelContentList[i] + "</div>";
+                                    }
+                                    if (type == 'image'){
+                                        labelContentStr = labelContentStr +  "<img class='container collapse rounded' id='collapseLabel" + i.toString() +  "' src='" + labelImageUrlList[0] + "' style='margin-top: 20px;'>";
+                                    }
+                                }
+                                $('#labelList').html(labelStr);
+                                $('#labelContentList').html(labelContentStr);
+                            }else{
+                                alert('添加标签失败');
+                            }
+                        }
+                    )
+                    }
+                });
+{#                开始采集#}
+                 $("#startCapture").click(function () {
+                    var url = $("#labelName").val();
+                    if (url == ''){
+                        alert("请填写网页链接地址");
+                    }
+                    else {
+                        $.get("/adaptionCapture/getHtml/", {
+                            'url': url
+                        }, function(ret){
+                            if (ret['level'] == 'normal'){
+                                var htmlStr = "<a href='/adaptionCapture/getTemplate/'>查看获取数据的网页</a>";
+                                $('#urlResult').html(htmlStr);
+                            }else{
+                                $('#urlResult').html("获取网页失败")
+                            }
+                        }
+                    )
+                    }
+                });
+
+                {#数据采集导航                #}
+                 $("#dataCaptureNav").click(function () {
+                    $(".content-panel").each(function () {
+			            $(this).hide();
+		            });
+                    $("#dataCapture").show();
+                });
+                {#状态展示导航                #}
+                $("#statusShowNav").click(function () {
+                    $(".content-panel").each(function () {
+			            $(this).hide();
+		            });
+                    $("#statusShow").show();
+                });
+                {#数据搜索导航                #}
+                $("#dataSearchNav").click(function () {
+                    $(".content-panel").each(function () {
+			            $(this).hide();
+		            });
+                    $("#dataSearch").show();
+                });
+                {#采集链接                #}
+                $("#captureUrlsButton").click(function () {
+                    $(".capture-content-panel").each(function () {
+			            $(this).hide();
+		            });
+                    $("#captureUrls").show();
+                });
+                {#生成标签                #}
+                $("#generateLabelsButton").click(function () {
+                    $(".capture-content-panel").each(function () {
+			            $(this).hide();
+		            });
+                    $("#generateLabels").show();
+                });
+                {#采集数据                #}
+                $("#captureDataButton").click(function () {
+                    $(".capture-content-panel").each(function () {
+			            $(this).hide();
+		            });
+                    $("#captureData").show();
+                });
+
+
+
+            });
+            function extendShow() {
+                 var _contentList = contentList[recordContentList];
+                 for (var i = 0 ; i < _contentList.length ; i++){
+                    if (i == 0){
+                        $('#radios1Content').html(_contentList[0]['content']);
+                    }
+                    if (i == 1){
+                        $('#radios2Content').html(_contentList[1]['content']);
+                    }
+                    if (i == 2){
+                        $('#radios3Content').html(_contentList[2]['content']);
+                    }
+                 }
+                 recordContentList = recordContentList + 1;
+                 if (recordContentList == contentList.length){
+                     $('#extend').html('');
+                 }
+            }
+
+            function changeColor(x) {
+                x.style.background = 'yellow';
+                x.style.cursor = "pointer";
+            }
+            function changeColorBack(x) {
+                 x.style.background = 'white';
+            }
+
+        </script>
+    {% endblock %}

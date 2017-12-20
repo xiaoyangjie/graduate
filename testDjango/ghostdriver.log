@@ -1,0 +1,67 @@
+[INFO  - 2017-12-19T12:33:36.083Z] GhostDriver - Main - running on port 11128
+[INFO  - 2017-12-19T12:33:37.196Z] Session [d5e79990-e4b8-11e7-8fbb-b1361f02a071] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-12-19T12:33:37.196Z] Session [d5e79990-e4b8-11e7-8fbb-b1361f02a071] - page.customHeaders:  - {}
+[INFO  - 2017-12-19T12:33:37.197Z] Session [d5e79990-e4b8-11e7-8fbb-b1361f02a071] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-12-19T12:33:37.197Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d5e79990-e4b8-11e7-8fbb-b1361f02a071
+[ERROR - 2017-12-19T12:33:40.115Z] Session [d5e79990-e4b8-11e7-8fbb-b1361f02a071] - page.onError - msg: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-12-19T12:33:40.115Z] Session [d5e79990-e4b8-11e7-8fbb-b1361f02a071] - page.onError - stack:
+  r (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:16)
+  _renderValidatedComponent (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  _updateRenderedComponent (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  _performComponentUpdate (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  updateComponent (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  performUpdateIfNecessary (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  performUpdateIfNecessary (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  u (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  perform (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  perform (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  perform (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  D (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  (anonymous function) (:0)
+  closeAll (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  perform (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  batchedUpdates (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:14)
+  s (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  r (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  enqueueSetState (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  setState (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  success (https://img3.doubanio.com/f/ithildin/0d950975613fdc59495abe70a2920f09aa322476/js/export/subject_topics_compiled.js:1)
+  f (https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js:1)
+  fireWith (https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js:1)
+  r (https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js:3)
+  r (https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js:3)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-12-19T12:33:40.248Z] Session [d5e79990-e4b8-11e7-8fbb-b1361f02a071] - page.onError - msg: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-12-19T12:33:40.248Z] Session [d5e79990-e4b8-11e7-8fbb-b1361f02a071] - page.onError - stack:
+  r (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:16)
+  _renderValidatedComponent (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  _updateRenderedComponent (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  _performComponentUpdate (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  updateComponent (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  performUpdateIfNecessary (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  performUpdateIfNecessary (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  u (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  perform (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  perform (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  perform (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  D (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  (anonymous function) (:0)
+  closeAll (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  perform (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  batchedUpdates (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:14)
+  s (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  r (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  enqueueSetState (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:15)
+  setState (https://img3.doubanio.com/f/movie/c7d6644d315d980333c64c04211e62e87a34dbcd/js/movie/lib/react.min.js:13)
+  success (https://img3.doubanio.com/misc/mixed_static/653dc115bd95478c.js:37)
+  f (https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js:1)
+  fireWith (https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js:1)
+  r (https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js:3)
+  r (https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js:3)
+
+  phantomjs://platform/console++.js:263 in error
