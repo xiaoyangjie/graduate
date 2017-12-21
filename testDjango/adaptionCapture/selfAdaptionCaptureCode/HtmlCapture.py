@@ -22,6 +22,7 @@ from LocationElement import FindLocation
 from Configure import *
 from bs4 import BeautifulSoup
 import os
+from Selenium import driverAPI
 
 class HtmlCapture(object):
 
@@ -33,12 +34,8 @@ class HtmlCapture(object):
     def htmlCapture(self, url):
         try:
             print url
-            print 1111111111
-            print os.getcwd()
-            driver = webdriver.PhantomJS(executable_path=os.getcwd() + '/adaptionCapture/selfAdaptionCaptureCode/phantomjs.exe')
-            driver.get(url)
-            time.sleep(3)
-            content = driver.page_source
+            print '+++++++++++++++++++'
+            content = driverAPI.getPageSource()
             content = str(BeautifulSoup(content, "lxml"))
             fp = open(os.getcwd() + '/adaptionCapture/templates/adaptionCapture/template.html','w')
             fp.write(content)
@@ -46,10 +43,5 @@ class HtmlCapture(object):
             self.mongoClient.insert({'num': 0, 'tag': 'html', 'soup_str': content, 'fatherNum': -1, 'class': None,
                                      'isFinish': False, 'content': None, 'fatherNumList': [], 'imageUrlList' : []})
             self.findLocation.findAllTag()
-
-            driver.quit()
         except requests.exceptions:
-            pass
-        except OSError:
-            print "selenium 关闭出了问题"
             pass

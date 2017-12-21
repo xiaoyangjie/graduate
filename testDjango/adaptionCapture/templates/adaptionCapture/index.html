@@ -114,8 +114,41 @@
                             </div>
                             <div style="margin-top: 10px;"><button type="button" class="btn btn-primary" id="generateLabel">生成标签</button></div>
                         </div>
+                </div>
+                <!--采集数据 -->
+                <div style="display:none;" id="captureData" class="capture-content-panel">
+                    <div class="row">
+                        <div class="col-md-2"><h5><label style="">链接数据库 :</label></h5></div>
+                        <div class="col-md-8">
+                        <select id="selectUrlsDatabase" style="width: 100%;background-color: rgba(10, 17, 45, 0.11);" onclick="getDatabase()">
+                            <option selected>选择数据库</option>
+                            <option >222.197.180.245:30011|yj|Url</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><h5><label style="">内容数据库 :</label></h5></div>
+                        <div class="col-md-8">
+                        <select id="selectContentDatabase" style="width: 100%;background-color: rgba(10, 17, 45, 0.11);" onclick="getDatabase()">
+                            <option selected>选择数据库</option>
+                            <option >222.197.180.245:30011|yj|WebsiteContent</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                        <button type="button" class="btn btn-primary" id="overCapture">结束采集</button>
+                        </div>
+                        <div class="col-md-1">
+                        <button type="button" class="btn btn-primary" id="specialCapture">特定采集</button>
+                        </div>
+                        <div class="col-md-1">
+                        <button type="button" class="btn btn-primary" id="extendCapture">扩展采集</button>
+                        </div>
                     </div>
                 </div>
+
+            </div>
 
             <!--状态监控 -->
             <div class="container content-panel" style="display:none ;background: white;margin-top: 10px;margin-bottom: 10px;" id="statusShow">
@@ -125,100 +158,6 @@
             <div class="container content-panel" style="display:none ;background: white;margin-top: 10px;margin-bottom: 10px;" id="dataSearch">
                 <span>sss</span>
             </div>
-{#        <div class="container" style="background : wheat ;margin-top: 20px;">#}
-{#            <div id="labelList">#}
-{#            </div>#}
-{#            <div id="labelContentList">#}
-{#            </div>#}
-{#            <a style="margin-top: 10px;margin-bottom: 10px;" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">#}
-{#                添加标签#}
-{#            </a>#}
-{##}
-{#        <div class="collapse" id="collapseExample" style="margin-top: 20px;">#}
-{#            <fieldset class="form-group">#}
-{#                <label ><h4>标签名</h4></label>#}
-{#                <input type="text" class="form-control" id="labelName" placeholder="标签名">#}
-{#            </fieldset>#}
-{#            <fieldset class="form-group">#}
-{#                <label ><h4>标签内容</h4></label>#}
-{#                <textarea class="form-control" id="labelContent" rows="3"></textarea>#}
-{#            </fieldset>#}
-{#            <button type="button" class="btn btn-primary" id="getMaybeContent">获取可能的数据</button>#}
-{#            <p style="background: #000; height: 1px;margin-top: 10px"></p>#}
-{#            <div class="row">#}
-{#                <div class="col" style="background-color:green;">#}
-{#                    <label>#}
-{#                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>#}
-{#                    选择按钮1#}
-{#                    </label>#}
-{#                    <fieldset class="form-group">#}
-{#                        <textarea class="form-control" id="radios1Content" rows="9"></textarea>#}
-{#                    </fieldset>#}
-{#                </div>#}
-{#                <div class="col" style="background-color:orange;"><label>#}
-{#                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">#}
-{#                     选择按钮2#}
-{#                     </label>#}
-{#                    <fieldset class="form-group">#}
-{#                        <textarea class="form-control" id="radios2Content" rows="9"></textarea>#}
-{#                    </fieldset></div>#}
-{#                <div class="col" style="background-color:lavender;">#}
-{#                    <label>#}
-{#                     <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>#}
-{#                    选择按钮3#}
-{#                  </label>#}
-{#                    <fieldset class="form-group">#}
-{#                        <textarea class="form-control" id="radios3Content" rows="9"></textarea>#}
-{#                    </fieldset></div>#}
-{#                <div id="extend"></div>#}
-{#            </div>#}
-{#            <div style="margin-top: 20px;">#}
-{#                <h4>标签类型</h4>#}
-{#                <label>#}
-{#                        <input type="radio" name="type" id="typeText" value="text" checked>#}
-{#                         文本#}
-{#                </label>#}
-{#                <label>#}
-{#                        <input type="radio" name="type" id="typeImage" value="image">#}
-{#                         图片#}
-{#                </label>#}
-{#            </div>#}
-{#            <div style="margin-top: 10px;"><button type="button" class="btn btn-primary" id="generateLabel">生成标签</button></div>#}
-{#        </div>#}
-{#        </div>#}
-{#        <div class="container"><p style="background: #000; height: 1px;margin-top: 20px"></p></div>#}
-{#        <div class="container" style="background: wheat;padding-top: 10px;margin-bottom: 20px;padding-bottom: 10px;">#}
-{#            <div class="row">#}
-{#                <div class="col-md-2"><h5><label style="">链接数据库 :</label></h5></div>#}
-{#               <div class="col-md-8">#}
-{#                <select id="selectUserDatabase" style="width: 100%;background-color: rgba(10, 17, 45, 0.11);">#}
-{#                    <option selected>选择数据库</option>#}
-{#                    {% for i in user %}#}
-{#                    <option value={{ i }}>{{ i }}</option>#}
-{#                    {% endfor %}#}
-{#                    </select>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="row">#}
-{#                <div class="col-md-2"><h5><label style="">内容数据库 :</label></h5></div>#}
-{#                <div class="col-md-8">#}
-{#                <select id="selectUserDatabase" style="width: 100%;background-color: rgba(10, 17, 45, 0.11);">#}
-{#                    <option selected>选择数据库</option>#}
-{#                    {% for i in user %}#}
-{#                    <option value={{ i }}>{{ i }}</option>#}
-{#                    {% endfor %}#}
-{#                </select>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="row">#}
-{#                <div class="col-md-6">#}
-{#                <button type="button" class="btn btn-primary" id="overCapture">结束采集</button>#}
-{#                </div>#}
-{#                <div class="col-md-6">#}
-{#                <button type="button" class="btn btn-primary" id="startCapture">开始采集</button>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
         </div>
         <script>
 {#            返回内容#}
@@ -355,8 +294,8 @@
                     )
                     }
                 });
-{#                开始采集#}
-                 $("#startCapture").click(function () {
+                //特定采集
+                 $("#specialCapture").click(function () {
                     var url = $("#labelName").val();
                     if (url == ''){
                         alert("请填写网页链接地址");
@@ -383,35 +322,35 @@
 		            });
                     $("#dataCapture").show();
                 });
-                {#状态展示导航                #}
+                //状态展示导航
                 $("#statusShowNav").click(function () {
                     $(".content-panel").each(function () {
 			            $(this).hide();
 		            });
                     $("#statusShow").show();
                 });
-                {#数据搜索导航                #}
+                //数据搜索导航
                 $("#dataSearchNav").click(function () {
                     $(".content-panel").each(function () {
 			            $(this).hide();
 		            });
                     $("#dataSearch").show();
                 });
-                {#采集链接                #}
+                //采集链接
                 $("#captureUrlsButton").click(function () {
                     $(".capture-content-panel").each(function () {
 			            $(this).hide();
 		            });
                     $("#captureUrls").show();
                 });
-                {#生成标签                #}
+                //生成标签
                 $("#generateLabelsButton").click(function () {
                     $(".capture-content-panel").each(function () {
 			            $(this).hide();
 		            });
                     $("#generateLabels").show();
                 });
-                {#采集数据                #}
+                //采集数据
                 $("#captureDataButton").click(function () {
                     $(".capture-content-panel").each(function () {
 			            $(this).hide();
@@ -449,5 +388,14 @@
                  x.style.background = 'white';
             }
 
+            //获取数据库名字
+            function getDatabase() {
+                var type = null;
+                $.get("/adaptionCapture/getDatabase/", {
+                            'type': type
+                        }, function(ret){
+
+                });
+            }
         </script>
     {% endblock %}
