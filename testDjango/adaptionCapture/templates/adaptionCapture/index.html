@@ -43,16 +43,12 @@
                     <span>ssssssmm</span>
                 </div>
                 <div style="display: none;" id="generateLabels" class="capture-content-panel">
-                    <form>
-                        <div class="form">
-                            <label for="url"><h4>链接地址（url）:</h4></label>
-                            <input type="url" class="form-control" id="url" placeholder="Enter url">
-                        </div>
-                        <div class="row" style=";margin-top: 20px;margin-bottom: 5px;">
+                    <div class="row" style=";margin-top: 20px;margin-bottom: 5px;">
+                        <div class="col-md-3"><button aria-label="center" type="button" class="btn btn-primary" id="getHtml">自定义采集</button></div>
+                        <div class="col-md-3"><button aria-label="center" type="button" class="btn btn-primary" id="getPageSource">抓取当前网页</button></div>
+
                         <div class="col-md-6" id="urlResult"></div>
-                        <div class="col-md-6"><button aria-label="center" type="button" class="btn btn-primary" id="getHtml">访问网页</button></div>
-                        </div>
-                    </form>
+                    </div>
                     <div><p style="background: #000; height: 1px;margin-top: 20px"></p></div>
 
                         <div id="labelList">
@@ -121,8 +117,8 @@
                         <div class="col-md-2"><h5><label style="">链接数据库 :</label></h5></div>
                         <div class="col-md-8">
                         <select id="selectUrlsDatabase" style="width: 100%;background-color: rgba(10, 17, 45, 0.11);" onclick="getDatabase()">
-                            <option selected>选择数据库</option>
-                            <option >222.197.180.245:30011|yj|Url</option>
+{#                            <option selected>选择数据库</option>#}
+                            <option selected>121.49.99.14:30011|yj|Url</option>
                         </select>
                         </div>
                     </div>
@@ -130,8 +126,8 @@
                         <div class="col-md-2"><h5><label style="">内容数据库 :</label></h5></div>
                         <div class="col-md-8">
                         <select id="selectContentDatabase" style="width: 100%;background-color: rgba(10, 17, 45, 0.11);" onclick="getDatabase()">
-                            <option selected>选择数据库</option>
-                            <option >222.197.180.245:30011|yj|WebsiteContent</option>
+{#                            <option selected>选择数据库</option>#}
+                            <option selected>121.49.99.14:30011|yj|WebsiteContent</option>
                         </select>
                         </div>
                     </div>
@@ -167,28 +163,27 @@
             var labelContentList = [];
 
             $(document).ready(function() {
-{#                获取网页#}
+                //打开界面
+                $('#urlResult').html("");
                 $("#getHtml").click(function () {
-                    $('#urlResult').html('');
-                    var url = $("#url").val();
-                    if (url == ''){
-                        alert("请填写网页链接地址");
+                    $.get("/adaptionCapture/getHtml/", {
+                    }, function(ret){
+
                     }
-                    else {
-                        var htmlStr = "<img src='/static/img/loading.gif' class='img-circle center-block' style='display:block;width:10%'>";
-                        $('#urlResult').html(htmlStr);
-                        $.get("/adaptionCapture/getHtml/", {
-                            'url': url
-                        }, function(ret){
-                            if (ret['level'] == 'normal'){
-                                var htmlStr = "<a href='/adaptionCapture/getTemplate/'><h4>查看获取数据的网页</h4></a>";
-                                $('#urlResult').html(htmlStr);
-                            }else{
-                                $('#urlResult').html("获取网页失败")
-                            }
-                        }
                     )
+                });
+                //
+                $("#getPageSource").click(function () {
+                    var htmlStr = "<img src='/static/img/loading.gif' class='img-circle center-block' style='display:block;width:10%'>";
+                    $('#urlResult').html(htmlStr);
+                    $.get("/adaptionCapture/getPageSource/", function(ret){
+                        if (ret['level'] == 'normal'){
+                            $('#urlResult').html(ret['content']);
+                        }else{
+                            $('#urlResult').html("获取网页失败")
+                        }
                     }
+                    )
                 });
                     {#获取叶子节点的内容  #}
                  $("#getMaybeContent").click(function () {
@@ -296,25 +291,46 @@
                 });
                 //特定采集
                  $("#specialCapture").click(function () {
-                    var url = $("#labelName").val();
-                    if (url == ''){
-                        alert("请填写网页链接地址");
+                    if (labelList == null){
+                        alert("没有标签");
                     }
                     else {
-                        $.get("/adaptionCapture/getHtml/", {
-                            'url': url
+                        $.get("/adaptionCapture/specialCapture/", {
+                            'labelList': labelList
                         }, function(ret){
                             if (ret['level'] == 'normal'){
-                                var htmlStr = "<a href='/adaptionCapture/getTemplate/'>查看获取数据的网页</a>";
-                                $('#urlResult').html(htmlStr);
-                            }else{
-                                $('#urlResult').html("获取网页失败")
+
                             }
                         }
                     )
                     }
                 });
-
+                //extendCapture
+                $("#extendCapture").click(function () {
+                    var selectUrlsDatabase = $("#selectUrlsDatabase").val();
+                    var selectContentDatabase = $("#selectContentDatabase").val();
+                    if (labelList == null){
+                        alert("没有标签");
+                    }
+                    else {
+                        var form = new FormData();
+                        form.append("selectUrlsDatabase", selectUrlsDatabase);
+                        form.append("selectContentDatabase", selectContentDatabase);
+                        form.append("labelList", labelList);
+                        $.ajax({
+                        url: '/adaptionCapture/extendCapture/',
+                        type: 'POST',
+                        cache: false,
+                        data: form,
+                        processData: false,
+                        contentType: false
+                        }).done(function(ret) {
+                            if (ret['level'] == 'normal'){
+                                alter("开始采集");
+                            }
+                        })
+                    }
+                });
                 {#数据采集导航                #}
                  $("#dataCaptureNav").click(function () {
                     $(".content-panel").each(function () {

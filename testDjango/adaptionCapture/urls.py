@@ -7,7 +7,9 @@ urlpatterns = [
     url(r'contentCapture/$', contentCapture, name='contentCapture'),
     url(r'urlCapture/$', urlCapture, name='urlCapture'),
     url(r'getHtml/$', getHtml, name='getHtml'),
-    url(r'getTemplate/$', getTemplate, name='getTemplate'),
+    url(r'getPageSource/$', getPageSource, name='getPageSource'),
     url(r'getMaybeContent/$', getMaybeContent, name='getMaybeContent'),
     url(r'generateLabel/$', generateLabel, name='generateLabel'),
+    url(r'specialCapture/$', specialCapture, name='specialCapture'),
+    url(r'extendCapture/$', extendCapture, name='extendCapture'),
 ]

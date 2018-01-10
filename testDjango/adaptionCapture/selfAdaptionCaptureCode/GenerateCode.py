@@ -180,10 +180,12 @@ class GenerateCode(object):
         result = {}
         procedureList = []
         result['elementName'] = name
-        result['elementType'] = _type
+        result['elementType'] = 'string'
         data = self.mongoClient.find_one({'num': int(num)})
         data['fatherNumList'].append(data['num'])
+        result['originalContent'] = data['content']
         commonList = data['fatherNumList']
+        print '+++++++++++++++++'
         for common in commonList:
             procedure = {}
             data = self.mongoClient.find_one({'num': common})
@@ -191,8 +193,13 @@ class GenerateCode(object):
             procedure['type'] = 'find'
             procedure['tag'] = data['tag']
             procedure['num'] = 0
-            if self.mongoClient.find({'class': data['class']}).count() == 1:
-                procedureList = []
+
+            print "+++++++++++++++开始获取路径++++++++++++"
+            # 相对路径
+            print "class值",data['class']
+            if data['class'] != None:
+                if self.mongoClient.find({'class': {'$regex': data['class']}}).count() == 1:
+                    procedureList = []
             ##找出绝对路径
             elif self.mongoClient.find({'tag': data['tag'], 'fatherNum': data['fatherNum']}).count() > 1:
                 locNum = 0
@@ -201,9 +208,19 @@ class GenerateCode(object):
                         break
                     locNum += 1
                 procedure['num'] = locNum
+            ##############绝对路径要不得，主要是有内容缺失的情况##########################
+            # if self.mongoClient.find({'tag': data['tag'], 'fatherNum': data['fatherNum']}).count() > 1:
+            #     locNum = 0
+            #     for father in self.mongoClient.find({'tag': data['tag'], 'fatherNum': data['fatherNum']}):
+            #         if father['num'] == data['num']:
+            #             break
+            #         locNum += 1
+            #     procedure['num'] = locNum
+
 
             procedureList.append(procedure)
 
+        print "+++++++++++++++获取路径完成++++++++++++"
         # 最后定位元素的操作
         procedure = {}
         if _type == 'image':

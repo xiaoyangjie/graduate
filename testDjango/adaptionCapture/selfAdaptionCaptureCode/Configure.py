@@ -1,7 +1,8 @@
 # coding=utf-8
 
 from urllib import quote_plus
-MONGO_DEFAULT = "mongodb://%s:%s@%s" % (quote_plus('@kb111'), quote_plus('ylb@(*wiki*)'), '222.197.180.245:30011')
+MONGO_DEFAULT = "mongodb://%s:%s@%s" % (quote_plus('kb314'), quote_plus('fzdwxxcl.314'), '121.49.99.14:30011')
+# MONGO_DEFAULT = "mongodb://localhost:27020"
 
 MONGO_DB = 'yj'
 

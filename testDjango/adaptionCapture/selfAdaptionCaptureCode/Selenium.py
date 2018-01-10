@@ -20,53 +20,32 @@ from selenium.common.exceptions import NoSuchElementException, StaleElementRefer
 class Selenium(object):
     def __init__(self):
         self.driver = webdriver.Chrome(executable_path=os.getcwd() + '/adaptionCapture/selfAdaptionCaptureCode/chromedriver.exe')
-        self.loginUrl = 'https://www.linkedin.com/uas/login'
-        self.username = '1019177406@qq.com'
-        self.password = 'yj15923365092'
-        # self.login()
-        print '+++++++++++++++++++++'
-        print "领英登陆成功"
-        print '+++++++++++++++++++++'
 
     def restart(self):
         self.driver = webdriver.PhantomJS(executable_path=os.getcwd() + '/adaptionCapture/selfAdaptionCaptureCode/phantomjs.exe')
-        flag = True
-        # if self.login():
-        #     print "重启成功"
 
-    # def login(self):
-    #     """
-    #     使用账户名和密码进行登录
-    #     :param email:
-    #     :param password:
-    #     :return:登录成功返回true
-    #     """
-    #     flag = True
-    #     try:
-    #         self.driver.get(self.loginUrl)
-    #         self.driver.find_element_by_id('session_key-login').send_keys(self.username)
-    #         self.driver.find_element_by_id('session_password-login').send_keys(self.password)
-    #         self.driver.find_element_by_css_selector('input#btn-primary.btn-primary').click()
-    #         time.sleep(6)
-    #     except:
-    #         flag = False
-    #     return flag
 
-    # def getPageSource(self, url):
-    #     flag = False
-    #     while not flag:
-    #         try:
-    #             self.driver.get(url)
-    #             time.sleep(3)
-    #             ActionChains(self.driver).send_keys(Keys.END).perform()  # 拉到底
-    #             time.sleep(3)
-    #             flag = True
-    #         except NoSuchWindowException:
-    #             print "NoSuchWindowException"
-    #             self.restart()
-    #     return self.driver.page_source
-
-    def getPageSource(self):
+    def getUrl(self, url):
+        flag = False
+        while not flag:
+            try:
+                self.driver.get(url)
+                time.sleep(3)
+                ActionChains(self.driver).send_keys(Keys.END).perform()  # 拉到底
+                time.sleep(3)
+                flag = True
+            except NoSuchWindowException:
+                print "NoSuchWindowException"
+                self.restart()
         return self.driver.page_source
 
-driverAPI = Selenium()
+    def getPageSource(self):
+        content = None
+        try:
+            content = self.driver.page_source
+        except NoSuchWindowException:
+            pass
+        return content
+
+    def getCurrentUrl(self):
+        return self.driver.current_url
