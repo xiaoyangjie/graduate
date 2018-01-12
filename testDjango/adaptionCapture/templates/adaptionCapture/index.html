@@ -28,9 +28,9 @@
             <!--数据采集 -->
             <div class="container content-panel" style="display:block ; background: white;margin-top: 10px;margin-bottom: 10px;" id="dataCapture">
                 <div class="row" style="margin-top: 20px;">
-                    <div class="col-sm-2">
-                        <h4><span class="capture-button-color" id="captureUrlsButton" onmousemove="changeColor(this)" onmouseleave="changeColorBack(this)">获取链接</span></h4>
-                    </div>
+{#                    <div class="col-sm-2">#}
+{#                        <h4><span class="capture-button-color" id="captureUrlsButton" onmousemove="changeColor(this)" onmouseleave="changeColorBack(this)">获取链接</span></h4>#}
+{#                    </div>#}
                     <div class="col-sm-2">
                         <h4><span class="capture-button-color" id="generateLabelsButton" onmousemove="changeColor(this)" onmouseleave="changeColorBack(this)">生成标签</span></h4>
                     </div>
@@ -39,10 +39,10 @@
                     </div>
                 </div>
                 <div><p style="background: #000; height: 1px;margin-top: 10px"></p></div>
-                <div style="display: block;" id="captureUrls" class="capture-content-panel">
+                <div style="display: none;" id="captureUrls" class="capture-content-panel">
                     <span>ssssssmm</span>
                 </div>
-                <div style="display: none;" id="generateLabels" class="capture-content-panel">
+                <div style="display: block;" id="generateLabels" class="capture-content-panel">
                     <div class="row" style=";margin-top: 20px;margin-bottom: 5px;">
                         <div class="col-md-3"><button aria-label="center" type="button" class="btn btn-primary" id="getHtml">自定义采集</button></div>
                         <div class="col-md-3"><button aria-label="center" type="button" class="btn btn-primary" id="getPageSource">抓取当前网页</button></div>
@@ -114,6 +114,14 @@
                 <!--采集数据 -->
                 <div style="display:none;" id="captureData" class="capture-content-panel">
                     <div class="row">
+                        <div class="col-md-2"><h5><label style="">特定链接集合 :</label></h5></div>
+                        <div class="col-md-8">
+                             <fieldset class="form-group">
+                                 <textarea class="form-control" id="specialUrlSet" rows="9"></textarea>
+                             </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-2"><h5><label style="">链接数据库 :</label></h5></div>
                         <div class="col-md-8">
                         <select id="selectUrlsDatabase" style="width: 100%;background-color: rgba(10, 17, 45, 0.11);" onclick="getDatabase()">
@@ -133,7 +141,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-8">
-                        <button type="button" class="btn btn-primary" id="overCapture">结束采集</button>
+                        <button type="button" class="btn btn-primary" id="overCapture" onclick="overCapture()">结束采集</button>
                         </div>
                         <div class="col-md-1">
                         <button type="button" class="btn btn-primary" id="specialCapture">特定采集</button>
@@ -142,7 +150,25 @@
                         <button type="button" class="btn btn-primary" id="extendCapture">扩展采集</button>
                         </div>
                     </div>
+                    <div><p style="background: #000; height: 1px;margin-top: 20px"></p></div>
+                    <div class="row">
+                        <div class="col-md-2"><h5><label style="">显示采集状况 :</label></h5></div>
+                        <div class="col-md-8">
+                             <fieldset class="form-group">
+                                 <textarea class="form-control" id="urlCaptureStatus" rows="9"></textarea>
+                             </fieldset>
+                        </div>
+                    </div>
+                    <div><p style="background: #000; height: 1px;margin-top: 20px"></p></div>
+                    <div class="row">
+                        <div class="col-md-2"><h5><label style="">导出数据路径 :</label></h5></div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="path" value="D:/a.xls">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="outputData" onclick="outputData()">导出数据</button>
                 </div>
+                <div><p style="background: #000; height: 1px;margin-top: 20px"></p></div>
 
             </div>
 
@@ -161,6 +187,11 @@
             var recordContentList = 1;
             var labelList = [];
             var labelContentList = [];
+            var timeOut = false;
+            var internal = 3000;
+            var showInfoList = [];
+            timeOut = false;
+            time();
 
             $(document).ready(function() {
                 //打开界面
@@ -226,7 +257,6 @@
                  });
                 {# 产生标签#}
                  $("#generateLabel").click(function () {
-
                      var str = document.getElementsByName("optionsRadios");
                      var typeList = document.getElementsByName("type");
                      var data = null;
@@ -289,27 +319,12 @@
                     )
                     }
                 });
-                //特定采集
-                 $("#specialCapture").click(function () {
-                    if (labelList == null){
-                        alert("没有标签");
-                    }
-                    else {
-                        $.get("/adaptionCapture/specialCapture/", {
-                            'labelList': labelList
-                        }, function(ret){
-                            if (ret['level'] == 'normal'){
 
-                            }
-                        }
-                    )
-                    }
-                });
                 //extendCapture
                 $("#extendCapture").click(function () {
                     var selectUrlsDatabase = $("#selectUrlsDatabase").val();
                     var selectContentDatabase = $("#selectContentDatabase").val();
-                    if (labelList == null){
+                    if (labelList.length == 0){
                         alert("没有标签");
                     }
                     else {
@@ -326,11 +341,40 @@
                         contentType: false
                         }).done(function(ret) {
                             if (ret['level'] == 'normal'){
-                                alter("开始采集");
+                                alert("完成采集");
                             }
                         })
                     }
                 });
+
+                //specialCapture
+                $("#specialCapture").click(function () {
+
+                    var specialUrlSet = $("#specialUrlSet").val();
+                    var selectContentDatabase = $("#selectContentDatabase").val();
+                    if (labelList.length == 0){
+                        alert("没有标签");
+                    }
+                    else {
+                        var form = new FormData();
+                        form.append("specialUrlSet", specialUrlSet);
+                        form.append("selectContentDatabase", selectContentDatabase);
+                        form.append("labelList", labelList);
+                        $.ajax({
+                        url: '/adaptionCapture/specialCapture/',
+                        type: 'POST',
+                        cache: false,
+                        data: form,
+                        processData: false,
+                        contentType: false
+                        }).done(function(ret) {
+                            if (ret['level'] == 'normal'){
+                                alert(ret['content']);
+                            }
+                        })
+                    }
+                });
+
                 {#数据采集导航                #}
                  $("#dataCaptureNav").click(function () {
                     $(".content-panel").each(function () {
@@ -411,6 +455,53 @@
                             'type': type
                         }, function(ret){
 
+                });
+            }
+            //导出数据
+            function outputData() {
+                var path = $("#path").val();
+                var selectContentDatabase = $("#selectContentDatabase").val();
+                $.get("/adaptionCapture/outputData/", {
+                        'path': path, 'selectContentDatabase' : selectContentDatabase
+                        }, function(ret){
+                    if (ret['level'] == 'normal'){
+                        alert("导出数据成功");
+                    }
+
+                });
+            }
+
+            //结束采集
+            function overCapture() {
+                $.get("/adaptionCapture/overCapture/", function(ret){
+                    if (ret['level'] == 'normal'){
+                        alert("结束采集成功");
+                    }
+                });
+            }
+
+            //定时请求任务
+            function time() {
+                if(timeOut) return;
+                clock();
+                setTimeout(time,internal); //time是指本身,延时递归调用自己,100为间隔调用时间,单位毫秒
+            }
+            function clock() {
+                $.get("/adaptionCapture/urlCaptureStatus/", function (ret) {
+                    if (ret['level'] == 'normal') {
+                        if (showInfoList.length < 10){
+                            showInfoList.push(ret['data']);
+                        }
+                        else {
+                            showInfoList.shift();
+                            showInfoList.push(ret['data']);
+                        }
+                        var showStr = "";
+                        for (var i = 0 ; i < showInfoList.length ; i++){
+                            showStr = showStr + "采集完成 : " + showInfoList[i]+ '\n';
+                        }
+                        $('#urlCaptureStatus').html(showStr);
+                    }
                 });
             }
         </script>

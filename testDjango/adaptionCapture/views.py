@@ -15,7 +15,6 @@ from selfAdaptionCaptureCode.HtmlCapture import HtmlCapture
 from selfAdaptionCaptureCode.GenerateCode import generateCodeAPI
 
 # Create your views here.
-
 def index(request):
     return render(request, 'adaptionCapture/index.html')
 
@@ -36,8 +35,40 @@ def getPageSource(request):
     else:
         return JsonResponse({'content': "页面不存在，重新自定义采集", 'level': 'error'})
 
+@csrf_exempt
 def specialCapture(request):
-    pass
+    """
+    给定的url采集
+    :param request:
+    :return:
+    """
+    labelList = []
+    print request.POST
+    labelList = request.POST['labelList'].split(',')
+    specialUrlSet = request.POST['specialUrlSet']
+    specialUrlList = specialUrlSet.split('\n')
+
+    selectContentDatabase = request.POST['selectContentDatabase']
+    contentHost = selectContentDatabase.split('|')[0]
+    contentDatabase = selectContentDatabase.split('|')[1]
+    contentCollection = selectContentDatabase.split('|')[2]
+    contentHost = "mongodb://%s:%s@%s" % (quote_plus('kb314'), quote_plus('fzdwxxcl.314'), contentHost)
+
+    ############初始化################
+    htmlCaptureAPI.urlRule = [0]
+    htmlCaptureAPI.urlsClient = MongoClient(contentHost)['yj']['UrlTemp']  #这个就是个临时的存放连接的集合
+    htmlCaptureAPI.contentClient = MongoClient(contentHost)[contentDatabase][contentCollection]
+    htmlCaptureAPI.labelList = labelList
+    htmlCaptureAPI.urlsClient.delete_many({})
+    htmlCaptureAPI.contentClient.delete_many({})
+
+    for url in specialUrlList:
+        try:
+            htmlCaptureAPI.urlsClient.insert({'isRead': False, 'url' : url})
+        except:pass
+    ##################################
+    htmlCaptureAPI.getContent()
+    return JsonResponse({'content': "采集完成", 'level': 'normal'})
 
 @csrf_exempt
 def extendCapture(request):
@@ -115,12 +146,12 @@ def generateLabel(request):
     print 1111111
     return JsonResponse({'content': "ss", 'level': 'normal'})
 
-def exportCSV(request):
-    selectContentDatabase = request.POST['selectContentDatabase']
+def outputData(request):
+    selectContentDatabase = request.GET['selectContentDatabase']
     contentHost = selectContentDatabase.split('|')[0]
     contentDatabase = selectContentDatabase.split('|')[1]
     contentCollection = selectContentDatabase.split('|')[2]
-    savePath = request.POST['savePath']
+    savePath = request.GET['path']
     MONGO_DEFAULT = "mongodb://%s:%s@%s" % (quote_plus('kb314'), quote_plus('fzdwxxcl.314'), '121.49.99.14:30011')
     mongoClient = MongoClient(MONGO_DEFAULT)[contentDatabase][contentCollection]
 
@@ -129,22 +160,30 @@ def exportCSV(request):
     EXCEL_COLS = 256
     nrows, total_rows, sheet_num = 0, 0, 0
 
-    for data in mongoClient.find():
-        data.pop('_id')
-        if (nrows % EXCEL_ROWS == 0):
-            wsheet = workbook.add_sheet('sheet' + str(sheet_num), cell_overwrite_ok=True)
-            nrows = 0
-            sheet_num = sheet_num + 1
-        keys = data.keys()
-        cols_num = EXCEL_COLS if len(keys) > EXCEL_COLS else len(keys)
-        for ncol in xrange(cols_num):
-            value = data[keys[ncol]]
-            wsheet.write(nrows, ncol, value)
-        nrows = nrows + 1
-        total_rows = total_rows + 1
-    workbook.save(savePath)
+    try:
+        for data in mongoClient.find():
+            data.pop('_id')
+            keys = data.keys()
+            cols_num = EXCEL_COLS if len(keys) > EXCEL_COLS else len(keys)
+            if (nrows % EXCEL_ROWS == 0):
+                wsheet = workbook.add_sheet('sheet' + str(sheet_num), cell_overwrite_ok=True)
+                nrows = 0
+                sheet_num = sheet_num + 1
+                for ncol in xrange(cols_num):
+                    wsheet.write(nrows, ncol, keys[ncol])
+                nrows = nrows + 1
+                total_rows = total_rows + 1
+            for ncol in xrange(cols_num):
+                value = data[keys[ncol]]
+                wsheet.write(nrows, ncol, value)
+            nrows = nrows + 1
+            total_rows = total_rows + 1
+        workbook.save(savePath)
+        return JsonResponse({'level':'normal', 'content' :'ss'})
+    except:
+        return JsonResponse({'level':'error', 'content' :'ss'})
 
-def showInfo(request):
+def urlCaptureStatus(request):
     """
     返回采集完了的url
     :param request:
@@ -156,3 +195,11 @@ def showInfo(request):
     else:
         return JsonResponse({'level':'error'})
 
+def overCapture(request):
+    """
+    结束采集
+    :param request:
+    :return:
+    """
+    htmlCaptureAPI.driverAPI.quit()
+    return JsonResponse({'level':'normal', 'content':'结束采集'})

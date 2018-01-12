@@ -12,4 +12,7 @@ urlpatterns = [
     url(r'generateLabel/$', generateLabel, name='generateLabel'),
     url(r'specialCapture/$', specialCapture, name='specialCapture'),
     url(r'extendCapture/$', extendCapture, name='extendCapture'),
+    url(r'urlCaptureStatus/$', urlCaptureStatus, name='urlCaptureStatus'),
+    url(r'outputData/$', outputData, name='outputData'),
+    url(r'overCapture/$', overCapture, name='overCapture'),
 ]

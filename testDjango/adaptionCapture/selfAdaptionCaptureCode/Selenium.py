@@ -20,6 +20,7 @@ from selenium.common.exceptions import NoSuchElementException, StaleElementRefer
 class Selenium(object):
     def __init__(self):
         self.driver = webdriver.Chrome(executable_path=os.getcwd() + '/adaptionCapture/selfAdaptionCaptureCode/chromedriver.exe')
+        self.isRestart = True
 
     def restart(self):
         self.driver = webdriver.PhantomJS(executable_path=os.getcwd() + '/adaptionCapture/selfAdaptionCaptureCode/phantomjs.exe')
@@ -49,3 +50,6 @@ class Selenium(object):
 
     def getCurrentUrl(self):
         return self.driver.current_url
+
+    def quit(self):
+        self.driver.quit()

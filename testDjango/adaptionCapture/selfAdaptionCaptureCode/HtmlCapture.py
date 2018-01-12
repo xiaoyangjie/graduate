@@ -32,6 +32,7 @@ class HtmlCapture(object):
         self.findLocation = FindLocation()
         print MONGO_DEFAULT
         self.mongoClient = MongoClient(MONGO_DEFAULT)[MONGO_DB][MONGO_WEBSITE_PARSE]
+        self.codeClient = MongoClient(MONGO_DEFAULT)[MONGO_DB][MONGO_CODE]
         # self.cookie = None
         self.result = {}
         self.urlRule = [0]
@@ -45,6 +46,10 @@ class HtmlCapture(object):
         self.showFinishUrlQueue = Queue()
 
     def getDriver(self):
+        try:
+            self.driverAPI.quit()
+        except:
+            pass
         self.driverAPI = Selenium()
 
     def htmlCapture(self):
@@ -65,7 +70,6 @@ class HtmlCapture(object):
 
         self.urlsClient = MongoClient(urlsHost)[urlsDatabase][urlsCollection]
         self.contentClient = MongoClient(contentHost)[contentDatabase][contentCollection]
-        self.codeClient = MongoClient(MONGO_DEFAULT)[MONGO_DB][MONGO_CODE]
         self.labelList = labelList
         ###########################################################
         # originalUrl = 'https://book.qidian.com/info/1010496369'
@@ -94,7 +98,7 @@ class HtmlCapture(object):
                 self.elementType = ''
 
                 print u'++++++++++++++开始采集+++++++++++++++++++'
-                self.contentClient.delete_many()
+                self.contentClient.delete_many({})
                 self.getContent()
 
     def getContent(self):
