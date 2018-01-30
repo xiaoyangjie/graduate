@@ -15,7 +15,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, NoSuchWindowException,TimeoutException
+from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, NoSuchWindowException,TimeoutException, \
+    UnexpectedAlertPresentException
+
 
 class Selenium(object):
     def __init__(self):
@@ -23,7 +25,7 @@ class Selenium(object):
         self.isRestart = True
 
     def restart(self):
-        self.driver = webdriver.PhantomJS(executable_path=os.getcwd() + '/adaptionCapture/selfAdaptionCaptureCode/phantomjs.exe')
+        self.driver = webdriver.Chrome(executable_path=os.getcwd() + '/adaptionCapture/selfAdaptionCaptureCode/phantomjs.exe')
 
 
     def getUrl(self, url):
@@ -35,9 +37,14 @@ class Selenium(object):
                 ActionChains(self.driver).send_keys(Keys.END).perform()  # 拉到底
                 time.sleep(3)
                 flag = True
+            except TimeoutException:
+                print 'TimeoutException'
             except NoSuchWindowException:
                 print "NoSuchWindowException"
                 self.restart()
+            except UnexpectedAlertPresentException:
+                alert = self.driver.switch_to.alert
+                alert.accept()
         return self.driver.page_source
 
     def getPageSource(self):
@@ -46,10 +53,20 @@ class Selenium(object):
             content = self.driver.page_source
         except NoSuchWindowException:
             pass
+        except UnexpectedAlertPresentException:
+            alert = self.driver.switch_to.alert
+            alert.accept()
+            content = self.driver.page_source
         return content
 
     def getCurrentUrl(self):
-        return self.driver.current_url
+        try :
+            current_url = self.driver.current_url
+        except UnexpectedAlertPresentException:
+            alert = self.driver.switch_to.alert
+            alert.accept()
+            current_url = self.driver.current_url
+        return current_url
 
     def quit(self):
         self.driver.quit()

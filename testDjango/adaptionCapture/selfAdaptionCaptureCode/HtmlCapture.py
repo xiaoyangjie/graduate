@@ -436,7 +436,10 @@ class HtmlCapture(object):
                 if len(soup.find_all(key, class_=j)) == 1:
                     _totalNum += 1
         print '________________'
-        return float(_totalNum)/self.totalUniqueClassTagNum
+        if self.totalUniqueClassTagNum == 0:
+            return 0.0
+        else:
+            return float(_totalNum)/self.totalUniqueClassTagNum
 
     def score(self, simiScore, labelScore):
         num = labelScore * 0.8 + simiScore * 0.2

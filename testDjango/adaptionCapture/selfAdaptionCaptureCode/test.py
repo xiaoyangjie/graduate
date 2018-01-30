@@ -32,42 +32,11 @@ MONGO_DEFAULT = "mongodb://%s:%s@%s" % (quote_plus('kb314'), quote_plus('fzdwxxc
 mongoClient = MongoClient(MONGO_DEFAULT)['yj']['WebsiteContent']
 
 
-workbook = xlwt.Workbook(encoding='utf-8')
-# datas = db.user.find()
-datas = mongoClient.find()[0:100]
-EXCEL_ROWS = 65535
-EXCEL_COLS = 256
-nrows, total_rows, sheet_num = 0, 0, 0
-
-for data in datas:
-    data.pop('_id')
-    if (nrows % EXCEL_ROWS == 0):
-        wsheet = workbook.add_sheet('sheet' + str(sheet_num), cell_overwrite_ok=True)
-        nrows = 0
-        sheet_num = sheet_num + 1
-    keys = data.keys()
-    cols_num = EXCEL_COLS if len(keys) > EXCEL_COLS else len(keys)
-    for ncol in xrange(cols_num):
-        value = data[keys[ncol]]
-        wsheet.write(nrows, ncol, value)
-    nrows = nrows + 1
-    total_rows = total_rows + 1
-
-workbook.save("D:\\a.xls")
-endTime = datetime.datetime.now()
-print "import xls success ! spend time %s seconds" % ((endTime - startTime).seconds)
-
-
-codeClient = MongoClient(host)['yj']['qidian']
-validUrlsList = []
-
-successNum = 0
-
 # urlClient = MongoClient(host)['yj']['Url']
 # pageSource = requests.get('https://movie.douban.com/subject/25823275/').content
 # print pageSource
 # soup = BeautifulSoup(pageSource, "lxml")
-# domainUrl = 'movie.douban.com'
+domainUrl = 'movie.douban.com'
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
@@ -76,26 +45,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 
 # driver = webdriver.Chrome()
-# driver.get('https://book.qidian.com/info/1010996810')
-# r = BeautifulSoup(driver.page_source, 'lxml')
-# for i in r.find_all('a'):
-#     originalUrl = i.get('href')
-#     print originalUrl
-#     url = originalUrl
-#     if url != None:
-#         if len(url.split('//')) == 1:
-#             if url[0] == '/':
-#                 url = 'https://' + 'book.qidian.com' + url
-#         else:
-#             if url.split('//')[0] == '':  # //www.zhihu.com/pin/927216298040659968
-#                 url = 'https://' + url.split('//')[1]
-#         print '__________________________'
-#         try:
-#             driver.get(url)
-#         except Exception:
-#             continue
-#         time.sleep(3)
-#         soup_str = BeautifulSoup(driver.page_source, 'lxml')
-#         codeClient.insert({'soup_str' : str(soup_str), 'url' : url, 'originalUrl' : originalUrl})
+# driver.get('http://www.news.uestc.edu.cn/?n=UestcNews.Front.ContributePage')
+# ActionChains(driver).send_keys(Keys.END).perform()  # 拉到底
+# driver.get('http://www.news.uestc.edu.cn/?n=UestcNews.Front.Document.ArticlePage&Id=62226')
+# alert = driver.switch_to.alert
+# alert.accept()
+# time.sleep(3)
+# print driver.page_source
+# driver.get('http://www.news.uestc.edu.cn/?n=UestcNews.Front.ContributePage')
+
 
 
